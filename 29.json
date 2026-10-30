@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"saam1","en":"clothes / a top (sounds the same as 'three')","zh":"衫"},
+{"jp":"gin6","en":"(classifier for clothes, matters)","zh":"件"},
+{"jp":"tiu4","en":"(classifier for trousers, long things)","zh":"條"},
+{"jp":"fu3","en":"trousers","zh":"褲"},
+{"jp":"haai4","en":"shoes","zh":"鞋"},
+{"jp":"soeng1","en":"(classifier for pairs)","zh":"雙"},
+{"jp":"maa5","en":"size","zh":"碼"},
+{"jp":"baak6sik1","en":"white","zh":"白色"},
+{"jp":"ngaan4sik1","en":"colour","zh":"顏色"},
+{"jp":"hap6sik1","en":"suitable / fits well","zh":"合適"}
+],
+"sentences": [
+{"jp":"ngo5 soeng2 mai5 jat1 gin6 saam1","en":"I want to buy a piece of clothing","w":["I","want to","buy","one","(cl.)","clothes"]},
+{"jp":"ni1 gin6 saam1 hou2 leng3","en":"This piece of clothing is very pretty","w":["this","(cl.)","clothes","very","pretty"]},
+{"jp":"ngo5 jiu3 jat1 tiu4 fu3","en":"I want a pair of trousers","w":["I","want","one","(cl.)","trousers"]},
+{"jp":"keoi5 mai5 zo2 jat1 soeng1 haai4","en":"He bought a pair of shoes","w":["he","buy","(done)","one","(cl.)","shoes"]},
+{"jp":"ni1 soeng1 haai4 hou2 gwai3","en":"This pair of shoes is very expensive","w":["this","(cl.)","shoes","very","expensive"]},
+{"jp":"ngo5 mai5 zo2 saam1 gin6 saam1","en":"I bought three pieces of clothing","w":["I","buy","(done)","three","(cl.)","clothes"]},
+{"jp":"nei5 jiu3 mat1je5 maa5","en":"What size do you need?","w":["you","need","what","size"]},
+{"jp":"ngo5 jiu3 daai6 maa5","en":"I need a large size","w":["I","need","big","size"]},
+{"jp":"keoi5 jiu3 sai3 maa5","en":"She needs a small size","w":["she","need","small","size"]},
+{"jp":"m4goi1 bei2 ngo5 si3 haa5 ni1 gin6 saam1","en":"Please let me try this piece of clothing","w":["please","let","me","try","(a bit)","this","(cl.)","clothes"]},
+{"jp":"ni1 gin6 saam1 hou2 hap6sik1 ngo5","en":"This fits me very well","w":["this","(cl.)","clothes","very","suitable","me"]},
+{"jp":"ni1 gin6 hou2 daai6","en":"This one is very big","w":["this","(cl.)","very","big"]},
+{"jp":"ni1 gin6 jau5di1 sai3","en":"This one is a bit small","w":["this","(cl.)","a bit","small"]},
+{"jp":"jau5 mou5 daai6 di1 ge3","en":"Do you have a bigger one?","w":["have","not have","big","(a bit)","(one)"]},
+{"jp":"nei5 zung1ji3 mat1je5 ngaan4sik1","en":"What colour do you like?","w":["you","like","what","colour"]},
+{"jp":"ngo5 zung1ji3 baak6sik1","en":"I like white","w":["I","like","white"]},
+{"jp":"jau5 mou5 baak6sik1 ge3","en":"Do you have a white one?","w":["have","not have","white","(one)"]},
+{"jp":"keoi5 zung1ji3 hak1sik1 ge3 haai4","en":"She likes the black shoes","w":["she","like","black","(that)","shoes"]},
+{"jp":"ni1 tiu4 fu3 gwai3 gwo3 go2 tiu4","en":"This pair of trousers is more expensive than that pair","w":["this","(cl.)","trousers","expensive","than","that","(cl.)"]},
+{"jp":"ni1 go3 ngaan4sik1 hou2 leng3","en":"This colour is very pretty","w":["this","(cl.)","colour","very","pretty"]}
+]
+}

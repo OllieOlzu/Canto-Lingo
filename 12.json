@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"dak1","en":"can / (links a verb to its result) / only","zh":"得"},
+{"jp":"dak1haan4","en":"free (not busy)","zh":"得閒"},
+{"jp":"paau2","en":"run","zh":"跑"},
+{"jp":"coeng3go1","en":"sing","zh":"唱歌"},
+{"jp":"waan2","en":"play","zh":"玩"},
+{"jp":"lek1","en":"clever / good at","zh":"叻"},
+{"jp":"mong4","en":"busy","zh":"忙"},
+{"jp":"gui6","en":"tired","zh":"攰"},
+{"jp":"king1gai2","en":"chat","zh":"傾偈"},
+{"jp":"duk6","en":"read / study","zh":"讀"}
+],
+"sentences": [
+{"jp":"ngo5 dak1","en":"I can","w":["I","can"]},
+{"jp":"ngo5 m4 dak1","en":"I cannot","w":["I","not","can"]},
+{"jp":"nei5 dak1 m4 dak1","en":"Can you or not?","w":["you","can","not","can"]},
+{"jp":"ngo5 ting1jat6 m4 dak1haan4","en":"I am not free tomorrow","w":["I","tomorrow","not","free"]},
+{"jp":"nei5 gam1jat6 dak1 m4 dak1haan4","en":"Are you free today?","w":["you","today","(is)","not","free"]},
+{"jp":"keoi5 paau2 dak1 hou2 faai3","en":"He runs very fast","w":["he","run","(result)","very","fast"]},
+{"jp":"nei5 zou6 dak1 hou2 hou2","en":"You do it very well","w":["you","do","(result)","very","good"]},
+{"jp":"keoi5 haang4 dak1 hou2 maan6","en":"He walks very slowly","w":["he","walk","(result)","very","slow"]},
+{"jp":"keoi5 sik6 dak1 hou2 do1","en":"He eats a lot","w":["he","eat","(result)","very","much"]},
+{"jp":"ngo5 jam2 dak1 hou2 siu2","en":"I drink very little","w":["I","drink","(result)","very","little"]},
+{"jp":"keoi5 gong2 dak1 hou2 faai3","en":"He talks very fast","w":["he","talk","(result)","very","fast"]},
+{"jp":"ngo5 dak1 jat1 go3 pang4jau5","en":"I have only one friend","w":["I","only","one","(cl.)","friend"]},
+{"jp":"ngo5 dak1 ng5 man1","en":"I have only five dollars","w":["I","only","five","dollar"]},
+{"jp":"keoi5 coeng3go1 hou2 lek1","en":"He is very good at singing","w":["he","sing","very","good at"]},
+{"jp":"ngo5 m4 sik1 coeng3go1","en":"I cannot sing","w":["I","not","know how to","sing"]},
+{"jp":"ngo5 gam1jat6 hou2 mong4","en":"I am very busy today","w":["I","today","very","busy"]},
+{"jp":"baa4baa1 gam1jat6 hou2 gui6","en":"Dad is very tired today","w":["dad","today","very","tired"]},
+{"jp":"ngo5dei6 hai2 hok6haau6 king1gai2","en":"We chat at school","w":["we","at","school","chat"]},
+{"jp":"keoi5 hou2 zung1ji3 waan2","en":"He really likes to play","w":["he","very","like","play"]},
+{"jp":"ngo5 hai2 hok6haau6 duk6 syu1","en":"I study at school","w":["I","at","school","study","book"]}
+]
+}

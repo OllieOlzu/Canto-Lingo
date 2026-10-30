@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"mei6","en":"not yet / yet? (at the end of a question)","zh":"未"},
+{"jp":"dou3","en":"arrive","zh":"到"},
+{"jp":"zi1","en":"know (a fact)","zh":"知"},
+{"jp":"sik1","en":"know (a person) / know how to","zh":"識"},
+{"jp":"zou2caan1","en":"breakfast","zh":"早餐"},
+{"jp":"ng5faan6","en":"lunch","zh":"午飯"},
+{"jp":"maan5faan6","en":"dinner","zh":"晚飯"},
+{"jp":"dang2","en":"wait","zh":"等"},
+{"jp":"dim2sam1","en":"dim sum","zh":"點心"},
+{"jp":"zou2","en":"early","zh":"早"}
+],
+"sentences": [
+{"jp":"ngo5 mei6 sik6 faan6","en":"I have not eaten yet","w":["I","not yet","eat","rice"]},
+{"jp":"nei5 sik6 zo2 faan6 mei6","en":"Have you eaten yet?","w":["you","eat","(done)","rice","yet?"]},
+{"jp":"nei5 sik6 zo2 zou2caan1 mei6","en":"Have you had breakfast yet?","w":["you","eat","(done)","breakfast","yet?"]},
+{"jp":"ngo5 sik6 zo2 zou2caan1","en":"I have had breakfast","w":["I","eat","(done)","breakfast"]},
+{"jp":"keoi5 mei6 dou3","en":"He has not arrived yet","w":["he","not yet","arrive"]},
+{"jp":"pang4jau5 dou3 zo2 mei6","en":"Has the friend arrived yet?","w":["friend","arrive","(done)","yet?"]},
+{"jp":"ngo5 m4 heoi3","en":"I am not going","w":["I","not","go"]},
+{"jp":"ngo5 mei6 heoi3","en":"I have not gone yet","w":["I","not yet","go"]},
+{"jp":"ngo5 mei6 sik6 gwo3 dim2sam1","en":"I have never eaten dim sum","w":["I","not yet","eat","(ever)","dim sum"]},
+{"jp":"ngo5 hou2 zung1ji3 sik6 dim2sam1","en":"I really like eating dim sum","w":["I","very","like","eat","dim sum"]},
+{"jp":"ngo5 maan5faan6 sik6 gai1","en":"I eat chicken for dinner","w":["I","dinner","eat","chicken"]},
+{"jp":"ngo5dei6 ng5faan6 sik6 dim2sam1","en":"We eat dim sum for lunch","w":["we","lunch","eat","dim sum"]},
+{"jp":"ngo5 m4 zi1","en":"I do not know","w":["I","not","know"]},
+{"jp":"ngo5 m4 zi1 keoi5 hai2 bin1dou6","en":"I do not know where he is","w":["I","not","know","he","at","where"]},
+{"jp":"ngo5 sik1 keoi5","en":"I know him","w":["I","know","him"]},
+{"jp":"ngo5 m4 sik1 go2 go3 jan4","en":"I do not know that person","w":["I","not","know","that","(cl.)","person"]},
+{"jp":"maa4maa1 dang2 gan2 baa4baa1","en":"Mum is waiting for Dad","w":["mum","wait","(-ing)","dad"]},
+{"jp":"ngo5 mei6 jam2 caa4","en":"I have not had tea yet","w":["I","not yet","drink","tea"]},
+{"jp":"keoi5 hou2 zou2 dou3","en":"He arrives very early","w":["he","very","early","arrive"]},
+{"jp":"ngo5 gam1jat6 hou2 zou2 heoi3 hok6haau6","en":"I go to school very early today","w":["I","today","very","early","go","school"]}
+]
+}

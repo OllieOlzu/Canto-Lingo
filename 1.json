@@ -1,0 +1,39 @@
+{
+"words": [
+{"jp":"ngo5","en":"I/me","zh":"我"},
+{"jp":"nei5","en":"you","zh":"你"},
+{"jp":"keoi5","en":"he/she","zh":"佢"},
+{"jp":"ngo5dei6","en":"we/us","zh":"我哋"},
+{"jp":"hou2","en":"good","zh":"好"},
+{"jp":"m4","en":"not","zh":"唔"},
+{"jp":"hai6","en":"is/am/are","zh":"係"},
+{"jp":"ni1","en":"this","zh":"呢"},
+{"jp":"go2","en":"that","zh":"嗰"},
+{"jp":"sik6","en":"eat","zh":"食"},
+{"jp":"jam2","en":"drink","zh":"飲"},
+{"jp":"zung1ji3","en":"like","zh":"鍾意"},
+{"jp":"jau5","en":"have","zh":"有"},
+{"jp":"mou5","en":"not have","zh":"冇"},
+{"jp":"faan6","en":"rice","zh":"飯"},
+{"jp":"caa4","en":"tea","zh":"茶"},
+{"jp":"seoi2","en":"water","zh":"水"},
+{"jp":"mai5","en":"buy","zh":"買"},
+{"jp":"hok6","en":"learn","zh":"學"},
+{"jp":"jan4","en":"person","zh":"人"}
+],
+"sentences": [
+{"jp":"ngo5 hai6 jan4","en":"I am a person","w":["I","am","person"]},
+{"jp":"nei5 hou2","en":"You are good","w":["you","good"]},
+{"jp":"ngo5 sik6 faan6","en":"I eat rice","w":["I","eat","rice"]},
+{"jp":"nei5 jam2 caa4","en":"You drink tea","w":["you","drink","tea"]},
+{"jp":"keoi5 zung1ji3 caa4","en":"She likes tea","w":["she","like","tea"]},
+{"jp":"ngo5dei6 zung1ji3 seoi2","en":"We like water","w":["we","like","water"]},
+{"jp":"ni1 hai6 faan6","en":"This is rice","w":["this","is","rice"]},
+{"jp":"go2 hai6 seoi2","en":"That is water","w":["that","is","water"]},
+{"jp":"ngo5 m4 zung1ji3 caa4","en":"I do not like tea","w":["I","not","like","tea"]},
+{"jp":"nei5 jau5 faan6","en":"You have rice","w":["you","have","rice"]},
+{"jp":"ngo5 mou5 seoi2","en":"I do not have water","w":["I","not have","water"]},
+{"jp":"keoi5 mai5 caa4","en":"He buys tea","w":["he","buy","tea"]},
+{"jp":"ngo5 hou2 zung1ji3 hok6","en":"I really like learning","w":["I","very","like","learn"]}
+]
+}

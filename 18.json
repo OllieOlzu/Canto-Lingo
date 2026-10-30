@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"ji6","en":"two (in counting)","zh":"二"},
+{"jp":"gau2","en":"nine (sounds the same as 'dog')","zh":"九"},
+{"jp":"sap6jat1","en":"eleven","zh":"十一"},
+{"jp":"sap6ji6","en":"twelve","zh":"十二"},
+{"jp":"dim2","en":"o'clock","zh":"點"},
+{"jp":"gei2dim2","en":"what time","zh":"幾點"},
+{"jp":"bun3","en":"half","zh":"半"},
+{"jp":"ji4gaa1","en":"now","zh":"而家"},
+{"jp":"ci4dou3","en":"be late","zh":"遲到"},
+{"jp":"gam1maan5","en":"tonight","zh":"今晚"}
+],
+"sentences": [
+{"jp":"ji4gaa1 gei2dim2","en":"What time is it now?","w":["now","what time"]},
+{"jp":"ji4gaa1 sap6ji6 dim2","en":"It is twelve o'clock now","w":["now","twelve","o'clock"]},
+{"jp":"ji4gaa1 ng5 dim2 bun3","en":"It is half past five now","w":["now","five","o'clock","half"]},
+{"jp":"ji4gaa1 hai6 m4 hai6 sap6jat1 dim2","en":"Is it eleven o'clock now?","w":["now","is","not","is","eleven","o'clock"]},
+{"jp":"nei5 gei2dim2 hei2san1","en":"What time do you get up?","w":["you","what time","get up"]},
+{"jp":"ngo5 cat1 dim2 hei2san1","en":"I get up at seven","w":["I","seven","o'clock","get up"]},
+{"jp":"ngo5 baat3 dim2 bun3 faan1gung1","en":"I go to work at half past eight","w":["I","eight","o'clock","half","go to work"]},
+{"jp":"nei5 gei2dim2 fong3gung1","en":"What time do you finish work?","w":["you","what time","finish work"]},
+{"jp":"ngo5 ng5 dim2 fong3gung1","en":"I finish work at five","w":["I","five","o'clock","finish work"]},
+{"jp":"ngo5dei6 sap6ji6 dim2 sik6 ng5faan6","en":"We eat lunch at twelve","w":["we","twelve","o'clock","eat","lunch"]},
+{"jp":"ngo5 luk6 dim2 bun3 sik6 maan5faan6","en":"I eat dinner at half past six","w":["I","six","o'clock","half","eat","dinner"]},
+{"jp":"ngo5 sap6jat1 dim2 fan3gaau3","en":"I go to sleep at eleven","w":["I","eleven","o'clock","sleep"]},
+{"jp":"keoi5 ji6 dim2 dou3","en":"He arrives at two o'clock","w":["he","two","o'clock","arrive"]},
+{"jp":"ngo5 gau2 dim2 heoi3 hok6haau6","en":"I go to school at nine","w":["I","nine","o'clock","go","school"]},
+{"jp":"ngo5 ci4dou3 zo2","en":"I am late","w":["I","be late","(done)"]},
+{"jp":"m4hou2 ci4dou3","en":"Do not be late","w":["don't","be late"]},
+{"jp":"gam1maan5 nei5 dak1 m4 dak1haan4","en":"Are you free tonight?","w":["tonight","you","(is)","not","free"]},
+{"jp":"ngo5 gam1maan5 hou2 mong4","en":"I am very busy tonight","w":["I","tonight","very","busy"]},
+{"jp":"ngo5dei6 gei2dim2 heoi3 aa3","en":"What time are we going?","w":["we","what time","go","(friendly)"]},
+{"jp":"ngo5dei6 ng5 dim2 heoi3 laa1","en":"Let's go at five!","w":["we","five","o'clock","go","(now)"]}
+]
+}

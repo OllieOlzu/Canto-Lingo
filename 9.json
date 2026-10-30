@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"soeng2","en":"want to / would like to / think","zh":"想"},
+{"jp":"m4sai2","en":"no need to / don't need to","zh":"唔使"},
+{"jp":"ni1dou6","en":"here","zh":"呢度"},
+{"jp":"go2dou6","en":"there","zh":"嗰度"},
+{"jp":"haang4","en":"walk","zh":"行"},
+{"jp":"zyu6","en":"live (reside)","zh":"住"},
+{"jp":"daa2","en":"hit / make (a phone call)","zh":"打"},
+{"jp":"din6waa2","en":"telephone / phone call","zh":"電話"},
+{"jp":"sau2gei1","en":"mobile phone","zh":"手機"},
+{"jp":"ngan4hong4","en":"bank","zh":"銀行"}
+],
+"sentences": [
+{"jp":"ngo5 soeng2 sik6 faan6","en":"I want to eat","w":["I","want to","eat","rice"]},
+{"jp":"ngo5 soeng2 heoi3 Hoeng1gong2","en":"I want to go to Hong Kong","w":["I","want to","go","Hong Kong"]},
+{"jp":"ngo5 m4 soeng2 heoi3","en":"I do not want to go","w":["I","not","want to","go"]},
+{"jp":"ngo5 jiu3 jat1 bui1 seoi2","en":"I want a glass of water","w":["I","want","one","(cl.)","water"]},
+{"jp":"ngo5 m4 jiu3","en":"I do not want it","w":["I","not","want"]},
+{"jp":"ngo5 jiu3 zou6 gung1fo3","en":"I need to do homework","w":["I","need","do","homework"]},
+{"jp":"nei5 m4sai2 heoi3","en":"You do not need to go","w":["you","no need","go"]},
+{"jp":"m4sai2 m4goi1","en":"No need, thanks","w":["no need","thanks"]},
+{"jp":"ni1dou6 mou5 jan4","en":"There is nobody here","w":["here","not have","person"]},
+{"jp":"ngo5 soeng2 daa2 din6waa2 bei2 maa4maa1","en":"I want to call Mum","w":["I","want to","make","phone call","give","mum"]},
+{"jp":"nei5 m4sai2 daa2 din6waa2 bei2 ngo5","en":"You do not need to call me","w":["you","no need","make","phone call","give","me"]},
+{"jp":"ngo5 hai2 ni1dou6","en":"I am here","w":["I","at","here"]},
+{"jp":"keoi5 zyu6 hai2 go2dou6","en":"He lives there","w":["he","live","at","there"]},
+{"jp":"nei5 zyu6 hai2 bin1dou6","en":"Where do you live?","w":["you","live","at","where"]},
+{"jp":"ngo5 zyu6 hai2 Hoeng1gong2","en":"I live in Hong Kong","w":["I","live","at","Hong Kong"]},
+{"jp":"ngo5 soeng2 haang4 heoi3 ngan4hong4","en":"I want to walk to the bank","w":["I","want to","walk","go","bank"]},
+{"jp":"ngan4hong4 hai2 go2dou6","en":"The bank is over there","w":["bank","at","there"]},
+{"jp":"ngo5 m4 soeng2 mai5 ni1 go3 sau2gei1","en":"I do not want to buy this phone","w":["I","not","want to","buy","this","(cl.)","phone"]},
+{"jp":"keoi5 jau5 loeng5 go3 sau2gei1","en":"He has two phones","w":["he","have","two","(cl.)","phone"]},
+{"jp":"ngo5 soeng2 keoi5 hai6 hou2 jan4","en":"I think he is a good person","w":["I","think","he","is","good","person"]}
+]
+}

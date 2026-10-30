@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"ming4zi6","en":"name","zh":"名字"},
+{"jp":"giu3","en":"be called / call","zh":"叫"},
+{"jp":"sing3","en":"surname / be surnamed","zh":"姓"},
+{"jp":"gou1hing3","en":"glad / happy","zh":"高興"},
+{"jp":"deoi3m4zyu6","en":"sorry","zh":"對唔住"},
+{"jp":"m4gan2jiu3","en":"never mind / it doesn't matter","zh":"唔緊要"},
+{"jp":"gin3","en":"see / meet","zh":"見"},
+{"jp":"zoi3gin3","en":"goodbye","zh":"再見"},
+{"jp":"noi6","en":"(for a) long time","zh":"耐"},
+{"jp":"gan6paai4","en":"recently","zh":"近排"}
+],
+"sentences": [
+{"jp":"nei5 giu3 mat1je5 ming4zi6","en":"What is your name?","w":["you","be called","what","name"]},
+{"jp":"ngo5 giu3 Mary","en":"My name is Mary","w":["I","be called","Mary"]},
+{"jp":"keoi5 giu3 David","en":"His name is David","w":["he","be called","David"]},
+{"jp":"ngo5 giu3 Mary nei5 ne1","en":"My name is Mary, what about you?","w":["I","be called","Mary","you","(what about)"]},
+{"jp":"nei5 sing3 mat1je5","en":"What is your surname?","w":["you","surname","what"]},
+{"jp":"ngo5 sing3 Wong4","en":"My surname is Wong","w":["I","surname","Wong"]},
+{"jp":"keoi5 sing3 Lei5","en":"Her surname is Lee","w":["she","surname","Lee"]},
+{"jp":"nei5 hai6 m4 hai6 sing3 Wong4","en":"Is your surname Wong?","w":["you","is","not","is","surname","Wong"]},
+{"jp":"keoi5 hai6 ngo5 pang4jau5 keoi5 giu3 David","en":"He is my friend, his name is David","w":["he","is","my","friend","he","be called","David"]},
+{"jp":"hou2 gou1hing3 sik1 nei5","en":"Nice to meet you","w":["very","glad","know","you"]},
+{"jp":"ngo5 dou1 hou2 gou1hing3","en":"I am very glad too","w":["I","also","very","glad"]},
+{"jp":"hou2 noi6 mou5 gin3","en":"Long time no see","w":["very","long","not have","see"]},
+{"jp":"ngo5 hou2 noi6 mou5 gin3 nei5","en":"I have not seen you for a long time","w":["I","very","long","not have","see","you"]},
+{"jp":"nei5 gan6paai4 hou2 m4 hou2 aa3","en":"How have you been recently?","w":["you","recently","good","not","good","(friendly)"]},
+{"jp":"ngo5 gan6paai4 hou2 mong4","en":"I have been very busy recently","w":["I","recently","very","busy"]},
+{"jp":"deoi3m4zyu6 aa3","en":"Sorry!","w":["sorry","(friendly)"]},
+{"jp":"deoi3m4zyu6 ngo5 m4 zi1","en":"Sorry, I do not know","w":["sorry","I","not","know"]},
+{"jp":"m4gan2jiu3 laa1","en":"Never mind","w":["never mind","(now)"]},
+{"jp":"ting1jat6 gin3","en":"See you tomorrow","w":["tomorrow","see"]},
+{"jp":"zoi3gin3 aa3","en":"Goodbye!","w":["goodbye","(friendly)"]}
+]
+}

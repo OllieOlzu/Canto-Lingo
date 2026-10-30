@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"cing2man6","en":"may I ask / excuse me (when asking)","zh":"請問"},
+{"jp":"zyun3","en":"turn","zh":"轉"},
+{"jp":"zik6","en":"straight","zh":"直"},
+{"jp":"zo2bin6","en":"left","zh":"左邊"},
+{"jp":"jau6bin6","en":"right","zh":"右邊"},
+{"jp":"lou6hau2","en":"junction / intersection","zh":"路口"},
+{"jp":"deoi3min6","en":"opposite / across from","zh":"對面"},
+{"jp":"fu6gan6","en":"nearby","zh":"附近"},
+{"jp":"ci3so2","en":"toilet","zh":"廁所"},
+{"jp":"ji1jyun2","en":"hospital","zh":"醫院"}
+],
+"sentences": [
+{"jp":"cing2man6 ci3so2 hai2 bin1dou6","en":"Excuse me, where is the toilet?","w":["may I ask","toilet","at","where"]},
+{"jp":"ci3so2 hai2 go2dou6","en":"The toilet is over there","w":["toilet","at","there"]},
+{"jp":"ci3so2 hai2 zo2bin6","en":"The toilet is on the left","w":["toilet","at","left"]},
+{"jp":"ngan4hong4 hai2 jau6bin6","en":"The bank is on the right","w":["bank","at","right"]},
+{"jp":"ni1dou6 mou5 ci3so2","en":"There is no toilet here","w":["here","not have","toilet"]},
+{"jp":"ngo5 m4 zi1 ci3so2 hai2 bin1dou6","en":"I do not know where the toilet is","w":["I","not","know","toilet","at","where"]},
+{"jp":"cing2man6 ji1jyun2 dim2 heoi3","en":"Excuse me, how do I get to the hospital?","w":["may I ask","hospital","how","go"]},
+{"jp":"zik6 haang4","en":"Walk straight","w":["straight","walk"]},
+{"jp":"zik6 haang4 zoi3 zyun3 zo2bin6","en":"Walk straight, then turn left","w":["straight","walk","then","turn","left"]},
+{"jp":"hai2 lou6hau2 zyun3 jau6bin6","en":"Turn right at the junction","w":["at","junction","turn","right"]},
+{"jp":"ji1jyun2 hai2 ngan4hong4 deoi3min6","en":"The hospital is opposite the bank","w":["hospital","at","bank","opposite"]},
+{"jp":"hok6haau6 hai2 ngo5 uk1kei2 deoi3min6","en":"The school is opposite my home","w":["school","at","my","home","opposite"]},
+{"jp":"ni1dou6 fu6gan6 jau5 mou5 ngan4hong4","en":"Is there a bank nearby?","w":["here","nearby","have","not have","bank"]},
+{"jp":"ni1dou6 fu6gan6 mou5 caan1teng1","en":"There is no restaurant nearby","w":["here","nearby","not have","restaurant"]},
+{"jp":"ngo5 uk1kei2 fu6gan6 jau5 ngan4hong4","en":"There is a bank near my home","w":["my","home","nearby","have","bank"]},
+{"jp":"ngan4hong4 gan6 m4 gan6 aa3","en":"Is the bank near?","w":["bank","near","not","near","(friendly)"]},
+{"jp":"haang4 heoi3 ji1jyun2 jiu3 gei2noi6","en":"How long does it take to walk to the hospital?","w":["walk","go","hospital","need","how long"]},
+{"jp":"haang4 heoi3 jiu3 sap6 fan1zung1","en":"It takes ten minutes to walk there","w":["walk","go","need","ten","minute"]},
+{"jp":"ngo5 ji4gaa1 hai2 ji1jyun2 deoi3min6","en":"I am opposite the hospital now","w":["I","now","at","hospital","opposite"]},
+{"jp":"nei5 hai2 bin1dou6 aa3","en":"Where are you?","w":["you","at","where","(friendly)"]}
+]
+}

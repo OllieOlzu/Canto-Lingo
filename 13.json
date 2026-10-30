@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"di1","en":"some / (plural) / a bit more","zh":"啲"},
+{"jp":"haa5","en":"a little / a moment (softens a verb)","zh":"吓"},
+{"jp":"faan1","en":"return / back / again","zh":"返"},
+{"jp":"faan1gung1","en":"go to work","zh":"返工"},
+{"jp":"fong3gung1","en":"finish work","zh":"放工"},
+{"jp":"seoi2gwo2","en":"fruit","zh":"水果"},
+{"jp":"ngau4naai5","en":"milk","zh":"牛奶"},
+{"jp":"jau5di1","en":"a bit / somewhat","zh":"有啲"},
+{"jp":"si3","en":"try","zh":"試"},
+{"jp":"caang2","en":"orange","zh":"橙"}
+],
+"sentences": [
+{"jp":"bei2 di1 seoi2 ngo5","en":"Give me some water","w":["give","some","water","me"]},
+{"jp":"bei2 di1 ngau4naai5 keoi5","en":"Give him some milk","w":["give","some","milk","him"]},
+{"jp":"bei2 ngo5 tai2 haa5","en":"Let me take a look","w":["let","me","look","(a bit)"]},
+{"jp":"bei2 ngo5 si3 haa5","en":"Let me try","w":["let","me","try","(a bit)"]},
+{"jp":"m4hou2 bei2 keoi5 heoi3","en":"Do not let him go","w":["don't","let","him","go"]},
+{"jp":"ngo5 mai5 di1 seoi2gwo2","en":"I buy some fruit","w":["I","buy","some","fruit"]},
+{"jp":"ni1 di1 caang2 hou2 hou2sik6","en":"These oranges are very delicious","w":["these","(plural)","orange","very","delicious"]},
+{"jp":"go2 di1 ping4gwo2 hou2 peng4","en":"Those apples are very cheap","w":["those","(plural)","apple","very","cheap"]},
+{"jp":"ngo5 jiu3 di1 ngau4naai5","en":"I want some milk","w":["I","want","some","milk"]},
+{"jp":"faai3 di1","en":"A bit faster","w":["fast","(a bit)"]},
+{"jp":"m4goi1 gong2 maan6 di1","en":"Please speak a bit slower","w":["please","speak","slow","(a bit)"]},
+{"jp":"ngo5 jau5di1 gui6","en":"I am a bit tired","w":["I","a bit","tired"]},
+{"jp":"keoi5 jau5di1 mong4","en":"He is a bit busy","w":["he","a bit","busy"]},
+{"jp":"ngo5 soeng2 sik6 do1 di1 seoi2gwo2","en":"I want to eat more fruit","w":["I","want to","eat","more","(some)","fruit"]},
+{"jp":"ngo5 soeng2 faan1 uk1kei2","en":"I want to go home","w":["I","want to","return","home"]},
+{"jp":"keoi5 faan1 zo2 uk1kei2","en":"He has gone home","w":["he","return","(done)","home"]},
+{"jp":"ngo5 ting1jat6 faan1gung1","en":"I go to work tomorrow","w":["I","tomorrow","go to work"]},
+{"jp":"baa4baa1 mei6 fong3gung1","en":"Dad has not finished work yet","w":["dad","not yet","finish work"]},
+{"jp":"ngo5 zou6 faan1 ni1 go3 gung1fo3","en":"I am redoing this homework","w":["I","do","again","this","(cl.)","homework"]},
+{"jp":"m4goi1 nei5 dang2 ngo5 haa5","en":"Please wait for me a moment","w":["please","you","wait","me","(a moment)"]}
+]
+}

@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"aa3","en":"(friendly / softening particle)","zh":"啊"},
+{"jp":"laa1","en":"(particle: now / let's / urging)","zh":"啦"},
+{"jp":"wo3","en":"(particle: pointing something out)","zh":"喎"},
+{"jp":"me1","en":"(particle: surprised or challenging question)","zh":"咩"},
+{"jp":"dim2joeng2","en":"how (in what way)","zh":"點樣"},
+{"jp":"gei2si4","en":"when","zh":"幾時"},
+{"jp":"gam2","en":"so / then / in that case","zh":"噉"},
+{"jp":"zan1","en":"really / truly","zh":"真"},
+{"jp":"zung6","en":"still","zh":"仲"},
+{"jp":"zou2san4","en":"good morning","zh":"早晨"}
+],
+"sentences": [
+{"jp":"zou2san4 aa3","en":"Good morning!","w":["good morning","(friendly)"]},
+{"jp":"nei5 hou2 aa3","en":"Hello!","w":["you","good","(friendly)"]},
+{"jp":"hou2 aa3","en":"Okay!","w":["good","(friendly)"]},
+{"jp":"hai6 aa3","en":"Yes, that's right","w":["is","(friendly)"]},
+{"jp":"nei5 heoi3 bin1dou6 aa3","en":"Where are you going?","w":["you","go","where","(friendly)"]},
+{"jp":"ni1 go3 dim2joeng2 sik6 aa3","en":"How do you eat this?","w":["this","(cl.)","how","eat","(friendly)"]},
+{"jp":"nei5 gei2si4 heoi3 Hoeng1gong2","en":"When are you going to Hong Kong?","w":["you","when","go","Hong Kong"]},
+{"jp":"gam2 nei5 soeng2 dim2 aa3","en":"So what do you want to do?","w":["so","you","want to","how","(friendly)"]},
+{"jp":"sik6 faan6 laa1","en":"Time to eat!","w":["eat","rice","(now)"]},
+{"jp":"heoi3 laa1","en":"Let's go!","w":["go","(now)"]},
+{"jp":"hou2 laa1","en":"Okay, all right","w":["good","(now)"]},
+{"jp":"nei5 hai6 hok6saang1 wo3","en":"You are a student, you know!","w":["you","is","student","(notice!)"]},
+{"jp":"ngo5 ting1jat6 m4 dak1haan4 wo3","en":"I am not free tomorrow, just so you know","w":["I","tomorrow","not","free","(notice!)"]},
+{"jp":"keoi5 zung6 hai2 uk1kei2 wo3","en":"He is still at home, you know","w":["he","still","at","home","(notice!)"]},
+{"jp":"hai6 me1","en":"Really? Is that so?","w":["is","(really?)"]},
+{"jp":"nei5 zung1ji3 keoi5 me1","en":"You like him?","w":["you","like","him","(really?)"]},
+{"jp":"nei5 zung6 hai2 ni1dou6 me1","en":"You are still here?","w":["you","still","at","here","(really?)"]},
+{"jp":"ngo5 zung6 mei6 sik6 faan6","en":"I still have not eaten","w":["I","still","not yet","eat","rice"]},
+{"jp":"go2 go3 dei6fong1 zan1 hai6 hou2 leng3 wo3","en":"That place really is beautiful!","w":["that","(cl.)","place","really","is","very","beautiful","(notice!)"]},
+{"jp":"m4 hai6 me1","en":"Isn't that so?","w":["not","is","(really?)"]}
+]
+}

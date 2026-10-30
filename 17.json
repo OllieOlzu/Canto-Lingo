@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"ming4baak6","en":"understand","zh":"明白"},
+{"jp":"dung2","en":"understand / get it","zh":"懂"},
+{"jp":"teng1","en":"listen / hear","zh":"聽"},
+{"jp":"zoi3","en":"again","zh":"再"},
+{"jp":"ci3","en":"(classifier for occasions: time)","zh":"次"},
+{"jp":"man6tai4","en":"question / problem","zh":"問題"},
+{"jp":"Jing1man2","en":"English","zh":"英文"},
+{"jp":"Pou2tung1waa2","en":"Mandarin","zh":"普通話"},
+{"jp":"zi6","en":"written character","zh":"字"},
+{"jp":"se2","en":"write","zh":"寫"}
+],
+"sentences": [
+{"jp":"ngo5 m4 ming4baak6","en":"I do not understand","w":["I","not","understand"]},
+{"jp":"nei5 ming4baak6 m4 ming4baak6","en":"Do you understand?","w":["you","understand","not","understand"]},
+{"jp":"ngo5 ming4baak6 zo2","en":"I understand now","w":["I","understand","(done)"]},
+{"jp":"nei5 dung2 m4 dung2 Jing1man2","en":"Do you understand English?","w":["you","understand","not","understand","English"]},
+{"jp":"ngo5 m4 dung2 Pou2tung1waa2","en":"I do not understand Mandarin","w":["I","not","understand","Mandarin"]},
+{"jp":"keoi5 sik1 gong2 Pou2tung1waa2","en":"He can speak Mandarin","w":["he","know how to","speak","Mandarin"]},
+{"jp":"ngo5 sik1 gong2 jat1 di1 Gwong2dung1waa2","en":"I can speak a little Cantonese","w":["I","know how to","speak","one","(a bit)","Cantonese"]},
+{"jp":"ngo5 hou2 zung1ji3 hok6 Gwong2dung1waa2","en":"I really like learning Cantonese","w":["I","very","like","learn","Cantonese"]},
+{"jp":"m4goi1 nei5 zoi3 gong2 jat1 ci3","en":"Please say that one more time","w":["please","you","again","speak","one","time"]},
+{"jp":"m4goi1 zoi3 gong2 maan6 di1","en":"Please say it again, a bit slower","w":["please","again","speak","slow","(a bit)"]},
+{"jp":"ngo5 teng1 m4 dung2","en":"I cannot understand what I hear","w":["I","hear","not","understand"]},
+{"jp":"keoi5 gong2 dak1 hou2 faai3 ngo5 teng1 m4 dung2","en":"He talks very fast, I cannot follow","w":["he","talk","(result)","very","fast","I","hear","not","understand"]},
+{"jp":"ni1 go3 zi6 dim2 duk6","en":"How do you read this character?","w":["this","(cl.)","character","how","read"]},
+{"jp":"ni1 go3 zi6 dim2 se2","en":"How do you write this character?","w":["this","(cl.)","character","how","write"]},
+{"jp":"ngo5 m4 zi1 ni1 go3 zi6 dim2 duk6","en":"I do not know how to read this character","w":["I","not","know","this","(cl.)","character","how","read"]},
+{"jp":"ngo5 m4 sik1 se2 ni1 go3 zi6","en":"I do not know how to write this character","w":["I","not","know how to","write","this","(cl.)","character"]},
+{"jp":"ni1 go3 Gwong2dung1waa2 dim2 gong2","en":"How do you say this in Cantonese?","w":["this","(cl.)","Cantonese","how","say"]},
+{"jp":"mou5 man6tai4","en":"No problem","w":["not have","problem"]},
+{"jp":"ngo5 jau5 jat1 go3 man6tai4","en":"I have a question","w":["I","have","one","(cl.)","question"]},
+{"jp":"nei5 jau5 mou5 man6tai4","en":"Do you have any questions?","w":["you","have","not have","question"]}
+]
+}

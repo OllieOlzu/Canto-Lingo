@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"gwo3","en":"than / more than (placed after an adjective)","zh":"過"},
+{"jp":"gam3","en":"so / that (degree)","zh":"咁"},
+{"jp":"gou1","en":"tall / high","zh":"高"},
+{"jp":"do1","en":"many / much / more","zh":"多"},
+{"jp":"siu2","en":"few / little / less","zh":"少"},
+{"jp":"jyun5","en":"far","zh":"遠"},
+{"jp":"gan6","en":"near / close","zh":"近"},
+{"jp":"coeng4","en":"long","zh":"長"},
+{"jp":"dyun2","en":"short","zh":"短"},
+{"jp":"dei6fong1","en":"place","zh":"地方"}
+],
+"sentences": [
+{"jp":"ngo5 gou1 gwo3 nei5","en":"I am taller than you","w":["I","tall","than","you"]},
+{"jp":"ni1 go3 gwai3 gwo3 go2 go3","en":"This one is more expensive than that one","w":["this","(cl.)","expensive","than","that","(cl.)"]},
+{"jp":"ni1 go3 peng4 gwo3 go2 go3","en":"This one is cheaper than that one","w":["this","(cl.)","cheap","than","that","(cl.)"]},
+{"jp":"ngo5 mou5 gam3 gou1","en":"I am not that tall","w":["I","not have","that","tall"]},
+{"jp":"ni1 go3 mou5 gam3 gwai3","en":"This one is not that expensive","w":["this","(cl.)","not have","that","expensive"]},
+{"jp":"baa4baa1 gou1 gwo3 maa4maa1","en":"Dad is taller than Mum","w":["dad","tall","than","mum"]},
+{"jp":"go2 gaa3 ce1 daai6 gwo3 ni1 gaa3 ce1","en":"That car is bigger than this car","w":["that","(cl.)","car","big","than","this","(cl.)","car"]},
+{"jp":"ngo5 ge3 uk1kei2 sai3 gwo3 keoi5 ge3","en":"My home is smaller than his","w":["my","(of)","home","small","than","his","(of)"]},
+{"jp":"hok6haau6 gan6 gwo3 ngan4hong4","en":"The school is nearer than the bank","w":["school","near","than","bank"]},
+{"jp":"ngan4hong4 jyun5 gwo3 hok6haau6","en":"The bank is farther than the school","w":["bank","far","than","school"]},
+{"jp":"ngo5 uk1kei2 hou2 gan6","en":"My home is very near","w":["my","home","very","near"]},
+{"jp":"keoi5 uk1kei2 hou2 jyun5","en":"His home is very far","w":["his","home","very","far"]},
+{"jp":"go2dou6 mou5 gam3 jyun5","en":"It is not that far over there","w":["there","not have","that","far"]},
+{"jp":"ni1 go3 dei6fong1 hou2 leng3","en":"This place is very beautiful","w":["this","(cl.)","place","very","beautiful"]},
+{"jp":"hou2 do1 jan4 zung1ji3 ni1 go3 dei6fong1","en":"Many people like this place","w":["very","many","person","like","this","(cl.)","place"]},
+{"jp":"ngo5 ge3 pang4jau5 do1 gwo3 keoi5","en":"I have more friends than him","w":["my","(of)","friend","more","than","him"]},
+{"jp":"nei5 ge3 cin2 siu2 gwo3 ngo5","en":"You have less money than me","w":["your","(of)","money","less","than","me"]},
+{"jp":"ni1 bun2 syu1 coeng4 gwo3 go2 bun2","en":"This book is longer than that one","w":["this","(cl.)","book","long","than","that","(cl.)"]},
+{"jp":"go2 bun2 syu1 dyun2 gwo3 ni1 bun2","en":"That book is shorter than this one","w":["that","(cl.)","book","short","than","this","(cl.)"]},
+{"jp":"ni1 go3 gam3 gwai3","en":"This is so expensive!","w":["this","(cl.)","so","expensive"]}
+]
+}

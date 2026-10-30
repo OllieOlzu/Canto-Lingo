@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"syu1fuk6","en":"comfortable","zh":"舒服"},
+{"jp":"tau4","en":"head","zh":"頭"},
+{"jp":"tou5","en":"stomach / belly","zh":"肚"},
+{"jp":"hau4lung4","en":"throat","zh":"喉嚨"},
+{"jp":"tung3","en":"hurt / painful","zh":"痛"},
+{"jp":"faat3siu1","en":"have a fever","zh":"發燒"},
+{"jp":"gam2mou6","en":"a cold / catch a cold","zh":"感冒"},
+{"jp":"bing6","en":"ill / illness","zh":"病"},
+{"jp":"ji1sang1","en":"doctor","zh":"醫生"},
+{"jp":"joek6","en":"medicine","zh":"藥"}
+],
+"sentences": [
+{"jp":"ngo5 m4 syu1fuk6","en":"I do not feel well","w":["I","not","comfortable"]},
+{"jp":"nei5 jau5di1 m4 syu1fuk6 me1","en":"You are not feeling well?","w":["you","a bit","not","comfortable","(really?)"]},
+{"jp":"ngo5 tau4 tung3","en":"I have a headache","w":["I","head","hurt"]},
+{"jp":"ngo5 tou5 tung3","en":"I have a stomachache","w":["I","stomach","hurt"]},
+{"jp":"keoi5 hau4lung4 tung3","en":"He has a sore throat","w":["he","throat","hurt"]},
+{"jp":"ngo5 jau5di1 tau4 tung3","en":"I have a bit of a headache","w":["I","a bit","head","hurt"]},
+{"jp":"ngo5 faat3siu1","en":"I have a fever","w":["I","have a fever"]},
+{"jp":"keoi5 gam2mou6 zo2","en":"He has caught a cold","w":["he","a cold","(done)"]},
+{"jp":"ngo5 bing6 zo2","en":"I have become ill","w":["I","ill","(done)"]},
+{"jp":"maa4maa1 bing6 zo2","en":"Mum has become ill","w":["mum","ill","(done)"]},
+{"jp":"ngo5 soeng2 tai2 ji1sang1","en":"I want to see a doctor","w":["I","want to","see","doctor"]},
+{"jp":"nei5 jiu3 tai2 ji1sang1","en":"You need to see a doctor","w":["you","need","see","doctor"]},
+{"jp":"keoi5 gam1jat6 heoi3 zo2 tai2 ji1sang1","en":"He went to see a doctor today","w":["he","today","go","(done)","see","doctor"]},
+{"jp":"ji1sang1 bei2 di1 joek6 ngo5","en":"The doctor gave me some medicine","w":["doctor","give","some","medicine","me"]},
+{"jp":"nei5 jiu3 sik6 joek6","en":"You need to take medicine","w":["you","need","eat","medicine"]},
+{"jp":"m4hou2 jam2 dung3 seoi2","en":"Do not drink cold water","w":["don't","drink","cold","water"]},
+{"jp":"jiu3 jam2 do1 di1 jit6 seoi2","en":"You need to drink more hot water","w":["need","drink","more","(some)","hot","water"]},
+{"jp":"nei5 jiu3 zou2 di1 fan3gaau3","en":"You need to sleep earlier","w":["you","need","early","(a bit)","sleep"]},
+{"jp":"hou2 di1 mei6 aa3","en":"Are you feeling better yet?","w":["good","(a bit)","yet?","(friendly)"]},
+{"jp":"ngo5 hou2 di1 zo2","en":"I am feeling better","w":["I","good","(a bit)","(done)"]}
+]
+}

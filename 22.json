@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"caa4caan1teng1","en":"cha chaan teng (Hong Kong-style cafe)","zh":"茶餐廳"},
+{"jp":"caan1paai2","en":"menu","zh":"餐牌"},
+{"jp":"wun2","en":"(classifier for bowls)","zh":"碗"},
+{"jp":"min6","en":"noodles","zh":"麵"},
+{"jp":"zuk1","en":"congee","zh":"粥"},
+{"jp":"naai5caa4","en":"milk tea","zh":"奶茶"},
+{"jp":"daa2baau1","en":"takeaway","zh":"打包"},
+{"jp":"laat6","en":"spicy","zh":"辣"},
+{"jp":"tim4","en":"sweet","zh":"甜"},
+{"jp":"baau2","en":"full (after eating)","zh":"飽"}
+],
+"sentences": [
+{"jp":"ngo5dei6 hai2 caa4caan1teng1 sik6 ng5faan6","en":"We eat lunch at the cha chaan teng","w":["we","at","cha chaan teng","eat","lunch"]},
+{"jp":"m4goi1 bei2 go3 caan1paai2 ngo5","en":"Please give me the menu","w":["please","give","(cl.)","menu","me"]},
+{"jp":"ngo5 jiu3 jat1 wun2 zuk1","en":"I want a bowl of congee","w":["I","want","one","(cl.)","congee"]},
+{"jp":"keoi5 jiu3 jat1 wun2 min6","en":"He wants a bowl of noodles","w":["he","want","one","(cl.)","noodles"]},
+{"jp":"ngo5 jiu3 loeng5 wun2 faan6","en":"I want two bowls of rice","w":["I","want","two","(cl.)","rice"]},
+{"jp":"m4goi1 jat1 bui1 naai5caa4","en":"A milk tea, please","w":["please","one","(cl.)","milk tea"]},
+{"jp":"m4goi1 loeng5 bui1 naai5caa4 tung4 jat1 bui1 gaa3fe1","en":"Two milk teas and a coffee, please","w":["please","two","(cl.)","milk tea","and","one","(cl.)","coffee"]},
+{"jp":"m4goi1 daa2baau1","en":"Takeaway, please","w":["please","takeaway"]},
+{"jp":"ngo5 soeng2 daa2baau1","en":"I want takeaway","w":["I","want to","takeaway"]},
+{"jp":"ni1 go3 hou2 laat6","en":"This is very spicy","w":["this","(cl.)","very","spicy"]},
+{"jp":"ngo5 m4 sik6 dak1 laat6","en":"I cannot eat spicy food","w":["I","not","eat","can","spicy"]},
+{"jp":"m4goi1 siu2 di1 laat6","en":"Please make it less spicy","w":["please","less","(a bit)","spicy"]},
+{"jp":"ni1 bui1 naai5caa4 hou2 tim4","en":"This milk tea is very sweet","w":["this","(cl.)","milk tea","very","sweet"]},
+{"jp":"m4goi1 siu2 di1 tim4","en":"Less sweet, please","w":["please","less","(a bit)","sweet"]},
+{"jp":"ngo5 m4 jiu3 tim4 ge3","en":"I do not want the sweet one","w":["I","not","want","sweet","(one)"]},
+{"jp":"ngo5 hou2 baau2","en":"I am very full","w":["I","very","full"]},
+{"jp":"nei5 baau2 m4 baau2","en":"Are you full?","w":["you","full","not","full"]},
+{"jp":"ngo5 sik6 zo2 loeng5 wun2 faan6 hou2 baau2","en":"I ate two bowls of rice and I am very full","w":["I","eat","(done)","two","(cl.)","rice","very","full"]},
+{"jp":"nei5dei6 jau5 mou5 zuk1","en":"Do you have congee?","w":["you all","have","not have","congee"]},
+{"jp":"m4goi1 maai4daan1 aa3","en":"The bill, please","w":["please","pay the bill","(friendly)"]}
+]
+}

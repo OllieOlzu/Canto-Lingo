@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"zo2","en":"(completed event / change of state)","zh":"咗"},
+{"jp":"gwo3","en":"(have ever done: past experience)","zh":"過"},
+{"jp":"gan2","en":"(in progress: -ing)","zh":"緊"},
+{"jp":"cam4jat6","en":"yesterday","zh":"噚日"},
+{"jp":"Hoeng1gong2","en":"Hong Kong","zh":"香港"},
+{"jp":"zou6","en":"do","zh":"做"},
+{"jp":"gung1fo3","en":"homework","zh":"功課"},
+{"jp":"maau1","en":"cat","zh":"貓"},
+{"jp":"hok6saang1","en":"student","zh":"學生"},
+{"jp":"din6si6","en":"TV","zh":"電視"}
+],
+"sentences": [
+{"jp":"ngo5 sik6 zo2 faan6","en":"I have eaten","w":["I","eat","(done)","rice"]},
+{"jp":"keoi5 jam2 zo2 jat1 bui1 caa4","en":"He drank a cup of tea","w":["he","drink","(done)","one","(cl.)","tea"]},
+{"jp":"ngo5 cam4jat6 mai5 zo2 jat1 bun2 syu1","en":"I bought a book yesterday","w":["I","yesterday","buy","(done)","one","(cl.)","book"]},
+{"jp":"nei5 cam4jat6 heoi3 zo2 bin1dou6","en":"Where did you go yesterday?","w":["you","yesterday","go","(done)","where"]},
+{"jp":"ngo5 heoi3 gwo3 Hoeng1gong2","en":"I have been to Hong Kong","w":["I","go","(ever)","Hong Kong"]},
+{"jp":"keoi5 mou5 heoi3 gwo3 Hoeng1gong2","en":"He has never been to Hong Kong","w":["he","not have","go","(ever)","Hong Kong"]},
+{"jp":"ngo5 jam2 gwo3 gaa3fe1","en":"I have drunk coffee before","w":["I","drink","(ever)","coffee"]},
+{"jp":"ngo5 sik6 gan2 faan6","en":"I am eating","w":["I","eat","(-ing)","rice"]},
+{"jp":"keoi5 tai2 gan2 din6si6","en":"He is watching TV","w":["he","watch","(-ing)","TV"]},
+{"jp":"nei5 zou6 gan2 mat1je5","en":"What are you doing?","w":["you","do","(-ing)","what"]},
+{"jp":"ngo5 zou6 gan2 gung1fo3","en":"I am doing homework","w":["I","do","(-ing)","homework"]},
+{"jp":"ngo5 zou6 zo2 gung1fo3","en":"I have done my homework","w":["I","do","(done)","homework"]},
+{"jp":"maa4maa1 cam4jat6 mai5 zo2 loeng5 zek3 gai1","en":"Mum bought two chickens yesterday","w":["mum","yesterday","buy","(done)","two","(cl.)","chicken"]},
+{"jp":"keoi5 jam2 gan2 gaa3fe1","en":"He is drinking coffee","w":["he","drink","(-ing)","coffee"]},
+{"jp":"ngo5 jau5 jat1 zek3 maau1","en":"I have a cat","w":["I","have","one","(cl.)","cat"]},
+{"jp":"keoi5 m4 hai6 hok6saang1","en":"He is not a student","w":["he","not","is","student"]},
+{"jp":"ngo5 pang4jau5 heoi3 zo2 Hoeng1gong2","en":"My friend went to Hong Kong","w":["my","friend","go","(done)","Hong Kong"]},
+{"jp":"keoi5 cam4jat6 mou5 heoi3 hok6haau6","en":"He did not go to school yesterday","w":["he","yesterday","not have","go","school"]},
+{"jp":"ngo5 tai2 gwo3 ni1 bun2 syu1","en":"I have read this book before","w":["I","read","(ever)","this","(cl.)","book"]},
+{"jp":"maa4maa1 hai2 uk1kei2 tai2 gan2 din6si6","en":"Mum is at home watching TV","w":["mum","at","home","watch","(-ing)","TV"]}
+]
+}

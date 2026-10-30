@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"gok3dak1","en":"feel / think","zh":"覺得"},
+{"jp":"jan1wai6","en":"because","zh":"因為"},
+{"jp":"so2ji5","en":"so / therefore","zh":"所以"},
+{"jp":"daan6hai6","en":"but","zh":"但係"},
+{"jp":"jyu4gwo2","en":"if","zh":"如果"},
+{"jp":"taai3","en":"too (excessively)","zh":"太"},
+{"jp":"zeoi3","en":"most","zh":"最"},
+{"jp":"laa3","en":"(particle: it's now so / already / exclamation)","zh":"喇"},
+{"jp":"co3","en":"wrong / mistake","zh":"錯"},
+{"jp":"jau6","en":"also / both ... and ... (jau6 A jau6 B)","zh":"又"}
+],
+"sentences": [
+{"jp":"ngo5 gok3dak1 hou2 hou2sik6","en":"I think it is very delicious","w":["I","feel","very","delicious"]},
+{"jp":"nei5 gok3dak1 dim2 aa3","en":"What do you think?","w":["you","feel","how","(friendly)"]},
+{"jp":"ngo5 gok3dak1 ni1 go3 dei6fong1 hou2 leng3","en":"I think this place is very beautiful","w":["I","feel","this","(cl.)","place","very","beautiful"]},
+{"jp":"ni1 go3 taai3 gwai3 laa3","en":"This is too expensive!","w":["this","(cl.)","too","expensive","(now)"]},
+{"jp":"go2 gin6 taai3 daai6 laa3","en":"That one is too big!","w":["that","(cl.)","too","big","(now)"]},
+{"jp":"ngo5 ji5ging1 hou2 baau2 laa3","en":"I am already very full","w":["I","already","very","full","(now)"]},
+{"jp":"keoi5 ji5ging1 faan1 zo2 uk1kei2 laa3","en":"He has already gone home","w":["he","already","return","(done)","home","(now)"]},
+{"jp":"ngo5 zeoi3 zung1ji3 sik6 dim2sam1","en":"I like eating dim sum the most","w":["I","most","like","eat","dim sum"]},
+{"jp":"keoi5 zeoi3 zung1ji3 coeng3go1","en":"He likes singing the most","w":["he","most","like","sing"]},
+{"jp":"ngo5 co3 zo2","en":"I made a mistake","w":["I","wrong","(done)"]},
+{"jp":"ngo5 m4 heoi3 jan1wai6 ngo5 hou2 gui6","en":"I am not going because I am very tired","w":["I","not","go","because","I","very","tired"]},
+{"jp":"jan1wai6 lok6jyu5 so2ji5 ngo5 m4 ceot1gaai1","en":"Because it is raining, I am not going out","w":["because","rain","so","I","not","go out"]},
+{"jp":"ngo5 soeng2 heoi3 daan6hai6 ngo5 mou5 si4gaan3","en":"I want to go, but I do not have time","w":["I","want to","go","but","I","not have","time"]},
+{"jp":"ni1 go3 hou2 hou2sik6 daan6hai6 hou2 gwai3","en":"This is delicious but very expensive","w":["this","(cl.)","very","delicious","but","very","expensive"]},
+{"jp":"jyu4gwo2 ting1jat6 cing4 ngo5dei6 heoi3 paa4saan1","en":"If it is sunny tomorrow, we will go hiking","w":["if","tomorrow","sunny","we","go","hike"]},
+{"jp":"jyu4gwo2 nei5 dak1haan4 nei5 lai4 laa1","en":"If you are free, come!","w":["if","you","free","you","come","(now)"]},
+{"jp":"jyu4gwo2 nei5 m4 soeng2 heoi3 dou1 m4gan2jiu3","en":"If you do not want to go, that is fine too","w":["if","you","not","want to","go","also","never mind"]},
+{"jp":"ni1 go3 jau6 leng3 jau6 peng4","en":"This is both pretty and cheap","w":["this","(cl.)","both","pretty","and","cheap"]},
+{"jp":"keoi5 jau6 leng3 jau6 lek1","en":"She is both pretty and clever","w":["she","both","pretty","and","clever"]},
+{"jp":"nei5 gong2 dak1 m4 co3","en":"You speak quite well","w":["you","speak","(result)","not","wrong"]}
+]
+}

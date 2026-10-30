@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jyutping practice</title>
+<style>
+:root{color-scheme:light dark;--bg:#e9efea;--fg:#14231f;--mu:#586b64;--bd:#bccbc3;--card:#f6faf7;--ac:#17695a;--ok:#1f7a4c;--no:#b33a3a}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1a17;--fg:#e4eee9;--mu:#8fa39a;--bd:#2c3d37;--card:#17251f;--ac:#5fcfb5;--ok:#5fcf8f;--no:#ee8a8a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.layout{display:grid;grid-template-columns:minmax(0,600px) minmax(0,1fr);min-height:100vh}
+main{padding:36px 20px 90px}
+h1{font:400 34px/1.1 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;margin:0 0 8px}
+button{font:inherit;color:inherit}
+.mu{color:var(--mu)}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;font-size:15px}
+.link{background:none;border:0;padding:0;color:var(--mu);cursor:pointer}
+.link:hover{color:var(--fg)}
+.ins{color:var(--mu);font-size:15px;margin:0 0 14px}
+.sent{font:400 26px/1.6 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;margin-bottom:24px}
+.sent.big{font-size:40px}
+.w{cursor:help;border-bottom:1px dotted var(--mu)}
+.spk{background:none;border:1px solid var(--bd);border-radius:50%;width:34px;height:34px;margin-left:10px;cursor:pointer;font-size:15px;vertical-align:middle;line-height:1}
+.spk:hover{border-color:var(--ac)}
+.btn{background:var(--card);border:1px solid var(--bd);border-radius:6px;padding:12px 22px;cursor:pointer}
+.btn:hover:not(:disabled){border-color:var(--ac);color:var(--ac)}
+.btn:disabled{opacity:.4;cursor:default}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin-top:28px}
+.ans{min-height:58px;border-bottom:2px solid var(--bd);padding:4px 0 10px;display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.pool{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.tile{background:var(--card);border:1px solid var(--bd);border-radius:6px;padding:8px 14px;cursor:pointer;font:400 21px "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+.tile:hover{border-color:var(--ac)}
+.opts{display:grid;gap:10px;margin-bottom:22px}
+.opt{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--card);border:1px solid var(--bd);border-radius:6px;padding:14px 16px;cursor:pointer;font-size:21px}
+.opt:hover{border-color:var(--ac)}
+.opt .sent{margin:0;font-size:21px;line-height:1.5}
+.opt .sent.big{font-size:21px}
+.ok,.opt.ok{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 15%,var(--card))}
+.no,.opt.no{border-color:var(--no);background:color-mix(in srgb,var(--no) 15%,var(--card))}
+.fb{margin:0 0 12px;font-weight:600}
+.okt{color:var(--ok)}.not{color:var(--no)}
+#tip{position:fixed;z-index:9;background:var(--fg);color:var(--bg);padding:7px 12px;border-radius:6px;font-size:16px;pointer-events:none;max-width:260px}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+#md{border-left:1px solid var(--bd);background:var(--card);height:100vh;position:sticky;top:0;display:flex;flex-direction:column;min-width:0}
+.mdbar{display:flex;gap:10px;padding:14px 24px;border-bottom:1px solid var(--bd)}
+.mdbar select{flex:1;min-width:0;font:inherit;color:inherit;background:var(--bg);border:1px solid var(--bd);border-radius:6px;padding:8px 10px}
+.mdbar .btn{padding:8px 14px;font-size:15px}
+#mdbody{flex:1;overflow:auto;padding:8px 44px 80px}
+.pad{padding-top:20px}
+.md{max-width:46rem;font:400 18px/1.75 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+.md h1,.md h2,.md h3,.md h4,.md h5,.md h6{line-height:1.25;font-weight:600;margin:1.7em 0 .5em}
+.md h1{font-size:2em;margin-top:.9em}.md h2{font-size:1.5em}.md h3{font-size:1.2em}.md h4,.md h5,.md h6{font-size:1em}
+.md p,.md ul,.md ol,.md blockquote,.md pre,.md .tbl{margin:0 0 1em}
+.md ul,.md ol{padding-left:1.5em}.md li>ul,.md li>ol{margin:.2em 0}
+.md code{font:.85em ui-monospace,Menlo,Consolas,monospace;background:var(--bg);border-radius:4px;padding:.1em .35em}
+.md pre{background:var(--bg);border:1px solid var(--bd);border-radius:6px;padding:14px;overflow:auto}
+.md pre code{background:none;padding:0;font-size:15px;line-height:1.5}
+.md blockquote{border-left:3px solid var(--ac);padding-left:16px;color:var(--mu)}
+.md blockquote>:last-child{margin-bottom:0}
+.md a{color:var(--ac)}.md img{max-width:100%}
+.md hr{border:0;border-top:1px solid var(--bd);margin:2em 0}
+.md .tbl{overflow-x:auto}
+.md table{border-collapse:collapse;font:16px/1.5 system-ui,sans-serif}
+.md th,.md td{border-bottom:1px solid var(--bd);padding:7px 16px 7px 0;text-align:left}
+.md th{border-bottom-width:2px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}#md{height:auto;min-height:60vh;position:static;border-left:0;border-top:1px solid var(--bd)}#mdbody{padding:8px 20px 60px}.mdbar{padding:14px 20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+<main><div id="app"></div></main>
+<aside id="md" aria-label="Markdown viewer">
+<div class="mdbar">
+<select id="mdsel" aria-label="Markdown file"><option value="">No .md files found</option></select>
+<label class="btn">Open file…<input id="mdfile" type="file" accept=".md,.markdown,text/markdown" hidden></label>
+</div>
+<div id="mdbody"><p class="mu pad">Pick a Markdown file above.</p></div>
+</aside>
+</div>
+<div id="tip" hidden></div>
+<script>
+const app=document.getElementById('app'),tip=document.getElementById('tip');
+let levels=[],lvl=0,words=[],sents=[],dict={};
+const rnd=a=>a[Math.random()*a.length|0];
+const shuf=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const pick=(a,n,not)=>shuf(a.filter(x=>x!==not)).slice(0,n);
+const h=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+
+/* Speech: the optional "zh" field in each word is used only for the voice, never displayed */
+function say(t){
+  if(!('speechSynthesis' in window))return;
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(t);u.lang='zh-HK';u.rate=.85;
+  const v=speechSynthesis.getVoices().find(v=>/zh[-_]HK|yue/i.test(v.lang));
+  if(v)u.voice=v;
+  speechSynthesis.speak(u);
+}
+const zhOf=s=>{const t=s.jp.split(' ').map(x=>dict[x]?.zh);return t.every(Boolean)?t.join(''):s.jp};
+const spk=t=>{const b=h('button','spk','🔊');b.type='button';b.title='Listen';b.setAttribute('aria-label','Listen');b.onclick=e=>{e.stopPropagation();say(t)};return b};
+
+/* word elements: right-click shows + speaks the translation */
+const jpW=(s,i,tag='span',c='w')=>{const t=s.jp.split(' ')[i],e=h(tag,c,t);e.dataset.tip=t+' = '+s.w[i];e.dataset.say=dict[t]?.zh||t;return e};
+const enIdx=(s,tok)=>{
+  const t=tok.toLowerCase().replace(/[^a-z]/g,'');
+  const c=[t,...['s','es','ing','ed'].filter(x=>t.endsWith(x)&&t.length>x.length+1).map(x=>t.slice(0,-x.length))];
+  return s.w.findIndex(g=>g.toLowerCase().split(/[\s\/]+/).some(x=>c.includes(x)));
+};
+const enW=(s,tok,tag='span',c='w')=>{
+  const e=h(tag,c,tok),i=enIdx(s,tok);
+  if(i<0)e.dataset.tip='no direct translation';
+  else{const t=s.jp.split(' ')[i];e.dataset.tip=tok.replace(/[^\w]/g,'')+' = '+t;e.dataset.say=dict[t]?.zh||t}
+  return e;
+};
+const wEl=(w,lang)=>{const e=h('span','w',lang==='jp'?w.jp:w.en);e.dataset.tip=w.jp+' = '+w.en;e.dataset.say=w.zh||w.jp;return e};
+const sentEl=(s,lang)=>{
+  const d=h('div','sent');
+  (lang==='jp'?s.jp.split(' ').map((_,i)=>jpW(s,i)):s.en.split(' ').map(t=>enW(s,t))).forEach(e=>d.append(e,' '));
+  d.append(spk(zhOf(s)));return d;
+};
+const wordP=(w,lang)=>{const d=h('div','sent big');d.append(wEl(w,lang),' ',spk(w.zh||w.jp));return d};
+
+document.addEventListener('contextmenu',e=>{
+  const t=e.target.closest('[data-tip]');if(!t)return;
+  e.preventDefault();
+  tip.textContent=t.dataset.tip;tip.hidden=false;
+  const r=tip.getBoundingClientRect();
+  tip.style.left=Math.max(8,Math.min(e.clientX,innerWidth-r.width-8))+'px';
+  tip.style.top=Math.min(e.clientY+18,innerHeight-r.height-8)+'px';
+  if(t.dataset.say)say(t.dataset.say);
+});
+['click','scroll','keydown'].forEach(ev=>addEventListener(ev,()=>tip.hidden=true,true));
+
+/* layout helpers */
+function shell(ins){
+  app.replaceChildren();
+  const t=h('div','top'),b=h('button','link','← Levels');b.onclick=menu;
+  t.append(b,h('span','mu','Level '+(lvl+1)));
+  const c=h('div');app.append(t,h('p','ins',ins),c);return c;
+}
+function done(c,ok,s,lang){
+  c.append(h('p','fb '+(ok?'okt':'not'),ok?'Correct':(s?'Not quite. The answer:':'Not quite')));
+  if(s)c.append(sentEl(s,lang));
+  const n=h('button','btn','Next →');n.onclick=next;c.append(n);n.focus();
+}
+function choose(ins,prompt,opts,ci){
+  const c=shell(ins);c.append(prompt);
+  const box=h('div','opts');let locked=false;
+  opts.forEach((o,i)=>{
+    const d=h('div','opt');d.append(o);
+    d.onclick=()=>{if(locked)return;locked=true;d.classList.add(i===ci?'ok':'no');box.children[ci].classList.add('ok');done(c,i===ci)};
+    box.append(d);
+  });
+  c.append(box);
+}
+function arrange(s,toJp){
+  const c=shell(toJp?'Put the Jyutping in order':'Put the English in order');
+  c.append(sentEl(s,toJp?'en':'jp'));
+  const tok=(toJp?s.jp:s.en).split(' '),n=tok.length;
+  const mk=i=>toJp?jpW(s,i,'button','tile'):enW(s,tok[i],'button','tile');
+  let order=shuf([...Array(n).keys()]);
+  while(n>1&&order.every((v,i)=>v===i))order=shuf(order);
+  let placed=[],locked=false;
+  const ans=h('div','ans'),pool=h('div','pool'),chk=h('button','btn','Check');
+  const paint=()=>{
+    ans.replaceChildren(...placed.map(i=>{const b=mk(i);b.onclick=()=>{if(!locked){placed=placed.filter(x=>x!==i);paint()}};return b}));
+    pool.replaceChildren(...order.filter(i=>!placed.includes(i)).map(i=>{const b=mk(i);b.onclick=()=>{if(!locked){placed.push(i);paint()}};return b}));
+    chk.disabled=placed.length<n;
+  };
+  chk.onclick=()=>{locked=true;chk.remove();const ok=placed.map(i=>tok[i]).join(' ')===tok.join(' ');ans.classList.add(ok?'ok':'no');done(c,ok,s,toJp?'jp':'en')};
+  paint();c.append(ans,pool,chk);
+}
+
+/* the six exercises */
+const ex=[
+  ()=>arrange(rnd(sents),0),
+  ()=>arrange(rnd(sents),1),
+  ()=>{const s=rnd(sents),o=shuf([s,...pick(sents,3,s)]);choose('Choose the English translation',sentEl(s,'jp'),o.map(x=>sentEl(x,'en')),o.indexOf(s))},
+  ()=>{const s=rnd(sents),o=shuf([s,...pick(sents,3,s)]);choose('Choose the Jyutping translation',sentEl(s,'en'),o.map(x=>sentEl(x,'jp')),o.indexOf(s))},
+  ()=>{const w=rnd(words),o=shuf([w,...pick(words.filter(x=>x.en!==w.en),3,w)]);choose('Choose the English for this word',wordP(w,'jp'),o.map(x=>wEl(x,'en')),o.indexOf(w))},
+  ()=>{const w=rnd(words),o=shuf([w,...pick(words.filter(x=>x.jp!==w.jp),3,w)]);choose('Choose the Jyutping for this word',wordP(w,'en'),o.map(x=>wEl(x,'jp')),o.indexOf(w))}
+];
+const next=()=>ex[Math.random()*ex.length|0]();
+
+/* levels: level N uses the words and sentences of levels 1..N */
+function start(i){
+  lvl=i;words=[];sents=[];dict={};
+  levels.slice(0,i+1).forEach(l=>{
+    (l.words||[]).forEach(w=>{if(!dict[w.jp]){dict[w.jp]=w;words.push(w)}});
+    sents.push(...(l.sentences||[]));
+  });
+  next();
+}
+function menu(){
+  app.replaceChildren(h('h1',null,'Jyutping practice'));
+  if(!levels.length){
+    app.append(h('p','mu','Could not load 1.json. Open this page through a local web server (for example, run “python3 -m http.server” in this folder, then visit localhost:8000/jyutping.html).'));
+    return;
+  }
+  app.append(h('p','mu','Choose a level. Right-click any word to see and hear its translation.'));
+  const g=h('div','grid');
+  levels.forEach((_,i)=>{const b=h('button','btn','Level '+(i+1));b.onclick=()=>start(i);g.append(b)});
+  app.append(g);
+}
+(async()=>{
+  for(let n=1;;n++){
+    try{const r=await fetch(n+'.json');if(!r.ok)break;levels.push(await r.json())}catch(e){break}
+  }
+  menu();
+})();
+
+/* ---------- Markdown side panel ---------- */
+const mdSel=document.getElementById('mdsel'),mdBody=document.getElementById('mdbody'),picked={};
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const safe=u=>/^\s*(javascript|data|vbscript):/i.test(u)?'#':u;
+function inl(s){
+  const codes=[];
+  s=esc(s).replace(/`([^`]+)`/g,(_,c)=>'\0'+(codes.push('<code>'+c+'</code>')-1)+'\0');
+  s=s.replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g,(_,a,u)=>'<img alt="'+a+'" src="'+safe(u)+'">')
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,(_,t,u)=>'<a href="'+safe(u)+'" target="_blank" rel="noopener">'+t+'</a>')
+    .replace(/\*\*([^*]+)\*\*|__([^_]+)__/g,(_,a,b)=>'<strong>'+(a||b)+'</strong>')
+    .replace(/\*([^*]+)\*|\b_([^_]+)_\b/g,(_,a,b)=>'<em>'+(a||b)+'</em>')
+    .replace(/~~([^~]+)~~/g,'<del>$1</del>');
+  return s.replace(/\0(\d+)\0/g,(_,i)=>codes[i]);
+}
+function md(src){
+  const L=src.replace(/\r/g,'').split('\n'),out=[],li=/^\s*([-*+]|\d+\.)\s/;
+  const hr=/^\s*([-*_]\s*){3,}$/,sep=/^\|?\s*:?-+:?\s*(\|\s*:?-+:?\s*)*\|?\s*$/;
+  const cells=r=>r.trim().replace(/^\||\|$/g,'').split('|').map(c=>c.trim());
+  let i=0,m;
+  while(i<L.length){
+    const l=L[i];
+    if(!l.trim()){i++;continue}
+    if(/^```/.test(l)){const b=[];i++;while(i<L.length&&!/^```/.test(L[i]))b.push(L[i++]);i++;out.push('<pre><code>'+esc(b.join('\n'))+'</code></pre>');continue}
+    if(m=l.match(/^(#{1,6})\s+(.*?)\s*#*$/)){out.push('<h'+m[1].length+'>'+inl(m[2])+'</h'+m[1].length+'>');i++;continue}
+    if(hr.test(l)){out.push('<hr>');i++;continue}
+    if(/^>/.test(l)){const b=[];while(i<L.length&&/^>/.test(L[i]))b.push(L[i++].replace(/^>\s?/,''));out.push('<blockquote>'+md(b.join('\n'))+'</blockquote>');continue}
+    if(l.includes('|')&&sep.test(L[i+1]||'')){
+      const head=cells(l),rows=[];i+=2;
+      while(i<L.length&&L[i].trim()&&L[i].includes('|'))rows.push(cells(L[i++]));
+      out.push('<div class="tbl"><table><thead><tr>'+head.map(c=>'<th>'+inl(c)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(r=>'<tr>'+r.map(c=>'<td>'+inl(c)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>');
+      continue;
+    }
+    if(li.test(l)){
+      const base=l.match(/^\s*/)[0].length,tag=/^\s*\d/.test(l)?'ol':'ul',items=[];
+      while(i<L.length){
+        if(!L[i].trim()){let j=i;while(j<L.length&&!L[j].trim())j++;if(j<L.length&&li.test(L[j])&&L[j].match(/^\s*/)[0].length===base){i=j;continue}break}
+        const ind=L[i].match(/^\s*/)[0].length,mm=L[i].match(/^\s*(?:[-*+]|\d+\.)\s+(.*)/);
+        if(mm&&ind===base){items.push([mm[1]]);i++}
+        else if(ind>base&&items.length){items[items.length-1].push(L[i].slice(base+2));i++}
+        else break;
+      }
+      out.push('<'+tag+'>'+items.map(it=>'<li>'+inl(it[0])+(it.length>1?md(it.slice(1).join('\n')):'')+'</li>').join('')+'</'+tag+'>');
+      continue;
+    }
+    const b=[l];i++;
+    while(i<L.length&&L[i].trim()&&!/^(#{1,6}\s|>|```|\|)/.test(L[i])&&!li.test(L[i])&&!hr.test(L[i]))b.push(L[i++]);
+    out.push('<p>'+inl(b.join(' '))+'</p>');
+  }
+  return out.join('\n');
+}
+async function openMd(name){
+  if(!name){mdBody.innerHTML='<p class="mu pad">Pick a Markdown file above.</p>';return}
+  try{
+    const t=name in picked?picked[name]:await fetch(encodeURIComponent(name)).then(r=>{if(!r.ok)throw 0;return r.text()});
+    mdBody.innerHTML='<div class="md">'+md(t)+'</div>';mdBody.scrollTop=0;
+  }catch(e){mdBody.innerHTML='<p class="mu pad">Could not load '+esc(name)+'.</p>'}
+}
+/* A browser cannot list a folder itself, so read the server's directory listing,
+   plus an optional md.json (["a.md","b.md"]) for servers that don't list folders. */
+async function loadMdList(){
+  const found=new Set(Object.keys(picked));
+  try{
+    const r=await fetch('./');
+    if(r.ok)new DOMParser().parseFromString(await r.text(),'text/html').querySelectorAll('a[href]').forEach(a=>{
+      const p=decodeURIComponent(a.getAttribute('href').split(/[?#]/)[0]).split('/').pop();
+      if(/\.md$/i.test(p))found.add(p);
+    });
+  }catch(e){}
+  try{const r=await fetch('md.json');if(r.ok)(await r.json()).forEach(f=>found.add(f))}catch(e){}
+  const cur=mdSel.value,names=[...found].sort((a,b)=>a.localeCompare(b));
+  mdSel.replaceChildren(new Option(names.length?'Choose a .md file':'No .md files found',''),...names.map(n=>new Option(n,n)));
+  if(names.includes(cur))mdSel.value=cur;
+  else if(names.length&&!cur){mdSel.value=names[0];openMd(names[0])}
+}
+mdSel.onchange=()=>openMd(mdSel.value);
+document.getElementById('mdfile').onchange=async e=>{
+  const f=e.target.files[0];if(!f)return;
+  picked[f.name]=await f.text();e.target.value='';
+  if(![...mdSel.options].some(o=>o.value===f.name))mdSel.append(new Option(f.name,f.name));
+  mdSel.value=f.name;openMd(f.name);
+};
+addEventListener('focus',loadMdList);
+loadMdList();
+</script>
+</body>
+</html>

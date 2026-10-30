@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"ga1jan4","en":"family members","zh":"家人"},
+{"jp":"go1go1","en":"older brother","zh":"哥哥"},
+{"jp":"gaa1ze1","en":"older sister","zh":"家姐"},
+{"jp":"sai3lou2","en":"younger brother","zh":"細佬"},
+{"jp":"sai3mui2","en":"younger sister","zh":"細妹"},
+{"jp":"ji4zi2","en":"son","zh":"兒子"},
+{"jp":"neoi5ji4","en":"daughter","zh":"女兒"},
+{"jp":"lou5gung1","en":"husband","zh":"老公"},
+{"jp":"lou5po4","en":"wife","zh":"老婆"},
+{"jp":"seoi3","en":"years old","zh":"歲"}
+],
+"sentences": [
+{"jp":"nei5 uk1kei2 jau5 gei2do1 go3 jan4","en":"How many people are in your family?","w":["your","home","have","how many","(cl.)","person"]},
+{"jp":"ngo5 uk1kei2 jau5 ng5 go3 jan4","en":"There are five people in my family","w":["my","home","have","five","(cl.)","person"]},
+{"jp":"ngo5 ga1jan4 dou1 hou2 hou2","en":"My family are all very well","w":["my","family","all","very","good"]},
+{"jp":"ngo5 jau5 jat1 go3 go1go1 tung4 jat1 go3 sai3mui2","en":"I have an older brother and a younger sister","w":["I","have","one","(cl.)","older brother","and","one","(cl.)","younger sister"]},
+{"jp":"nei5 jau5 mou5 gaa1ze1","en":"Do you have an older sister?","w":["you","have","not have","older sister"]},
+{"jp":"ngo5 mou5 sai3lou2","en":"I do not have a younger brother","w":["I","not have","younger brother"]},
+{"jp":"ngo5 gaa1ze1 hou2 leng3","en":"My older sister is very pretty","w":["my","older sister","very","pretty"]},
+{"jp":"ngo5 go1go1 hou2 gou1","en":"My older brother is very tall","w":["my","older brother","very","tall"]},
+{"jp":"ngo5 sai3lou2 hou2 zung1ji3 waan2","en":"My younger brother really likes to play","w":["my","younger brother","very","like","play"]},
+{"jp":"ngo5 sai3mui2 hai2 hok6haau6 duk6 syu1","en":"My younger sister studies at school","w":["my","younger sister","at","school","study","book"]},
+{"jp":"keoi5 hai6 ngo5 lou5po4","en":"She is my wife","w":["she","is","my","wife"]},
+{"jp":"keoi5 hai6 ngo5 lou5gung1","en":"He is my husband","w":["he","is","my","husband"]},
+{"jp":"ngo5 lou5gung1 hou2 zung1ji3 coeng3go1","en":"My husband really likes singing","w":["my","husband","very","like","sing"]},
+{"jp":"ngo5 lou5po4 gung1zok3 hou2 mong4","en":"My wife is very busy at work","w":["my","wife","work","very","busy"]},
+{"jp":"ngo5 jau5 jat1 go3 ji4zi2 tung4 jat1 go3 neoi5ji4","en":"I have a son and a daughter","w":["I","have","one","(cl.)","son","and","one","(cl.)","daughter"]},
+{"jp":"ngo5 ji4zi2 loeng5 seoi3","en":"My son is two years old","w":["my","son","two","years old"]},
+{"jp":"ngo5 neoi5ji4 sap6 seoi3","en":"My daughter is ten years old","w":["my","daughter","ten","years old"]},
+{"jp":"nei5 gei2do1 seoi3","en":"How old are you?","w":["you","how many","years old"]},
+{"jp":"ngo5 baa4baa1 tung4 maa4maa1 dou1 hou2 hou2","en":"My dad and mum are both very well","w":["my","dad","and","mum","both","very","good"]},
+{"jp":"ngo5dei6 ga1jan4 dou1 zung1ji3 sik6 dim2sam1","en":"Our family all like eating dim sum","w":["our","family","all","like","eat","dim sum"]}
+]
+}

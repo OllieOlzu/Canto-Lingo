@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"go3","en":"(general classifier)","zh":"個"},
+{"jp":"zek3","en":"(classifier for animals)","zh":"隻"},
+{"jp":"bun2","en":"(classifier for books)","zh":"本"},
+{"jp":"gaa3","en":"(classifier for vehicles)","zh":"架"},
+{"jp":"bui1","en":"(classifier for cups/glasses)","zh":"杯"},
+{"jp":"jat1","en":"one","zh":"一"},
+{"jp":"loeng5","en":"two (before a classifier)","zh":"兩"},
+{"jp":"saam1","en":"three","zh":"三"},
+{"jp":"gau2","en":"dog","zh":"狗"},
+{"jp":"ce1","en":"car","zh":"車"}
+],
+"sentences": [
+{"jp":"ngo5 jau5 jat1 zek3 gau2","en":"I have a dog","w":["I","have","one","(cl.)","dog"]},
+{"jp":"keoi5 jau5 loeng5 zek3 gau2","en":"He has two dogs","w":["he","have","two","(cl.)","dog"]},
+{"jp":"ngo5 mai5 jat1 bun2 syu1","en":"I buy a book","w":["I","buy","one","(cl.)","book"]},
+{"jp":"nei5 jau5 saam1 bun2 syu1","en":"You have three books","w":["you","have","three","(cl.)","book"]},
+{"jp":"ngo5 jam2 jat1 bui1 seoi2","en":"I drink a glass of water","w":["I","drink","one","(cl.)","water"]},
+{"jp":"keoi5 jiu3 jat1 bui1 caa4","en":"She wants a cup of tea","w":["she","want","one","(cl.)","tea"]},
+{"jp":"ngo5 jiu3 loeng5 bui1 gaa3fe1","en":"I want two cups of coffee","w":["I","want","two","(cl.)","coffee"]},
+{"jp":"ngo5 jau5 jat1 go3 pang4jau5","en":"I have a friend","w":["I","have","one","(cl.)","friend"]},
+{"jp":"ngo5dei6 jau5 loeng5 gaa3 ce1","en":"We have two cars","w":["we","have","two","(cl.)","car"]},
+{"jp":"baa4baa1 mai5 jat1 gaa3 ce1","en":"Dad buys a car","w":["dad","buy","one","(cl.)","car"]},
+{"jp":"ni1 go3 hai6 mat1je5","en":"What is this?","w":["this","(cl.)","is","what"]},
+{"jp":"go2 go3 hai6 ngo5 pang4jau5","en":"That person is my friend","w":["that","(cl.)","is","my","friend"]},
+{"jp":"nei5 jau5 gei2do1 go3 pang4jau5","en":"How many friends do you have?","w":["you","have","how many","(cl.)","friend"]},
+{"jp":"maa4maa1 gam1jat6 mai5 saam1 bun2 syu1","en":"Mum buys three books today","w":["mum","today","buy","three","(cl.)","book"]},
+{"jp":"maa4maa1 ting1jat6 mai5 jat1 zek3 gai1","en":"Mum will buy a chicken tomorrow","w":["mum","tomorrow","buy","one","(cl.)","chicken"]},
+{"jp":"ni1 bun2 syu1 hou2 gwai3","en":"This book is very expensive","w":["this","(cl.)","book","very","expensive"]},
+{"jp":"go2 zek3 gau2 hou2 daai6","en":"That dog is very big","w":["that","(cl.)","dog","very","big"]},
+{"jp":"ngo5 m4 zung1ji3 go2 zek3 gau2","en":"I do not like that dog","w":["I","not","like","that","(cl.)","dog"]},
+{"jp":"keoi5 mou5 ce1","en":"He does not have a car","w":["he","not have","car"]},
+{"jp":"ngo5 jau5 jat1 zek3 gau2 keoi5 dou1 jau5 jat1 zek3 gau2","en":"I have a dog and he also has a dog","w":["I","have","one","(cl.)","dog","he","also","have","one","(cl.)","dog"]}
+]
+}

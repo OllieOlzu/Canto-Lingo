@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"lo1","en":"(particle: obviously / that's how it is)","zh":"囉"},
+{"jp":"maa3","en":"(particle: after all / you know)","zh":"嘛"},
+{"jp":"ne1","en":"(particle: what about ...?)","zh":"呢"},
+{"jp":"ze1","en":"(particle: just / only / that's all)","zh":"啫"},
+{"jp":"oi3","en":"love / like to","zh":"愛"},
+{"jp":"tung4hok6","en":"classmate","zh":"同學"},
+{"jp":"ceot1gaai1","en":"go out","zh":"出街"},
+{"jp":"hei2san1","en":"get up","zh":"起身"},
+{"jp":"maai4daan1","en":"pay the bill","zh":"埋單"},
+{"jp":"lou5baan2","en":"boss","zh":"老闆"}
+],
+"sentences": [
+{"jp":"hai6 lo1","en":"That's right, obviously","w":["is","(obviously)"]},
+{"jp":"hou2 lo1","en":"Okay then","w":["good","(obviously)"]},
+{"jp":"keoi5 mou5 cin2 lo1","en":"He has no money, of course","w":["he","not have","money","(obviously)"]},
+{"jp":"hai6 gam2 maa3","en":"That's how it is, after all","w":["is","so","(after all)"]},
+{"jp":"keoi5 hai6 hok6saang1 maa3","en":"He is a student, after all","w":["he","is","student","(after all)"]},
+{"jp":"keoi5 hai6 ngo5 tung4hok6 maa3","en":"He is my classmate, after all","w":["he","is","my","classmate","(after all)"]},
+{"jp":"nei5 ne1","en":"What about you?","w":["you","(what about)"]},
+{"jp":"ngo5 hai6 hok6saang1 nei5 ne1","en":"I am a student, what about you?","w":["I","am","student","you","(what about)"]},
+{"jp":"ngo5 sik6 zo2 faan6 nei5 ne1","en":"I have eaten, what about you?","w":["I","eat","(done)","rice","you","(what about)"]},
+{"jp":"ngo5 hai6 gong2 haa5 ze1","en":"I am just saying","w":["I","is","say","(a bit)","(just)"]},
+{"jp":"ngo5 jau5 jat1 go3 pang4jau5 ze1","en":"I have just one friend","w":["I","have","one","(cl.)","friend","(just)"]},
+{"jp":"ni1 go3 sap6 man1 ze1","en":"This is only ten dollars","w":["this","(cl.)","ten","dollar","(just)"]},
+{"jp":"ngo5 oi3 maa4maa1 tung4 baa4baa1","en":"I love Mum and Dad","w":["I","love","mum","and","dad"]},
+{"jp":"keoi5 oi3 sik6 dim2sam1","en":"He loves eating dim sum","w":["he","love","eat","dim sum"]},
+{"jp":"nei5 gei2si4 hei2san1","en":"When do you get up?","w":["you","when","get up"]},
+{"jp":"ngo5 ting1jat6 jiu3 hou2 zou2 hei2san1","en":"Tomorrow I need to get up very early","w":["I","tomorrow","need","very","early","get up"]},
+{"jp":"ngo5 tung4 pang4jau5 ceot1gaai1","en":"I go out with a friend","w":["I","with","friend","go out"]},
+{"jp":"keoi5dei6 dou1 zung1ji3 ceot1gaai1","en":"They all like going out","w":["they","all","like","go out"]},
+{"jp":"maai4daan1 m4goi1","en":"The bill, please","w":["pay the bill","please"]},
+{"jp":"lou5baan2 gam1jat6 mou5 faan1gung1","en":"The boss is not at work today","w":["boss","today","not have","go to work"]}
+]
+}

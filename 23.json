@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"dei6tit3","en":"MTR / subway","zh":"地鐵"},
+{"jp":"ba1si2","en":"bus","zh":"巴士"},
+{"jp":"dik1si2","en":"taxi","zh":"的士"},
+{"jp":"zaam6","en":"station / stop","zh":"站"},
+{"jp":"daap3","en":"take (a vehicle)","zh":"搭"},
+{"jp":"lok6","en":"get off (a vehicle) / go down","zh":"落"},
+{"jp":"soeng5","en":"get on (a vehicle) / go up","zh":"上"},
+{"jp":"zung1","en":"hour (after a classifier) / clock","zh":"鐘"},
+{"jp":"fan1zung1","en":"minute","zh":"分鐘"},
+{"jp":"gei2noi6","en":"how long","zh":"幾耐"}
+],
+"sentences": [
+{"jp":"ngo5 daap3 dei6tit3 faan1gung1","en":"I take the MTR to work","w":["I","take","MTR","go to work"]},
+{"jp":"keoi5 daap3 ba1si2 heoi3 hok6haau6","en":"He takes the bus to school","w":["he","take","bus","go","school"]},
+{"jp":"nei5 daap3 mat1je5 faan1gung1","en":"What do you take to work?","w":["you","take","what","go to work"]},
+{"jp":"ngo5 m4 daap3 dik1si2","en":"I do not take taxis","w":["I","not","take","taxi"]},
+{"jp":"dik1si2 hou2 gwai3","en":"Taxis are very expensive","w":["taxi","very","expensive"]},
+{"jp":"dei6tit3 faai3 gwo3 ba1si2","en":"The MTR is faster than the bus","w":["MTR","fast","than","bus"]},
+{"jp":"ba1si2 maan6 gwo3 dei6tit3","en":"The bus is slower than the MTR","w":["bus","slow","than","MTR"]},
+{"jp":"dei6tit3 zaam6 hai2 bin1dou6","en":"Where is the MTR station?","w":["MTR","station","at","where"]},
+{"jp":"dei6tit3 zaam6 hou2 gan6","en":"The MTR station is very near","w":["MTR","station","very","near"]},
+{"jp":"ba1si2 zaam6 hai2 go2dou6","en":"The bus stop is over there","w":["bus","stop","at","there"]},
+{"jp":"ngo5 ji4gaa1 hai2 dei6tit3 zaam6","en":"I am at the MTR station now","w":["I","now","at","MTR","station"]},
+{"jp":"dei6tit3 zung6 mei6 dou3","en":"The MTR has not arrived yet","w":["MTR","still","not yet","arrive"]},
+{"jp":"ngo5 hai2 ni1 go3 zaam6 lok6 ce1","en":"I get off at this stop","w":["I","at","this","(cl.)","station","get off","car"]},
+{"jp":"keoi5 hai2 go2 go3 zaam6 soeng5 ce1","en":"He gets on at that stop","w":["he","at","that","(cl.)","station","get on","car"]},
+{"jp":"m4goi1 jau5 lok6","en":"Excuse me, getting off please (said on a bus)","w":["excuse me","have","get off"]},
+{"jp":"daap3 dei6tit3 heoi3 hok6haau6 jiu3 gei2noi6","en":"How long does it take to get to school by MTR?","w":["take","MTR","go","school","need","how long"]},
+{"jp":"jiu3 sap6 fan1zung1","en":"It takes ten minutes","w":["need","ten","minute"]},
+{"jp":"jiu3 saam1 sap6 fan1zung1","en":"It takes thirty minutes","w":["need","three","ten","minute"]},
+{"jp":"jiu3 jat1 go3 zung1","en":"It takes an hour","w":["need","one","(cl.)","hour"]},
+{"jp":"ngo5 uk1kei2 hou2 jyun5 daap3 ba1si2 jiu3 loeng5 go3 zung1","en":"My home is very far, it takes two hours by bus","w":["my","home","very","far","take","bus","need","two","(cl.)","hour"]}
+]
+}

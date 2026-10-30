@@ -1,0 +1,35 @@
+{
+"words": [
+{"jp":"sing1kei4","en":"week","zh":"星期"},
+{"jp":"jat6","en":"day / Sunday (after 'week')","zh":"日"},
+{"jp":"jyut6","en":"month","zh":"月"},
+{"jp":"hou6","en":"date (day of the month)","zh":"號"},
+{"jp":"gei2","en":"what number / how many (small number)","zh":"幾"},
+{"jp":"soeng6","en":"last / previous","zh":"上"},
+{"jp":"haa6","en":"next","zh":"下"},
+{"jp":"zau1mut6","en":"weekend","zh":"週末"},
+{"jp":"saang1jat6","en":"birthday","zh":"生日"},
+{"jp":"fong3ga3","en":"holiday / day off","zh":"放假"}
+],
+"sentences": [
+{"jp":"gam1jat6 sing1kei4 gei2","en":"What day of the week is it today?","w":["today","week","what number"]},
+{"jp":"gam1jat6 sing1kei4 saam1","en":"Today is Wednesday","w":["today","week","three"]},
+{"jp":"ting1jat6 sing1kei4 ng5","en":"Tomorrow is Friday","w":["tomorrow","week","five"]},
+{"jp":"cam4jat6 sing1kei4 sei3","en":"Yesterday was Thursday","w":["yesterday","week","four"]},
+{"jp":"sing1kei4 jat6 ngo5 m4 gung1zok3","en":"I do not work on Sunday","w":["week","day","I","not","work"]},
+{"jp":"gam1jat6 gei2 hou6","en":"What is the date today?","w":["today","what number","date"]},
+{"jp":"gam1jat6 sap6 hou6","en":"Today is the tenth","w":["today","ten","date"]},
+{"jp":"ngo5 saang1jat6 hai6 sap6ji6 jyut6 ng5 hou6","en":"My birthday is on December 5th","w":["my","birthday","is","twelve","month","five","date"]},
+{"jp":"nei5 saang1jat6 hai6 gei2 jyut6 gei2 hou6","en":"When is your birthday? (which month, which day)","w":["your","birthday","is","what number","month","what number","date"]},
+{"jp":"keoi5 saang1jat6 hai6 saam1 jyut6 jat1 hou6","en":"Her birthday is on March 1st","w":["her","birthday","is","three","month","one","date"]},
+{"jp":"gam1jat6 hai6 ngo5 saang1jat6","en":"Today is my birthday","w":["today","is","my","birthday"]},
+{"jp":"zau1mut6 ngo5 m4 gung1zok3","en":"I do not work on the weekend","w":["weekend","I","not","work"]},
+{"jp":"zau1mut6 nei5 jiu3 m4 jiu3 gung1zok3 aa3","en":"Do you have to work on the weekend?","w":["weekend","you","need","not","need","work","(friendly)"]},
+{"jp":"zau1mut6 ngo5 soeng2 tung4 pang4jau5 ceot1gaai1","en":"I want to go out with friends on the weekend","w":["weekend","I","want to","with","friend","go out"]},
+{"jp":"soeng6 go3 sing1kei4 ngo5 hou2 mong4","en":"I was very busy last week","w":["last","(cl.)","week","I","very","busy"]},
+{"jp":"haa6 go3 sing1kei4 nei5 dak1 m4 dak1haan4","en":"Are you free next week?","w":["next","(cl.)","week","you","(is)","not","free"]},
+{"jp":"soeng6 go3 jyut6 ngo5 heoi3 zo2 Hoeng1gong2","en":"I went to Hong Kong last month","w":["last","(cl.)","month","I","go","(done)","Hong Kong"]},
+{"jp":"haa6 go3 jyut6 ngo5 jau5 saam1 jat6 fong3ga3","en":"I have three days off next month","w":["next","(cl.)","month","I","have","three","day","holiday"]},
+{"jp":"ngo5 ting1jat6 fong3ga3","en":"I am on holiday tomorrow","w":["I","tomorrow","holiday"]}
+]
+}

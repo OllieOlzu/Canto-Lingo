@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"dim6jing2","en":"movie","zh":"電影"},
+{"jp":"jam1ngok6","en":"music","zh":"音樂"},
+{"jp":"wan6dung6","en":"exercise / sport","zh":"運動"},
+{"jp":"jau4seoi2","en":"swim","zh":"游水"},
+{"jp":"paa4saan1","en":"hike / climb a hill","zh":"爬山"},
+{"jp":"bo1","en":"ball","zh":"波"},
+{"jp":"haang4gaai1","en":"go shopping / stroll around the shops","zh":"行街"},
+{"jp":"paak3ziu3","en":"take photos","zh":"拍照"},
+{"jp":"leoi5hang4","en":"travel / go on a trip","zh":"旅行"},
+{"jp":"si4gaan3","en":"time","zh":"時間"}
+],
+"sentences": [
+{"jp":"nei5 zung1ji3 zou6 mat1je5","en":"What do you like to do?","w":["you","like","do","what"]},
+{"jp":"ngo5 zung1ji3 tai2 dim6jing2","en":"I like watching movies","w":["I","like","watch","movie"]},
+{"jp":"ngo5 zung1ji3 teng1 jam1ngok6","en":"I like listening to music","w":["I","like","listen","music"]},
+{"jp":"keoi5 zung1ji3 daa2 bo1","en":"He likes playing ball sports","w":["he","like","hit","ball"]},
+{"jp":"nei5 zung1ji3 m4 zung1ji3 wan6dung6","en":"Do you like exercise?","w":["you","like","not","like","exercise"]},
+{"jp":"ngo5 m4 zung1ji3 wan6dung6","en":"I do not like exercise","w":["I","not","like","exercise"]},
+{"jp":"ngo5 sik1 jau4seoi2","en":"I can swim","w":["I","know how to","swim"]},
+{"jp":"keoi5 jau4seoi2 hou2 lek1","en":"He is very good at swimming","w":["he","swim","very","good at"]},
+{"jp":"ngo5 ting1jat6 soeng2 heoi3 paa4saan1","en":"Tomorrow I want to go hiking","w":["I","tomorrow","want to","go","hike"]},
+{"jp":"zau1mut6 nei5 soeng2 zou6 mat1je5","en":"What do you want to do this weekend?","w":["weekend","you","want to","do","what"]},
+{"jp":"zau1mut6 ngo5dei6 heoi3 paa4saan1 laa1","en":"Let's go hiking this weekend","w":["weekend","we","go","hike","(now)"]},
+{"jp":"keoi5 hou2 zung1ji3 paak3ziu3","en":"He really likes taking photos","w":["he","very","like","take photos"]},
+{"jp":"ngo5 zung1ji3 haang4gaai1","en":"I like going shopping","w":["I","like","go shopping"]},
+{"jp":"ngo5 maa4maa1 zung1ji3 tung4 pang4jau5 haang4gaai1","en":"My mum likes to go shopping with friends","w":["my","mum","like","with","friend","go shopping"]},
+{"jp":"ngo5 zung1ji3 leoi5hang4","en":"I like traveling","w":["I","like","travel"]},
+{"jp":"ngo5 soeng2 heoi3 Hoeng1gong2 leoi5hang4","en":"I want to travel to Hong Kong","w":["I","want to","go","Hong Kong","travel"]},
+{"jp":"nei5 soeng2 m4 soeng2 tai2 dim6jing2","en":"Do you want to watch a movie?","w":["you","want to","not","want to","watch","movie"]},
+{"jp":"nei5 jau5 mou5 si4gaan3","en":"Do you have time?","w":["you","have","not have","time"]},
+{"jp":"ngo5 gam1jat6 mou5 si4gaan3","en":"I do not have time today","w":["I","today","not have","time"]},
+{"jp":"gam1jat6 ngo5 mou5 si4gaan3 tai2 dim6jing2","en":"I do not have time to watch a movie today","w":["today","I","not have","time","watch","movie"]}
+]
+}

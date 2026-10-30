@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"sei3","en":"four","zh":"四"},
+{"jp":"ng5","en":"five","zh":"五"},
+{"jp":"luk6","en":"six","zh":"六"},
+{"jp":"cat1","en":"seven","zh":"七"},
+{"jp":"baat3","en":"eight","zh":"八"},
+{"jp":"sap6","en":"ten","zh":"十"},
+{"jp":"man1","en":"dollar","zh":"蚊"},
+{"jp":"m4goi1","en":"please / excuse me / thanks (for a service)","zh":"唔該"},
+{"jp":"do1ze6","en":"thank you (for a gift or favour)","zh":"多謝"},
+{"jp":"maai6","en":"sell","zh":"賣"}
+],
+"sentences": [
+{"jp":"gaa3fe1 gei2do1 cin2","en":"How much is the coffee?","w":["coffee","how much","money"]},
+{"jp":"jat1 bui1 gaa3fe1 sap6 man1","en":"A cup of coffee is ten dollars","w":["one","(cl.)","coffee","ten","dollar"]},
+{"jp":"ni1 bun2 syu1 baat3 man1","en":"This book is eight dollars","w":["this","(cl.)","book","eight","dollar"]},
+{"jp":"ping4gwo2 loeng5 man1 jat1 go3","en":"Apples are two dollars each","w":["apple","two","dollar","one","(cl.)"]},
+{"jp":"ngo5 mai5 saam1 go3 ping4gwo2","en":"I buy three apples","w":["I","buy","three","(cl.)","apple"]},
+{"jp":"ngo5 jau5 ng5 man1","en":"I have five dollars","w":["I","have","five","dollar"]},
+{"jp":"keoi5 jau5 sap6 man1","en":"He has ten dollars","w":["he","have","ten","dollar"]},
+{"jp":"ngo5 mou5 cin2","en":"I do not have money","w":["I","not have","money"]},
+{"jp":"nei5 jiu3 sei3 go3 ping4gwo2","en":"You want four apples","w":["you","want","four","(cl.)","apple"]},
+{"jp":"min6baau1 cat1 man1 jat1 go3","en":"Bread is seven dollars each","w":["bread","seven","dollar","one","(cl.)"]},
+{"jp":"m4goi1 jat1 bui1 gaa3fe1","en":"A coffee, please","w":["please","one","(cl.)","coffee"]},
+{"jp":"m4goi1 loeng5 bui1 caa4","en":"Two teas, please","w":["please","two","(cl.)","tea"]},
+{"jp":"m4goi1 ni1 go3 gei2do1 cin2","en":"Excuse me, how much is this?","w":["excuse me","this","(cl.)","how much","money"]},
+{"jp":"do1ze6 nei5","en":"Thank you","w":["thank","you"]},
+{"jp":"baa4baa1 bei2 sap6 man1 ngo5","en":"Dad gives me ten dollars","w":["dad","give","ten","dollar","me"]},
+{"jp":"ngo5 bei2 luk6 man1 keoi5","en":"I give him six dollars","w":["I","give","six","dollar","him"]},
+{"jp":"keoi5 maai6 ping4gwo2","en":"He sells apples","w":["he","sell","apple"]},
+{"jp":"caan1teng1 maai6 gaa3fe1","en":"The restaurant sells coffee","w":["restaurant","sell","coffee"]},
+{"jp":"ngo5 mai5 ping4gwo2 keoi5 maai6 ping4gwo2","en":"I buy apples and he sells apples","w":["I","buy","apple","he","sell","apple"]},
+{"jp":"nei5 mai5 zo2 gei2do1 go3 ping4gwo2","en":"How many apples did you buy?","w":["you","buy","(done)","how many","(cl.)","apple"]}
+]
+}

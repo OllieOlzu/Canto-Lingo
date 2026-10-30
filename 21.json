@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"baak3","en":"hundred","zh":"百"},
+{"jp":"cin1","en":"thousand","zh":"千"},
+{"jp":"ling4","en":"zero","zh":"零"},
+{"jp":"gaa3cin2","en":"price","zh":"價錢"},
+{"jp":"daa2zit3","en":"discount","zh":"打折"},
+{"jp":"zaau2","en":"give change","zh":"找"},
+{"jp":"gau3","en":"enough","zh":"夠"},
+{"jp":"jin6gam1","en":"cash","zh":"現金"},
+{"jp":"seon3jung6kaat1","en":"credit card","zh":"信用卡"},
+{"jp":"fu6","en":"pay","zh":"付"}
+],
+"sentences": [
+{"jp":"ni1 go3 gaa3cin2 hai6 gei2do1","en":"What is the price of this?","w":["this","(cl.)","price","is","how much"]},
+{"jp":"ni1 go3 jat1 baak3 man1","en":"This is one hundred dollars","w":["this","(cl.)","one","hundred","dollar"]},
+{"jp":"go2 go3 loeng5 baak3 man1","en":"That one is two hundred dollars","w":["that","(cl.)","two","hundred","dollar"]},
+{"jp":"ni1 go3 jat1 baak3 ling4 ng5 man1","en":"This is one hundred and five dollars","w":["this","(cl.)","one","hundred","zero","five","dollar"]},
+{"jp":"ni1 go3 sau2gei1 saam1 cin1 man1","en":"This phone is three thousand dollars","w":["this","(cl.)","phone","three","thousand","dollar"]},
+{"jp":"go2 bun2 syu1 saam1 sap6 man1","en":"That book is thirty dollars","w":["that","(cl.)","book","three","ten","dollar"]},
+{"jp":"ngo5 jau5 ji6 sap6 man1","en":"I have twenty dollars","w":["I","have","two","ten","dollar"]},
+{"jp":"ni1 go3 sap6 ng5 man1","en":"This is fifteen dollars","w":["this","(cl.)","ten","five","dollar"]},
+{"jp":"ngo5 jau5 loeng5 cin1 man1","en":"I have two thousand dollars","w":["I","have","two","thousand","dollar"]},
+{"jp":"peng4 di1 dak1 m4 dak1 aa3","en":"Can you make it a bit cheaper?","w":["cheap","(a bit)","can","not","can","(friendly)"]},
+{"jp":"daa2zit3 dak1 m4 dak1 aa3","en":"Can you give a discount?","w":["discount","can","not","can","(friendly)"]},
+{"jp":"ni1 go3 jau5 mou5 daa2zit3","en":"Is there a discount on this?","w":["this","(cl.)","have","not have","discount"]},
+{"jp":"ngo5 soeng2 fu6 cin2","en":"I want to pay","w":["I","want to","pay","money"]},
+{"jp":"nei5 jau5 mou5 jin6gam1","en":"Do you have cash?","w":["you","have","not have","cash"]},
+{"jp":"ngo5 mou5 jin6gam1","en":"I do not have cash","w":["I","not have","cash"]},
+{"jp":"ngo5 fu6 seon3jung6kaat1","en":"I pay by credit card","w":["I","pay","credit card"]},
+{"jp":"keoi5 fu6 jin6gam1","en":"He pays in cash","w":["he","pay","cash"]},
+{"jp":"keoi5 zaau2 zo2 saam1 man1 bei2 ngo5","en":"He gave me three dollars in change","w":["he","give change","(done)","three","dollar","give","me"]},
+{"jp":"gau3 m4 gau3 cin2","en":"Is there enough money?","w":["enough","not","enough","money"]},
+{"jp":"ngo5 ge3 cin2 m4 gau3","en":"My money is not enough","w":["my","(of)","money","not","enough"]}
+]
+}

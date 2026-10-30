@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"lok6jyu5","en":"rain / it rains","zh":"落雨"},
+{"jp":"fung1","en":"wind","zh":"風"},
+{"jp":"cing4","en":"sunny / clear","zh":"晴"},
+{"jp":"jam1","en":"cloudy / overcast","zh":"陰"},
+{"jp":"daa2fung1","en":"typhoon (a typhoon hits)","zh":"打風"},
+{"jp":"nyun5","en":"warm","zh":"暖"},
+{"jp":"loeng4","en":"cool","zh":"涼"},
+{"jp":"sap1","en":"humid / wet","zh":"濕"},
+{"jp":"jyu5ze1","en":"umbrella","zh":"雨遮"},
+{"jp":"daai3","en":"bring / carry","zh":"帶"}
+],
+"sentences": [
+{"jp":"gam1jat6 lok6jyu5","en":"It is raining today","w":["today","rain"]},
+{"jp":"ting1jat6 dou1 lok6jyu5","en":"It will rain tomorrow too","w":["tomorrow","also","rain"]},
+{"jp":"cam4jat6 hou2 cing4","en":"It was very sunny yesterday","w":["yesterday","very","sunny"]},
+{"jp":"gam1jat6 hou2 jam1","en":"It is very cloudy today","w":["today","very","cloudy"]},
+{"jp":"gam1jat6 fung1 hou2 daai6","en":"It is very windy today","w":["today","wind","very","big"]},
+{"jp":"ting1jat6 jau5 daa2fung1","en":"There is a typhoon tomorrow","w":["tomorrow","have","typhoon"]},
+{"jp":"daa2fung1 ngo5dei6 m4 heoi3 hok6haau6","en":"When there is a typhoon, we do not go to school","w":["typhoon","we","not","go","school"]},
+{"jp":"gam1jat6 tin1hei3 dim2 aa3","en":"How is the weather today?","w":["today","weather","how","(friendly)"]},
+{"jp":"gam1jat6 tin1hei3 hou2 hou2","en":"The weather is very good today","w":["today","weather","very","good"]},
+{"jp":"gam1jat6 hou2 loeng4","en":"It is nicely cool today","w":["today","very","cool"]},
+{"jp":"ting1jat6 nyun5 di1","en":"It will be a bit warmer tomorrow","w":["tomorrow","warm","(a bit)"]},
+{"jp":"gam1jat6 hou2 sap1","en":"It is very humid today","w":["today","very","humid"]},
+{"jp":"gam1jat6 m4 jit6","en":"It is not hot today","w":["today","not","hot"]},
+{"jp":"Hoeng1gong2 ge3 tin1hei3 hou2 jit6","en":"The weather in Hong Kong is very hot","w":["Hong Kong","(of)","weather","very","hot"]},
+{"jp":"Hoeng1gong2 jit6 gwo3 ni1dou6","en":"Hong Kong is hotter than here","w":["Hong Kong","hot","than","here"]},
+{"jp":"ni1dou6 ge3 tin1hei3 dung3 gwo3 Hoeng1gong2","en":"The weather here is colder than Hong Kong","w":["here","(of)","weather","cold","than","Hong Kong"]},
+{"jp":"Hoeng1gong2 dung3 m4 dung3 aa3","en":"Is Hong Kong cold?","w":["Hong Kong","cold","not","cold","(friendly)"]},
+{"jp":"ngo5 jiu3 daai3 jyu5ze1","en":"I need to bring an umbrella","w":["I","need","bring","umbrella"]},
+{"jp":"nei5 jau5 mou5 jyu5ze1","en":"Do you have an umbrella?","w":["you","have","not have","umbrella"]},
+{"jp":"ting1jat6 lok6jyu5 nei5 jiu3 daai3 jyu5ze1","en":"It will rain tomorrow, you need to bring an umbrella","w":["tomorrow","rain","you","need","bring","umbrella"]}
+]
+}

@@ -1,0 +1,41 @@
+{
+"words": [
+{"jp":"hai2","en":"at/in","zh":"喺"},
+{"jp":"dim2","en":"how","zh":"點"},
+{"jp":"dim2gaai2","en":"why","zh":"點解"},
+{"jp":"gei2do1","en":"how much/many","zh":"幾多"},
+{"jp":"cin2","en":"money","zh":"錢"},
+{"jp":"gaa3fe1","en":"coffee","zh":"咖啡"},
+{"jp":"gai1","en":"chicken","zh":"雞"},
+{"jp":"min6baau1","en":"bread","zh":"麵包"},
+{"jp":"ping4gwo2","en":"apple","zh":"蘋果"},
+{"jp":"caan1teng1","en":"restaurant","zh":"餐廳"},
+{"jp":"tin1hei3","en":"weather","zh":"天氣"},
+{"jp":"gwai3","en":"expensive","zh":"貴"},
+{"jp":"peng4","en":"cheap","zh":"平"},
+{"jp":"hou2sik6","en":"delicious","zh":"好食"},
+{"jp":"jit6","en":"hot","zh":"熱"},
+{"jp":"dung3","en":"cold","zh":"凍"},
+{"jp":"syu1","en":"book","zh":"書"},
+{"jp":"bei2","en":"give","zh":"畀"},
+{"jp":"wan2","en":"find","zh":"搵"},
+{"jp":"sin1saang1","en":"teacher","zh":"先生"}
+],
+"sentences": [
+{"jp":"ngo5dei6 hai2 caan1teng1 sik6 faan6","en":"We eat rice at the restaurant","w":["we","at","restaurant","eat","rice"]},
+{"jp":"gaa3fe1 hou2 gwai3","en":"Coffee is very expensive","w":["coffee","very","expensive"]},
+{"jp":"ping4gwo2 hou2 peng4","en":"Apples are very cheap","w":["apple","very","cheap"]},
+{"jp":"min6baau1 gei2do1 cin2","en":"How much is the bread?","w":["bread","how much","money"]},
+{"jp":"gam1jat6 tin1hei3 hou2 jit6","en":"The weather is very hot today","w":["today","weather","very","hot"]},
+{"jp":"ting1jat6 tin1hei3 m4 hou2","en":"The weather is not good tomorrow","w":["tomorrow","weather","not","good"]},
+{"jp":"keoi5 hou2 zung1ji3 sik6 gai1","en":"He really likes eating chicken","w":["he","very","like","eat","chicken"]},
+{"jp":"nei5 dim2gaai2 m4 sik6 min6baau1","en":"Why do you not eat bread?","w":["you","why","not","eat","bread"]},
+{"jp":"nei5 hai2 bin1dou6","en":"Where are you?","w":["you","at","where"]},
+{"jp":"sin1saang1 hai2 hok6haau6","en":"The teacher is at school","w":["teacher","at","school"]},
+{"jp":"ngo5 jiu3 wan2 syu1","en":"I want to find a book","w":["I","want","find","book"]},
+{"jp":"baa4baa1 bei2 cin2 ngo5","en":"Dad gives me money","w":["dad","give","money","me"]},
+{"jp":"ngo5 zung1ji3 dung3 caa4","en":"I like cold tea","w":["I","like","cold","tea"]},
+{"jp":"ngo5dei6 gam1jat6 hai2 uk1kei2 sik6 gai1","en":"We eat chicken at home today","w":["we","today","at","home","eat","chicken"]},
+{"jp":"keoi5 dim2 heoi3 hok6haau6","en":"How does he go to school?","w":["he","how","go","school"]}
+]
+}

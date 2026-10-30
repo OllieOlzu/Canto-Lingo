@@ -1,0 +1,40 @@
+{
+"words": [
+{"jp":"gam1jat6","en":"today","zh":"今日"},
+{"jp":"ting1jat6","en":"tomorrow","zh":"聽日"},
+{"jp":"dou1","en":"also","zh":"都"},
+{"jp":"jiu3","en":"want/need","zh":"要"},
+{"jp":"heoi3","en":"go","zh":"去"},
+{"jp":"lai4","en":"come","zh":"嚟"},
+{"jp":"fan3gaau3","en":"sleep","zh":"瞓覺"},
+{"jp":"gung1zok3","en":"work","zh":"工作"},
+{"jp":"hok6haau6","en":"school","zh":"學校"},
+{"jp":"uk1kei2","en":"home","zh":"屋企"},
+{"jp":"coi3","en":"vegetables","zh":"菜"},
+{"jp":"pang4jau5","en":"friend","zh":"朋友"},
+{"jp":"maa4maa1","en":"mum","zh":"媽媽"},
+{"jp":"baa4baa1","en":"dad","zh":"爸爸"},
+{"jp":"daai6","en":"big","zh":"大"},
+{"jp":"sai3","en":"small","zh":"細"},
+{"jp":"tai2","en":"watch","zh":"睇"},
+{"jp":"tung4","en":"with","zh":"同"},
+{"jp":"mat1je5","en":"what","zh":"乜嘢"},
+{"jp":"bin1dou6","en":"where","zh":"邊度"}
+],
+"sentences": [
+{"jp":"ngo5 gam1jat6 heoi3 hok6haau6","en":"I go to school today","w":["I","today","go","school"]},
+{"jp":"nei5 ting1jat6 heoi3 bin1dou6","en":"Where are you going tomorrow?","w":["you","tomorrow","go","where"]},
+{"jp":"keoi5 jiu3 sik6 coi3","en":"He wants to eat vegetables","w":["he","want","eat","vegetables"]},
+{"jp":"ngo5 tung4 pang4jau5 jam2 caa4","en":"I drink tea with a friend","w":["I","with","friend","drink","tea"]},
+{"jp":"maa4maa1 gam1jat6 mou5 gung1zok3","en":"Mum does not have work today","w":["mum","today","not have","work"]},
+{"jp":"baa4baa1 dou1 jiu3 gung1zok3","en":"Dad also needs to work","w":["dad","also","need","work"]},
+{"jp":"nei5 jiu3 mat1je5","en":"What do you want?","w":["you","want","what"]},
+{"jp":"pang4jau5 ting1jat6 lai4 ngo5 uk1kei2","en":"A friend comes to my home tomorrow","w":["friend","tomorrow","come","my","home"]},
+{"jp":"ngo5 gam1jat6 m4 heoi3 gung1zok3","en":"I am not going to work today","w":["I","today","not","go","work"]},
+{"jp":"hok6haau6 hou2 daai6","en":"The school is very big","w":["school","very","big"]},
+{"jp":"ngo5 uk1kei2 hou2 sai3","en":"My home is very small","w":["my","home","very","small"]},
+{"jp":"nei5 zung1ji3 tai2 mat1je5","en":"What do you like to watch?","w":["you","like","watch","what"]},
+{"jp":"ngo5 tung4 maa4maa1 mai5 coi3","en":"I buy vegetables with Mum","w":["I","with","mum","buy","vegetables"]},
+{"jp":"keoi5 gam1jat6 jiu3 fan3gaau3","en":"He needs to sleep today","w":["he","today","need","sleep"]}
+]
+}

@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"ge3","en":"(of / 's / links a description to a noun)","zh":"嘅"},
+{"jp":"bin1go3","en":"who","zh":"邊個"},
+{"jp":"keoi5dei6","en":"they/them","zh":"佢哋"},
+{"jp":"nei5dei6","en":"you (plural)","zh":"你哋"},
+{"jp":"doi2","en":"bag","zh":"袋"},
+{"jp":"din6nou5","en":"computer","zh":"電腦"},
+{"jp":"san1","en":"new","zh":"新"},
+{"jp":"gau6","en":"old (not new)","zh":"舊"},
+{"jp":"hung4sik1","en":"red","zh":"紅色"},
+{"jp":"hak1sik1","en":"black","zh":"黑色"}
+],
+"sentences": [
+{"jp":"ni1 go3 hai6 ngo5 ge3 syu1","en":"This is my book","w":["this","(cl.)","is","my","(of)","book"]},
+{"jp":"go2 zek3 hai6 nei5 ge3 gau2","en":"That is your dog","w":["that","(cl.)","is","your","(of)","dog"]},
+{"jp":"ni1 gaa3 ce1 hai6 baa4baa1 ge3","en":"This car is Dad's","w":["this","(cl.)","car","is","dad","'s"]},
+{"jp":"ni1 go3 hai6 maa4maa1 ge3 doi2","en":"This is Mum's bag","w":["this","(cl.)","is","mum","'s","bag"]},
+{"jp":"ngo5 ge3 din6nou5 hou2 san1","en":"My computer is very new","w":["my","(of)","computer","very","new"]},
+{"jp":"keoi5 ge3 sau2gei1 hou2 gau6","en":"His phone is very old","w":["his","(of)","phone","very","old"]},
+{"jp":"san1 ge3 din6nou5 hou2 gwai3","en":"The new computer is very expensive","w":["new","(that)","computer","very","expensive"]},
+{"jp":"gau6 ge3 ce1 hou2 peng4","en":"The old car is very cheap","w":["old","(that)","car","very","cheap"]},
+{"jp":"hung4sik1 ge3 doi2 hou2 leng3","en":"The red bag is very pretty","w":["red","(that)","bag","very","pretty"]},
+{"jp":"ngo5 zung1ji3 hak1sik1 ge3 doi2","en":"I like the black bag","w":["I","like","black","(that)","bag"]},
+{"jp":"keoi5 mai5 ge3 syu1 hou2 gwai3","en":"The book he bought is very expensive","w":["he","buy","(that)","book","very","expensive"]},
+{"jp":"keoi5 hai6 ngo5 zung1ji3 ge3 jan4","en":"He is the person I like","w":["he","is","I","like","(that)","person"]},
+{"jp":"nei5 sik6 ge3 faan6 hou2 hou2sik6","en":"The meal you are eating is very delicious","w":["you","eat","(that)","rice","very","delicious"]},
+{"jp":"ni1 go3 doi2 hai6 bin1go3 ge3","en":"Whose bag is this?","w":["this","(cl.)","bag","is","who","'s"]},
+{"jp":"go2 bun2 syu1 hai6 bin1go3 ge3","en":"Whose book is that?","w":["that","(cl.)","book","is","who","'s"]},
+{"jp":"keoi5dei6 dou1 hai6 hok6saang1","en":"They are all students","w":["they","all","are","student"]},
+{"jp":"nei5dei6 dou1 zung1ji3 sik6 dim2sam1","en":"You all like eating dim sum","w":["you all","all","like","eat","dim sum"]},
+{"jp":"keoi5dei6 ge3 uk1kei2 hou2 daai6","en":"Their home is very big","w":["their","(of)","home","very","big"]},
+{"jp":"nei5dei6 ge3 pang4jau5 dou1 jau5 din6nou5","en":"Your friends all have computers","w":["your","(of)","friend","all","have","computer"]},
+{"jp":"ngo5dei6 ge3 hok6haau6 hou2 san1","en":"Our school is very new","w":["our","(of)","school","very","new"]}
+]
+}

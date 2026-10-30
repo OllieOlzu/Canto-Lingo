@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"leng3","en":"pretty / beautiful","zh":"靚"},
+{"jp":"hoi1sam1","en":"happy","zh":"開心"},
+{"jp":"ngo6","en":"hungry","zh":"餓"},
+{"jp":"naan4","en":"difficult","zh":"難"},
+{"jp":"jung4ji6","en":"easy","zh":"容易"},
+{"jp":"faai3","en":"fast","zh":"快"},
+{"jp":"maan6","en":"slow","zh":"慢"},
+{"jp":"gong2","en":"speak / say","zh":"講"},
+{"jp":"Gwong2dung1waa2","en":"Cantonese","zh":"廣東話"},
+{"jp":"m4hou2","en":"don't (do it)","zh":"唔好"}
+],
+"sentences": [
+{"jp":"nei5 heoi3 m4 heoi3","en":"Are you going or not?","w":["you","go","not","go"]},
+{"jp":"nei5 sik6 m4 sik6 gai1","en":"Do you eat chicken?","w":["you","eat","not","eat","chicken"]},
+{"jp":"nei5 hai6 m4 hai6 hok6saang1","en":"Are you a student?","w":["you","is","not","is","student"]},
+{"jp":"nei5 zung1ji3 m4 zung1ji3 caa4","en":"Do you like tea?","w":["you","like","not","like","tea"]},
+{"jp":"ni1 go3 gwai3 m4 gwai3","en":"Is this expensive?","w":["this","(cl.)","expensive","not","expensive"]},
+{"jp":"ni1 gaa3 ce1 faai3 m4 faai3","en":"Is this car fast?","w":["this","(cl.)","car","fast","not","fast"]},
+{"jp":"nei5 jau5 mou5 pang4jau5","en":"Do you have friends?","w":["you","have","not have","friend"]},
+{"jp":"ting1jat6 nei5 lai4 m4 lai4","en":"Are you coming tomorrow?","w":["tomorrow","you","come","not","come"]},
+{"jp":"ni1 go3 hou2sik6 m4 hou2sik6","en":"Is this delicious?","w":["this","(cl.)","delicious","not","delicious"]},
+{"jp":"ni1 gaa3 ce1 hou2 maan6","en":"This car is very slow","w":["this","(cl.)","car","very","slow"]},
+{"jp":"ngo5 hou2 ngo6","en":"I am very hungry","w":["I","very","hungry"]},
+{"jp":"nei5 ngo6 m4 ngo6","en":"Are you hungry?","w":["you","hungry","not","hungry"]},
+{"jp":"keoi5 hou2 hoi1sam1","en":"He is very happy","w":["he","very","happy"]},
+{"jp":"ni1 go3 hou2 jung4ji6","en":"This is very easy","w":["this","(cl.)","very","easy"]},
+{"jp":"Gwong2dung1waa2 m4 hai6 hou2 naan4","en":"Cantonese is not very difficult","w":["Cantonese","not","is","very","difficult"]},
+{"jp":"nei5 hou2 leng3","en":"You are very pretty","w":["you","very","pretty"]},
+{"jp":"ngo5 sik1 gong2 Gwong2dung1waa2","en":"I can speak Cantonese","w":["I","know how to","speak","Cantonese"]},
+{"jp":"keoi5 m4 sik1 gong2 Gwong2dung1waa2","en":"He cannot speak Cantonese","w":["he","not","know how to","speak","Cantonese"]},
+{"jp":"m4hou2 dang2 ngo5","en":"Do not wait for me","w":["don't","wait","me"]},
+{"jp":"m4hou2 jam2 caa4","en":"Do not drink tea","w":["don't","drink","tea"]}
+]
+}
