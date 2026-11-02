@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"ji5cin4","en":"before / in the past","zh":"以前"},
+{"jp":"gau6si4","en":"in the old days","zh":"舊時"},
+{"jp":"sai3go3","en":"when young","zh":"細個"},
+{"jp":"gu3si6","en":"story","zh":"故事"},
+{"jp":"go2zan6si4","en":"at that time","zh":"嗰陣時"},
+{"jp":"hau6loi4","en":"later / afterwards","zh":"後來"},
+{"jp":"zi1hau6","en":"after / afterwards","zh":"之後"},
+{"jp":"cung4cin4","en":"formerly / in the past","zh":"從前"},
+{"jp":"sang1wut6","en":"life","zh":"生活"},
+{"jp":"san1fu2","en":"hard / tiring","zh":"辛苦"}
+],
+"sentences": [
+{"jp":"je4je4 nei5 sai3go3 go2zan6si4 zyu6 hai2 bin1dou6","en":"Grandpa, where did you live when you were young?","w":["grandpa","you","when young","at that time","live","at","where"]},
+{"jp":"ngo5 sai3go3 go2zan6si4 zyu6 hai2 Hoeng1gong2","en":"When I was young, I lived in Hong Kong","w":["I","when young","at that time","live","at","Hong Kong"]},
+{"jp":"ji5cin4 ngo5dei6 uk1kei2 hou2 sai3","en":"In the past our home was very small","w":["before","our","home","very","small"]},
+{"jp":"gau6si4 sang1wut6 hou2 san1fu2","en":"Life in the old days was very hard","w":["in the old days","life","very","hard"]},
+{"jp":"cung4cin4 ni1dou6 mou5 dei6tit3","en":"Formerly there was no MTR here","w":["formerly","here","not have","MTR"]},
+{"jp":"je4je4 gong2 gu3si6 bei2 ngo5 teng1","en":"Grandpa tells me a story","w":["grandpa","tell","story","give","me","listen"]},
+{"jp":"maa4maa4 sai3go3 go2zan6si4 hou2 zung1ji3 duk6 syu1","en":"When Grandma was young, she really liked reading books","w":["grandma","when young","at that time","very","like","read","book"]},
+{"jp":"hau6loi4 ngo5dei6 zyu6 hai2 Hoeng1gong2","en":"Later we lived in Hong Kong","w":["later","we","live","at","Hong Kong"]},
+{"jp":"sik6 faan6 zi1hau6 je4je4 zung1ji3 gong2 gu3si6","en":"After eating, Grandpa likes to tell stories","w":["eat","rice","after","grandpa","like","tell","story"]},
+{"jp":"nei5 sai3go3 go2zan6si4 jau5 mou5 din6si6","en":"Did you have a TV when you were young?","w":["you","when young","at that time","have","not have","TV"]},
+{"jp":"gau6si4 mou5 sau2gei1 dou1 mou5 din6nou5","en":"In the old days there were no mobile phones and no computers","w":["in the old days","not have","mobile phone","also","not have","computer"]},
+{"jp":"nei5 sai3go3 go2zan6si4 zung1ji3 zou6 mat1je5","en":"What did you like to do when you were young?","w":["you","when young","at that time","like","do","what"]},
+{"jp":"ngo5 sai3go3 go2zan6si4 zung1ji3 hai2 gung1jyun2 waan2","en":"When I was young, I liked playing in the park","w":["I","when young","at that time","like","at","park","play"]},
+{"jp":"hau6loi4 ngo5 heoi3 zo2 Hoeng1gong2 duk6 syu1","en":"Later I went to Hong Kong to study","w":["later","I","go","(done)","Hong Kong","read","book"]},
+{"jp":"ji5cin4 ge3 sang1wut6 tung4 ji4gaa1 m4 tung4","en":"Life before and now are not the same","w":["before","(of)","life","with","now","not","same"]},
+{"jp":"cung4cin4 je4je4 hai2 caan1teng1 zou6 gung1zok3","en":"Formerly Grandpa worked at a restaurant","w":["formerly","grandpa","at","restaurant","do","work"]},
+{"jp":"go2zan6si4 hou2 san1fu2 daan6hai6 hou2 hoi1sam1","en":"At that time life was hard but very happy","w":["at that time","very","hard","but","very","happy"]},
+{"jp":"ngo5 hou2 zung1ji3 teng1 je4je4 gong2 gu3si6","en":"I really like listening to Grandpa tell stories","w":["I","very","like","listen","grandpa","tell","story"]},
+{"jp":"zi1hau6 ngo5dei6 jat1cai4 sik6 maan5faan6","en":"Afterwards we eat dinner together","w":["after","we","together","eat","dinner"]},
+{"jp":"ngo5 zung1ji3 nei5 gong2 ge3 gu3si6","en":"I like the stories you tell","w":["I","like","you","tell","(that)","story"]}
+]
+}

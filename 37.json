@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"tung4maai4","en":"and / along with","zh":"同埋"},
+{"jp":"waak6ze2","en":"or","zh":"或者"},
+{"jp":"bat1gwo3","en":"however / but","zh":"不過"},
+{"jp":"zung6jau5","en":"and also / besides","zh":"仲有"},
+{"jp":"gan1zyu6","en":"then / next","zh":"跟住"},
+{"jp":"jin4hau6","en":"then / afterwards","zh":"然後"},
+{"jp":"jyu1si6","en":"so / thereupon","zh":"於是"},
+{"jp":"kei4sat6","en":"actually","zh":"其實"},
+{"jp":"bun2loi4","en":"originally","zh":"本來"},
+{"jp":"git3gwo2","en":"as a result / in the end","zh":"結果"}
+],
+"sentences": [
+{"jp":"je4je4 zung1ji3 jam2 caa4 tung4maai4 tai2 bou3zi2","en":"Grandpa likes drinking tea and reading the newspaper","w":["grandpa","like","drink","tea","and","read","newspaper"]},
+{"jp":"ngo5 soeng2 sik6 dim2sam1 waak6ze2 min6","en":"I want to eat dim sum or noodles","w":["I","want to","eat","dim sum","or","noodles"]},
+{"jp":"ngo5 soeng2 heoi3 taam3 maa4maa4 bat1gwo3 gam1jat6 hou2 mong4","en":"I want to visit Grandma, but I am very busy today","w":["I","want to","go","visit","grandma","however","today","very","busy"]},
+{"jp":"maa4maa4 zyu2 zo2 tong1 zung6jau5 zyu2 zo2 gai1","en":"Grandma made soup and also made chicken","w":["grandma","cook","(done)","soup","and also","cook","(done)","chicken"]},
+{"jp":"ngo5dei6 sik6 zo2 faan6 gan1zyu6 heoi3 gung1jyun2 haang4","en":"After eating, we then went to the park for a walk","w":["we","eat","(done)","rice","then","go","park","walk"]},
+{"jp":"je4je4 tai2 zo2 bou3zi2 jin4hau6 heoi3 gung1jyun2 san4wan6","en":"Grandpa read the newspaper, then went to the park for morning exercise","w":["grandpa","read","(done)","newspaper","then","go","park","morning exercise"]},
+{"jp":"lok6jyu5 jyu1si6 ngo5dei6 m4 heoi3 gung1jyun2 laa3","en":"It rained, so we did not go to the park","w":["rain","so","we","not","go","park","(now)"]},
+{"jp":"kei4sat6 je4je4 hou2 zung1ji3 maa4zoek3","en":"Actually, Grandpa really likes mahjong","w":["actually","grandpa","very","like","mahjong"]},
+{"jp":"ngo5 bun2loi4 soeng2 heoi3 taam3 nei5 bat1gwo3 ting1jat6 sin1 dak1haan4","en":"I originally wanted to visit you, but I am only free tomorrow","w":["I","originally","want to","go","visit","you","however","tomorrow","first","free"]},
+{"jp":"git3gwo2 ngo5dei6 jat1cai4 heoi3 zo2 caa4lau4","en":"In the end we went to the teahouse together","w":["as a result","we","together","go","(done)","teahouse"]},
+{"jp":"ngo5 jiu3 jat1 wun2 zuk1 waak6ze2 jat1 wun2 min6","en":"I want a bowl of congee or a bowl of noodles","w":["I","want","one","(bowl)","congee","or","one","(bowl)","noodles"]},
+{"jp":"nei5 jam2 caa4 tung4maai4 sik6 dim2sam1 hou2 m4 hou2 aa3","en":"Do you want to drink tea and eat dim sum?","w":["you","drink","tea","and","eat","dim sum","good","not","good","(friendly)"]},
+{"jp":"maa4maa4 jau5di1 gui6 bat1gwo3 keoi5 m4 soeng2 fan3gaau3","en":"Grandma is a bit tired, but she does not want to sleep","w":["grandma","a bit","tired","however","she","not","want to","sleep"]},
+{"jp":"ngo5 pui4 je4je4 tai2 ji1sang1 zung6jau5 pui4 keoi5 heoi3 fuk1can2","en":"I accompany Grandpa to see the doctor, and also accompany him to his follow-up appointment","w":["I","accompany","grandpa","see","doctor","and also","accompany","him","go","follow-up appointment"]},
+{"jp":"ngo5 sin1 heoi3 caa4lau4 dang2 nei5 gan1zyu6 ngo5dei6 jat1cai4 heoi3","en":"I will go to the teahouse first and wait for you, then we will go together","w":["I","first","go","teahouse","wait","you","then","we","together","go"]},
+{"jp":"je4je4 gong2 gu3si6 jin4hau6 maa4maa4 dou1 gong2 zo2 jat1 go3","en":"Grandpa told a story, then Grandma also told one","w":["grandpa","tell","story","then","grandma","also","tell","(done)","one","(cl.)"]},
+{"jp":"ngo5 mou5 si4gaan3 jyu1si6 ngo5 m4 heoi3 leoi5hang4 laa3","en":"I do not have time, so I am not going travelling","w":["I","not have","time","so","I","not","go","travel","(now)"]},
+{"jp":"kei4sat6 ngo5 bun2loi4 m4 zi1 nei5 bing6 zo2","en":"Actually, I did not know you were ill","w":["actually","I","originally","not","know","you","ill","(done)"]},
+{"jp":"git3gwo2 je4je4 jau1sik1 zo2 zing1san4 hou2 hou2 laa3","en":"In the end Grandpa rested, and his energy is very good now","w":["as a result","grandpa","rest","(done)","energy","very","good","(now)"]},
+{"jp":"nei5 zung1ji3 caa4 waak6ze2 gaa3fe1 aa3","en":"Do you like tea or coffee?","w":["you","like","tea","or","coffee","(friendly)"]}
+]
+}

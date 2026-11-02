@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"seoi1jin4","en":"although","zh":"雖然"},
+{"jp":"zau6syun3","en":"even if","zh":"就算"},
+{"jp":"ji4ce2","en":"moreover","zh":"而且"},
+{"jp":"faan2ji4","en":"instead / on the contrary","zh":"反而"},
+{"jp":"fau2zak1","en":"otherwise","zh":"否則"},
+{"jp":"mou4leon6","en":"no matter","zh":"無論"},
+{"jp":"zi2jiu3","en":"as long as","zh":"只要"},
+{"jp":"ceoi4fei1","en":"unless","zh":"除非"},
+{"jp":"zik1si2","en":"even if","zh":"即使"},
+{"jp":"bat1jyu4","en":"why not / it would be better to","zh":"不如"}
+],
+"sentences": [
+{"jp":"seoi1jin4 je4je4 jau5di1 tau4wan4 keoi5 zung6 hai6 heoi3 zo2 gung1jyun2","en":"Although Grandpa is a bit dizzy, he still went to the park","w":["although","grandpa","a bit","dizzy","he","still","is","go","(done)","park"]},
+{"jp":"ngo5 seoi1jin4 hou2 mong4 daan6hai6 dou1 pui4 maa4maa4 sik6 faan6","en":"Although I am very busy, I still accompany Grandma for a meal","w":["I","although","very","busy","but","also","accompany","grandma","eat","rice"]},
+{"jp":"zau6syun3 lok6jyu5 ngo5dei6 dou1 heoi3 taam3 gung1gung1","en":"Even if it rains, we will still go and visit Maternal Grandpa","w":["even if","rain","we","also","go","visit","maternal grandpa"]},
+{"jp":"maa4maa4 zyu2 ge3 sung3 hou2 hou2sik6 ji4ce2 hou2 gin6hong1","en":"The dishes Grandma cooks are very delicious and moreover very healthy","w":["grandma","cook","(that)","dishes","very","delicious","moreover","very","healthy"]},
+{"jp":"ngo5 jiu3 jau1sik1 do1 di1 fau2zak1 ting1jat6 m4 dak1haan4","en":"I need to rest more, otherwise I will not be free tomorrow","w":["I","need","rest","more","a bit","otherwise","tomorrow","not","free"]},
+{"jp":"mou4leon6 gei2 mong4 ngo5 dou1 heoi3 taam3 nei5","en":"No matter how busy, I will still visit you","w":["no matter","how","busy","I","also","go","visit","you"]},
+{"jp":"zi2jiu3 nei5 san1tai2 hou2 ngo5 dou1 hoi1sam1","en":"As long as your health is good, I am happy too","w":["as long as","your","health","good","I","also","happy"]},
+{"jp":"ceoi4fei1 nei5 san1tai2 hou2 fau2zak1 m4hou2 heoi3 leoi5hang4","en":"Unless your health is good, otherwise do not go travelling","w":["unless","your","health","good","otherwise","don't","go","travel"]},
+{"jp":"zik1si2 ngo5 hou2 gui6 ngo5 dou1 jiu3 pui4 je4je4","en":"Even if I am very tired, I still need to keep Grandpa company","w":["even if","I","very","tired","I","also","need","accompany","grandpa"]},
+{"jp":"bat1jyu4 ngo5dei6 gam1jat6 heoi3 caa4lau4 laa1","en":"Why don't we go to the teahouse today?","w":["why not","we","today","go","teahouse","(now)"]},
+{"jp":"ngo5 soeng2 mai5 ni1 gin6 saam1 bei2 maa4maa4 bat1gwo3 m4 zi1 keoi5 zung1ji3 m4 zung1ji3","en":"I want to buy this piece of clothing for Grandma, but I do not know whether she likes it","w":["I","want to","buy","this","(cl.)","clothes","give","grandma","but","not","know","she","like","not","like"]},
+{"jp":"keoi5 zyu2 ge3 sung3 m4 hou2sik6 faan2ji4 maa4maa4 zyu2 ge3 hou2 hou2sik6","en":"The dishes he cooks are not delicious; instead, the ones Grandma cooks are very delicious","w":["he","cook","(that)","dishes","not","delicious","instead","grandma","cook","(that)","very","delicious"]},
+{"jp":"nei5 jiu3 gong2 bei2 je4je4 zi1 fau2zak1 keoi5 daam1sam1","en":"You need to tell Grandpa, otherwise he will worry","w":["you","need","speak","give","grandpa","know","otherwise","he","worry"]},
+{"jp":"ji4ce2 nei5 jiu3 gei3dak1 sik6 joek6","en":"Moreover, you need to remember to take your medicine","w":["moreover","you","need","remember","eat","medicine"]},
+{"jp":"mou4leon6 ngo5 gei2 mong4 ngo5 dou1 pui4 nei5 heoi3 fuk1can2","en":"No matter how busy I am, I will still accompany you to your follow-up appointment","w":["no matter","I","how","busy","I","also","accompany","you","go","follow-up appointment"]},
+{"jp":"zi2jiu3 nei5 jau5sam1 ngo5 dou1 hou2 hoi1sam1","en":"As long as you are thoughtful, I am very happy","w":["as long as","you","thoughtful","I","also","very","happy"]},
+{"jp":"bat1jyu4 ngo5 sin1 heoi3 caa4lau4 deng6 toi2","en":"Why don't I go to the teahouse first to book a table?","w":["why not","I","first","go","teahouse","book","table"]},
+{"jp":"zik1si2 nei5 m4 soeng2 heoi3 ngo5 dou1 m4gan2jiu3","en":"Even if you do not want to go, it is fine too","w":["even if","you","not","want to","go","I","also","never mind"]},
+{"jp":"zau6syun3 ngo5 hou2 mong4 ngo5 dou1 jiu3 daa2 din6waa2 bei2 maa4maa4","en":"Even if I am very busy, I still need to call Grandma","w":["even if","I","very","busy","I","also","need","hit","phone","give","grandma"]},
+{"jp":"seoi1jin4 je4je4 gau6 keoi5 zung6 hou2 zing1san4","en":"Although Grandpa is old, he is still very energetic","w":["although","grandpa","old","he","still","very","energetic"]}
+]
+}

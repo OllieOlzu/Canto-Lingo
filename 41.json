@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"m4hou2ji3si1","en":"excuse me / sorry","zh":"唔好意思"},
+{"jp":"maa4faan4","en":"trouble (someone)","zh":"麻煩"},
+{"jp":"m4goi1saai3","en":"thanks so much (for a service)","zh":"唔該晒"},
+{"jp":"do1ze6saai3","en":"thank you so much","zh":"多謝晒"},
+{"jp":"haa6ci3","en":"next time","zh":"下次"},
+{"jp":"bong1sau2","en":"help out","zh":"幫手"},
+{"jp":"zau2","en":"leave / go away","zh":"走"},
+{"jp":"gwo3je6","en":"stay overnight","zh":"過夜"},
+{"jp":"lai5mat6","en":"gift","zh":"禮物"},
+{"jp":"lau4","en":"stay / remain","zh":"留"}
+],
+"sentences": [
+{"jp":"m4hou2ji3si1 maa4faan4 nei5 aa3","en":"Excuse me, sorry to trouble you","w":["excuse me","trouble","you","(friendly)"]},
+{"jp":"m4goi1saai3 maa4maa4","en":"Thanks so much, Grandma","w":["thanks so much","grandma"]},
+{"jp":"do1ze6saai3 nei5 je4je4","en":"Thank you so much, Grandpa","w":["thank you so much","you","grandpa"]},
+{"jp":"gam1jat6 maa4faan4 nei5 zyu2 faan6 m4hou2ji3si1","en":"Sorry to trouble you to cook today","w":["today","trouble","you","cook","rice","excuse me"]},
+{"jp":"haa6ci3 ngo5 zoi3 lai4 taam3 nei5dei6 jat1cai4 jam2 caa4","en":"Next time I will come to visit you all and drink tea together","w":["next time","I","again","come","visit","you all","together","drink","tea"]},
+{"jp":"ngo5 bong1sau2 maa4maa4 zyu2 faan6 tung4 bou1 tong1","en":"I help Grandma cook and make soup","w":["I","help","grandma","cook","rice","and","cook (soup)","soup"]},
+{"jp":"je4je4 ngo5 zau2 laa1 haa6ci3 zoi3gin3","en":"Grandpa, I am leaving now; see you next time","w":["grandpa","I","leave","(now)","next time","goodbye"]},
+{"jp":"gam1maan5 ngo5 hai2 nei5dei6 uk1kei2 gwo3je6 tung4 nei5dei6 king1gai2","en":"Tonight I will stay overnight at your home and chat with you all","w":["tonight","I","at","your","home","stay overnight","with","you all","chat"]},
+{"jp":"ni1 go3 lai5mat6 hai6 ngo5 mai5 bei2 nei5dei6 ge3","en":"This gift is one I bought for you all","w":["this","(cl.)","gift","is","I","buy","give","you all","(that)"]},
+{"jp":"maa4maa4 giu3 ngo5 lau4 haa5 sik6 faan6","en":"Grandma asked me to stay for a meal","w":["grandma","call","me","stay","a while","eat","rice"]},
+{"jp":"m4hou2ji3si1 ngo5 lai4 ci4dou3 zo2 maa4faan4 nei5dei6 dang2","en":"Sorry I arrived late and troubled you all to wait","w":["excuse me","I","come","be late","(done)","trouble","you all","wait"]},
+{"jp":"m4goi1saai3 nei5 pui4 je4je4 heoi3 fuk1can2 zan1 hai6 maa4faan4 nei5","en":"Thanks so much for accompanying Grandpa to his follow-up appointment; it is really a bother for you","w":["thanks so much","you","accompany","grandpa","go","follow-up appointment","really","is","trouble","you"]},
+{"jp":"do1ze6saai3 nei5dei6 gam1jat6 zyu2 faan6 bei2 ngo5 sik6","en":"Thank you all so much for cooking for me today","w":["thank you so much","you all","today","cook","rice","give","me","eat"]},
+{"jp":"ngo5 bong1sau2 nei5 bou1 tong1 tung4 zyu2 faan6","en":"I help you make soup and cook","w":["I","help","you","cook (soup)","soup","and","cook","rice"]},
+{"jp":"haa6ci3 ngo5 jiu3 mai5 do1 di1 lai5mat6 bei2 nei5dei6","en":"Next time I need to buy more gifts for you all","w":["next time","I","need","buy","more","a bit","gift","give","you all"]},
+{"jp":"gwo3je6 go2zan6si4 ngo5 tung4 maa4maa4 king1gai2 zo2 hou2 noi6","en":"When I stayed overnight, I chatted with Grandma for a long time","w":["stay overnight","at that time","I","with","grandma","chat","(done)","very","long time"]},
+{"jp":"je4je4 nei5 m4sai2 gwo3lai4 ngo5 heoi3 nei5 uk1kei2","en":"Grandpa, you do not need to come over; I will go to your home","w":["grandpa","you","no need to","come over","I","go","your","home"]},
+{"jp":"maa4maa4 maan6maan2 haang4 ngo5 hai2 ni1dou6 dang2 nei5","en":"Grandma, walk slowly; I will wait for you here","w":["grandma","slowly","walk","I","at","here","wait","you"]},
+{"jp":"ngo5 zau2 laa1 ting1jat6 zoi3 lai4 gin3 nei5dei6","en":"I am leaving now; I will come to see you all again tomorrow","w":["I","leave","(now)","tomorrow","again","come","see","you all"]},
+{"jp":"m4hou2ji3si1 cing2man6 ni1dou6 jau5 mou5 ci3so2","en":"Excuse me, may I ask if there is a toilet here?","w":["excuse me","may I ask","here","have","not have","toilet"]}
+]
+}

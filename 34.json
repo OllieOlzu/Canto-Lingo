@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"caa4lau4","en":"teahouse","zh":"茶樓"},
+{"jp":"bou1","en":"cook (soup) / pot","zh":"煲"},
+{"jp":"sung3","en":"dishes (to go with rice)","zh":"餸"},
+{"jp":"tong1","en":"soup","zh":"湯"},
+{"jp":"haam4","en":"salty","zh":"鹹"},
+{"jp":"taam5","en":"bland","zh":"淡"},
+{"jp":"nong4","en":"strong (flavour)","zh":"濃"},
+{"jp":"zyu2","en":"cook","zh":"煮"},
+{"jp":"mei6dou6","en":"flavour / taste","zh":"味道"},
+{"jp":"tim1","en":"also / too (added at the end)","zh":"添"}
+],
+"sentences": [
+{"jp":"gam1jat6 ngo5dei6 jat1cai4 heoi3 caa4lau4 jam2 caa4","en":"Today we go to the teahouse to drink tea together","w":["today","we","together","go","teahouse","drink","tea"]},
+{"jp":"je4je4 zyu2 ge3 sung3 zeoi3 hou2sik6","en":"The dishes Grandpa cooks are the most delicious","w":["grandpa","cook","(that)","dishes","most","delicious"]},
+{"jp":"maa4maa4 bou1 ge3 tong1 hou2 mei6dou6","en":"The soup Grandma makes is very flavourful","w":["grandma","cook (soup)","(that)","soup","very","flavour"]},
+{"jp":"ni1 wun2 tong1 hou2 haam4","en":"This bowl of soup is very salty","w":["this","(bowl)","soup","very","salty"]},
+{"jp":"ni1 go3 sung3 hou2 taam5","en":"This dish is very bland","w":["this","(cl.)","dish","very","bland"]},
+{"jp":"ngo5 zung1ji3 jam2 nong4 di1 ge3 caa4","en":"I like drinking stronger tea","w":["I","like","drink","strong","a bit","(that)","tea"]},
+{"jp":"m4goi1 zoi3 bei2 jat1 bui1 caa4 ngo5","en":"Please give me another cup of tea","w":["please","again","give","one","(cup)","tea","me"]},
+{"jp":"ngo5 jiu3 jat1 wun2 tong1 tung4 jat1 wun2 faan6","en":"I want a bowl of soup and a bowl of rice","w":["I","want","one","(bowl)","soup","and","one","(bowl)","rice"]},
+{"jp":"je4je4 nei5 sik6 do1 di1 sung3 laa1","en":"Grandpa, eat a bit more","w":["grandpa","you","eat","more","a bit","dishes","(now)"]},
+{"jp":"maa4maa4 gam1jat6 zyu2 zo2 hou2 do1 sung3","en":"Grandma cooked a lot of dishes today","w":["grandma","today","cook","(done)","very","many","dishes"]},
+{"jp":"ngo5dei6 hai2 caa4lau4 sik6 zo2 saam1 wun2 faan6","en":"We ate three bowls of rice at the teahouse","w":["we","at","teahouse","eat","(done)","three","(bowl)","rice"]},
+{"jp":"ni1 go3 mei6dou6 hou2 hou2","en":"This tastes very good","w":["this","(cl.)","flavour","very","good"]},
+{"jp":"ni1 wun2 tong1 taam5 zo2 di1","en":"This bowl of soup is a bit bland","w":["this","(bowl)","soup","bland","(done)","a bit"]},
+{"jp":"ngo5 m4 sik6 dak1 haam4 ge3 sung3","en":"I cannot eat salty dishes","w":["I","not","eat","can","salty","(that)","dishes"]},
+{"jp":"caa4lau4 ge3 dim2sam1 hou2 peng4","en":"The dim sum at the teahouse is very cheap","w":["teahouse","(of)","dim sum","very","cheap"]},
+{"jp":"ngo5dei6 sik6 zo2 saam1 wun2 faan6 hou2 baau2","en":"We ate three bowls of rice and are very full","w":["we","eat","(done)","three","(bowl)","rice","very","full"]},
+{"jp":"maa4maa4 nei5 bou1 ge3 tong1 zan1 hai6 hou2 hou2sik6","en":"Grandma, the soup you make is really delicious","w":["grandma","you","cook (soup)","(that)","soup","really","is","very","delicious"]},
+{"jp":"ting1jat6 ngo5 zyu2 faan6 bei2 nei5dei6 sik6","en":"Tomorrow I will cook a meal for you all","w":["tomorrow","I","cook","rice","give","you all","eat"]},
+{"jp":"ngo5 zung1ji3 taam5 di1 m4 zung1ji3 taai3 haam4","en":"I like it a bit bland, not too salty","w":["I","like","bland","a bit","not","like","too","salty"]},
+{"jp":"je4je4 jam2 zo2 loeng5 bui1 caa4 zung6 soeng2 jam2 jat1 bui1 tim1","en":"Grandpa has drunk two cups of tea and still wants one more cup too","w":["grandpa","drink","(done)","two","(cup)","tea","still","want to","drink","one","(cup)","also"]}
+]
+}

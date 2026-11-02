@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"san4wan6","en":"morning exercise","zh":"晨運"},
+{"jp":"aan3gaau3","en":"afternoon nap","zh":"晏覺"},
+{"jp":"bou3zi2","en":"newspaper","zh":"報紙"},
+{"jp":"sau1jam1gei1","en":"radio","zh":"收音機"},
+{"jp":"maa4zoek3","en":"mahjong","zh":"麻雀"},
+{"jp":"jyut6kek6","en":"Cantonese opera","zh":"粵劇"},
+{"jp":"faa1","en":"flower","zh":"花"},
+{"jp":"joeng5","en":"raise / keep (an animal)","zh":"養"},
+{"jp":"zoek3zai2","en":"bird","zh":"雀仔"},
+{"jp":"taai3gik6","en":"tai chi","zh":"太極"}
+],
+"sentences": [
+{"jp":"je4je4 zung1ji3 heoi3 gung1jyun2 zou6 san4wan6","en":"Grandpa likes to go to the park for morning exercise","w":["grandpa","like","go","park","do","morning exercise"]},
+{"jp":"maa4maa4 gam1jat6 fan3gaau3 zo2 mei6","en":"Has Grandma slept today?","w":["grandma","today","sleep","(done)","not yet"]},
+{"jp":"je4je4 gam1jat6 tai2 bou3zi2","en":"Grandpa reads the newspaper today","w":["grandpa","today","read","newspaper"]},
+{"jp":"maa4maa4 teng1 gan2 sau1jam1gei1","en":"Grandma is listening to the radio","w":["grandma","listen","(-ing)","radio"]},
+{"jp":"gung1gung1 zung1ji3 daa2 maa4zoek3","en":"Maternal Grandpa likes playing mahjong","w":["maternal grandpa","like","play","mahjong"]},
+{"jp":"po4po4 zung1ji3 teng1 jyut6kek6","en":"Maternal Grandma likes listening to Cantonese opera","w":["maternal grandma","like","listen","Cantonese opera"]},
+{"jp":"je4je4 hai2 gung1jyun2 daa2 taai3gik6","en":"Grandpa does tai chi in the park","w":["grandpa","at","park","do","tai chi"]},
+{"jp":"maa4maa4 joeng5 zo2 loeng5 zek3 zoek3zai2","en":"Grandma keeps two birds","w":["grandma","keep","(done)","two","(cl.)","bird"]},
+{"jp":"ngo5 pui4 po4po4 heoi3 gung1jyun2 tai2 faa1","en":"I accompany Maternal Grandma to the park to see the flowers","w":["I","accompany","maternal grandma","go","park","see","flowers"]},
+{"jp":"ngo5dei6 jat1cai4 daa2 maa4zoek3 laa1","en":"Let's play mahjong together","w":["we","together","play","mahjong","(now)"]},
+{"jp":"nei5 gam1jat6 san4wan6 zo2 mei6","en":"Have you done your morning exercise today?","w":["you","today","morning exercise","(done)","not yet"]},
+{"jp":"ngo5 gam1jat6 san4wan6 zo2 laa3","en":"I have done my morning exercise today","w":["I","today","morning exercise","(done)","(now)"]},
+{"jp":"maa4maa4 ge3 aan3gaau3 hou2 hou2","en":"Grandma's afternoon nap is very good","w":["grandma","(of)","afternoon nap","very","good"]},
+{"jp":"je4je4 ji4gaa1 fan3gaau3 gan2","en":"Grandpa is sleeping now","w":["grandpa","now","sleep","(-ing)"]},
+{"jp":"gung1gung1 jau5 jat1 zek3 zoek3zai2","en":"Maternal Grandpa has a bird","w":["maternal grandpa","have","one","(cl.)","bird"]},
+{"jp":"zoek3zai2 hai2 faa1 go2dou6","en":"The bird is over there by the flowers","w":["bird","at","flowers","there"]},
+{"jp":"po4po4 zung1ji3 jyut6kek6 je4je4 dou1 zung1ji3","en":"Maternal Grandma likes Cantonese opera, and Grandpa likes it too","w":["maternal grandma","like","Cantonese opera","grandpa","also","like"]},
+{"jp":"nei5 gam1jat6 jau5 mou5 heoi3 gung1jyun2 san4wan6","en":"Did you go to the park for morning exercise today?","w":["you","today","have","not have","go","park","morning exercise"]},
+{"jp":"ngo5 haa6ng5 pui4 maa4maa4 tai2 bou3zi2","en":"In the afternoon I keep Grandma company reading the newspaper","w":["I","afternoon","accompany","grandma","read","newspaper"]},
+{"jp":"je6maan5 ngo5dei6 jat1cai4 teng1 sau1jam1gei1","en":"At night we listen to the radio together","w":["night","we","together","listen","radio"]}
+]
+}

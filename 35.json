@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"jau1sik1","en":"rest","zh":"休息"},
+{"jp":"daam1sam1","en":"worry","zh":"擔心"},
+{"jp":"siu2sam1","en":"be careful","zh":"小心"},
+{"jp":"zoek3","en":"wear","zh":"著"},
+{"jp":"hyut3aat3","en":"blood pressure","zh":"血壓"},
+{"jp":"tau4wan4","en":"dizzy","zh":"頭暈"},
+{"jp":"zou2tau2","en":"good night / rest early","zh":"早唞"},
+{"jp":"gwat1tau4","en":"bones","zh":"骨頭"},
+{"jp":"wai6hau2","en":"appetite","zh":"胃口"},
+{"jp":"fuk1can2","en":"follow-up appointment","zh":"覆診"}
+],
+"sentences": [
+{"jp":"maa4maa4 nei5 jiu3 jau1sik1 do1 di1","en":"Grandma, you need to rest more","w":["grandma","you","need","rest","more","a bit"]},
+{"jp":"je4je4 ge3 hyut3aat3 jau5di1 gou1","en":"Grandpa's blood pressure is a bit high","w":["grandpa","(of)","blood pressure","a bit","high"]},
+{"jp":"po4po4 gam1jat6 jau5di1 tau4wan4","en":"Maternal Grandma is a bit dizzy today","w":["maternal grandma","today","a bit","dizzy"]},
+{"jp":"nei5 jau5 mou5 jau1sik1 gau3","en":"Have you rested enough?","w":["you","have","not have","rest","enough"]},
+{"jp":"m4hou2 daam1sam1 ngo5 dou1 hou2 hou2","en":"Do not worry, I am very well too","w":["don't","worry","I","also","very","good"]},
+{"jp":"nei5 jiu3 zoek3 do1 jat1 gin6 saam1","en":"You need to wear one more layer of clothes","w":["you","need","wear","more","one","(cl.)","clothes"]},
+{"jp":"tin1hei3 dung3 siu2sam1 aa3","en":"The weather is cold, be careful","w":["weather","cold","be careful","(friendly)"]},
+{"jp":"je4je4 nei5 wai6hau2 hou2 m4 hou2","en":"Grandpa, how is your appetite?","w":["grandpa","your","appetite","good","not","good"]},
+{"jp":"ngo5 wai6hau2 hou2 hou2 sik6 dak1 hou2 do1","en":"My appetite is very good, I can eat a lot","w":["my","appetite","very","good","eat","(result)","very","much"]},
+{"jp":"maa4maa4 ting1jat6 heoi3 ji1jyun2 fuk1can2","en":"Grandma goes to the hospital for a follow-up appointment tomorrow","w":["grandma","tomorrow","go","hospital","follow-up appointment"]},
+{"jp":"je4je4 ge3 gwat1tau4 jau5di1 tung3","en":"Grandpa's bones are a bit painful","w":["grandpa","(of)","bones","a bit","painful"]},
+{"jp":"nei5 jiu3 sik6 joek6 m4hou2 mong4gei3","en":"You need to take your medicine, do not forget","w":["you","need","eat","medicine","don't","forget"]},
+{"jp":"zou2tau2 laa1 je4je4","en":"Good night, Grandpa","w":["good night","(now)","grandpa"]},
+{"jp":"maa4maa4 nei5 jau1sik1 gau3 mei6","en":"Grandma, have you rested enough yet?","w":["grandma","you","rest","enough","not yet"]},
+{"jp":"ngo5 ji5ging1 jau1sik1 gau3 laa3","en":"I have already rested enough","w":["I","already","rest","enough","(now)"]},
+{"jp":"m4sai2 daam1sam1 ngo5","en":"No need to worry about me","w":["no need to","worry","me"]},
+{"jp":"je4je4 jau5di1 tau4wan4 so2ji5 ngo5 pui4 keoi5 heoi3 tai2 ji1sang1","en":"Grandpa is a bit dizzy, so I accompany him to see the doctor","w":["grandpa","a bit","dizzy","so","I","accompany","him","go","see","doctor"]},
+{"jp":"nei5 jiu3 siu2sam1 m4hou2 paau2","en":"You need to be careful, do not run","w":["you","need","be careful","don't","run"]},
+{"jp":"maa4maa4 gam1jat6 zing1san4 hou2 hou2 ngo5 m4 daam1sam1 laa3","en":"Grandma is very energetic today, I am no longer worried","w":["grandma","today","energy","very","good","I","not","worry","(now)"]},
+{"jp":"ting1jat6 ngo5 pui4 nei5 heoi3 fuk1can2","en":"Tomorrow I will accompany you to your follow-up appointment","w":["tomorrow","I","accompany","you","go","follow-up appointment"]}
+]
+}

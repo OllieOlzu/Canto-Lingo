@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"gwaa3zyu6","en":"miss (someone)","zh":"掛住"},
+{"jp":"wui4jik1","en":"memory / recall","zh":"回憶"},
+{"jp":"tung4nin4","en":"childhood","zh":"童年"},
+{"jp":"gam2dung6","en":"moved / touched","zh":"感動"},
+{"jp":"hang6fuk1","en":"blessed / happy","zh":"幸福"},
+{"jp":"wan1nyun5","en":"warm (feeling)","zh":"溫暖"},
+{"jp":"siu3","en":"smile / laugh","zh":"笑"},
+{"jp":"soeng1sam1","en":"sad","zh":"傷心"},
+{"jp":"pou5","en":"hug / embrace","zh":"抱"},
+{"jp":"zan1sik1","en":"cherish","zh":"珍惜"}
+],
+"sentences": [
+{"jp":"ngo5 hou2 gwaa3zyu6 je4je4 tung4 maa4maa4 soeng2 faai3 di1 lai4 gin3 nei5dei6","en":"I really miss Grandpa and Grandma and want to come see you all sooner","w":["I","very","miss","grandpa","and","grandma","want to","faster","a bit","come","see","you all"]},
+{"jp":"ngo5 ge3 tung4nin4 hou2 hoi1sam1 zung6 jau5 hou2 do1 wui4jik1","en":"My childhood was very happy, and I still have many memories","w":["my","(of)","childhood","very","happy","still","have","very","many","memory"]},
+{"jp":"ngo5 wui4jik1 sai3go3 go2zan6si4 gam2dung6 zo2","en":"When I recall my childhood, I feel moved","w":["I","recall","when young","at that time","moved","(done)"]},
+{"jp":"teng1 dou3 je4je4 gong2 ge3 gu3si6 ngo5 hou2 gam2dung6","en":"Hearing the stories Grandpa tells, I am very moved","w":["listen","(arrive)","grandpa","tell","(that)","story","I","very","moved"]},
+{"jp":"ngo5 pou5 zo2 maa4maa4 jat1 haa5 maa4maa4 siu3 zo2","en":"I gave Grandma a hug and she smiled","w":["I","hug","(done)","grandma","one","a moment","grandma","smile","(done)"]},
+{"jp":"maa4maa4 siu3 zo2 ngo5 dou1 siu3 zo2","en":"Grandma smiled, and I smiled too","w":["grandma","smile","(done)","I","also","smile","(done)"]},
+{"jp":"ni1 go3 wui4jik1 hou2 wan1nyun5 ngo5 zan1sik1 ni1 di1 si4gaan3","en":"This memory is very warm, and I cherish these times","w":["this","(cl.)","memory","very","warm","I","cherish","this","some","time"]},
+{"jp":"je4je4 tung4 maa4maa4 jat1cai4 ngo5 gok3dak1 hou2 hang6fuk1","en":"With Grandpa and Grandma together, I feel very blessed","w":["grandpa","and","grandma","together","I","feel","very","blessed"]},
+{"jp":"nei5 m4sai2 soeng1sam1 ngo5 ting1jat6 zoi3 lai4","en":"You do not need to be sad, I will come again tomorrow","w":["you","no need to","sad","I","tomorrow","again","come"]},
+{"jp":"ngo5 zan1sik1 tung4 nei5dei6 jat1cai4 ge3 si4gaan3","en":"I cherish the time together with you all","w":["I","cherish","with","you all","together","(of)","time"]},
+{"jp":"sai3go3 go2zan6si4 ngo5 hou2 zung1ji3 pou5 maa4maa4","en":"When I was young, I really liked hugging Grandma","w":["when young","at that time","I","very","like","hug","grandma"]},
+{"jp":"je4je4 gam1jat6 siu3 dak1 hou2 hoi1sam1","en":"Grandpa is smiling very happily today","w":["grandpa","today","smile","(result)","very","happy"]},
+{"jp":"teng1 nei5 gong2 gu3si6 ngo5 gok3dak1 hou2 wan1nyun5","en":"Listening to you tell stories, I feel very warm","w":["listen","you","tell","story","I","feel","very","warm"]},
+{"jp":"ngo5 wui4jik1 heoi3 caa4lau4 ge3 si4gaan3","en":"I recall the time we went to the teahouse","w":["I","recall","go","teahouse","(of)","time"]},
+{"jp":"maa4maa4 ngo5 hou2 gwaa3zyu6 nei5 hou2 soeng2 gin3 nei5","en":"Grandma, I really miss you and want to see you","w":["grandma","I","very","miss","you","very","want to","see","you"]},
+{"jp":"ngo5dei6 jat1cai4 ge3 wui4jik1 hou2 wan1nyun5","en":"Our memories together are very warm","w":["our","together","(of)","memory","very","warm"]},
+{"jp":"soeng1sam1 go2zan6si4 je4je4 pui4 zo2 ngo5","en":"When I was sad, Grandpa stayed with me","w":["sad","at that time","grandpa","accompany","(done)","me"]},
+{"jp":"ngo5 soeng2 zan1sik1 ni1 di1 si4gaan3","en":"I want to cherish these times","w":["I","want to","cherish","this","some","time"]},
+{"jp":"nei5dei6 ge3 tung4nin4 hai6 dim2joeng2 ge3","en":"What was your childhood like?","w":["your","(of)","childhood","is","how","(that)"]},
+{"jp":"je4je4 maa4maa4 ngo5 oi3 nei5dei6","en":"Grandpa, Grandma, I love you both","w":["grandpa","grandma","I","love","you all"]}
+]
+}

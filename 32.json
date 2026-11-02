@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"taam3","en":"visit","zh":"探"},
+{"jp":"gwo3lai4","en":"come over","zh":"過來"},
+{"jp":"jap6lai4","en":"come in","zh":"入嚟"},
+{"jp":"co5","en":"sit","zh":"坐"},
+{"jp":"gung1jyun2","en":"park","zh":"公園"},
+{"jp":"haa6ng5","en":"afternoon","zh":"下午"},
+{"jp":"je6maan5","en":"night","zh":"夜晚"},
+{"jp":"maan6maan2","en":"slowly / take your time","zh":"慢慢"},
+{"jp":"jat1cai4","en":"together","zh":"一齊"},
+{"jp":"pui4","en":"accompany / keep someone company","zh":"陪"}
+],
+"sentences": [
+{"jp":"ngo5 ting1jat6 soeng2 heoi3 taam3 je4je4","en":"I want to visit Grandpa tomorrow","w":["I","tomorrow","want to","go","visit","grandpa"]},
+{"jp":"nei5 gei2si4 gwo3lai4 aa3","en":"When are you coming over?","w":["you","when","come over","(friendly)"]},
+{"jp":"m4goi1 jap6lai4 co5","en":"Please come in and sit down","w":["please","come in","sit"]},
+{"jp":"ngo5dei6 jat1cai4 heoi3 gung1jyun2 haang4","en":"We go to the park for a walk together","w":["we","together","go","park","walk"]},
+{"jp":"haa6ng5 ngo5 pui4 maa4maa4 heoi3 gung1jyun2","en":"In the afternoon I accompany Grandma to the park","w":["afternoon","I","accompany","grandma","go","park"]},
+{"jp":"je6maan5 ngo5dei6 jat1cai4 sik6 maan5faan6","en":"At night we eat dinner together","w":["night","we","together","eat","dinner"]},
+{"jp":"maan6maan2 haang4 m4hou2 paau2","en":"Walk slowly, do not run","w":["slowly","walk","don't","run"]},
+{"jp":"ngo5 maan6maan2 gong2 nei5 maan6maan2 teng1","en":"I speak slowly and you listen slowly","w":["I","slowly","speak","you","slowly","listen"]},
+{"jp":"je4je4 ngo5 lai4 pui4 nei5 aa3","en":"Grandpa, I have come to keep you company","w":["grandpa","I","come","accompany","you","(friendly)"]},
+{"jp":"ngo5dei6 hai2 gung1jyun2 co5 haa5","en":"We sit in the park for a while","w":["we","at","park","sit","a while"]},
+{"jp":"haa6ng5 hou2 nyun5 ngo5dei6 heoi3 gung1jyun2 laa1","en":"The afternoon is warm, let's go to the park","w":["afternoon","very","warm","we","go","park","(now)"]},
+{"jp":"je6maan5 gung1jyun2 hou2 loeng4","en":"The park is very cool at night","w":["night","park","very","cool"]},
+{"jp":"nei5 gam1jat6 haa6ng5 jau5 mou5 heoi3 gung1jyun2","en":"Did you go to the park this afternoon?","w":["you","today","afternoon","have","not have","go","park"]},
+{"jp":"ngo5 gam1jat6 haa6ng5 hai2 uk1kei2","en":"I am at home this afternoon","w":["I","today","afternoon","at","home"]},
+{"jp":"maa4maa4 giu3 ngo5dei6 gwo3lai4 sik6 faan6","en":"Grandma calls us over to eat","w":["grandma","call","us","come over","eat","rice"]},
+{"jp":"ngo5 tung4 je4je4 king1gai2","en":"I chat with Grandpa","w":["I","with","grandpa","chat"]},
+{"jp":"gwo3lai4 ni1dou6 co5 laa1","en":"Come over here and sit","w":["come over","here","sit","(now)"]},
+{"jp":"je6maan5 ngo5 pui4 po4po4 tai2 din6si6","en":"At night I keep Maternal Grandma company watching TV","w":["night","I","accompany","maternal grandma","watch","TV"]},
+{"jp":"ting1jat6 haa6ng5 ngo5 zoi3 lai4 taam3 nei5dei6","en":"I will come to visit you all again tomorrow afternoon","w":["tomorrow","afternoon","I","again","come","visit","you all"]},
+{"jp":"nei5dei6 gwo3lai4 ngo5 uk1kei2 sik6 faan6 laa1","en":"Come over to my home to eat!","w":["you all","come over","my","home","eat","rice","(now)"]}
+]
+}

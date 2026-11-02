@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"san1nin4","en":"New Year","zh":"新年"},
+{"jp":"baai3nin4","en":"pay New Year visits","zh":"拜年"},
+{"jp":"lei6si6","en":"red packet","zh":"利是"},
+{"jp":"tyun4nin4faan6","en":"reunion dinner","zh":"團年飯"},
+{"jp":"tyun4zeoi6","en":"reunite","zh":"團聚"},
+{"jp":"zuk1fuk1","en":"bless / wish","zh":"祝福"},
+{"jp":"hei1mong6","en":"hope","zh":"希望"},
+{"jp":"san1tai2gin6hong1","en":"good health","zh":"身體健康"},
+{"jp":"lung4maa5zing1san4","en":"full of energy","zh":"龍馬精神"},
+{"jp":"maan6si6jyu4ji3","en":"everything goes as wished","zh":"萬事如意"}
+],
+"sentences": [
+{"jp":"san1nin4 dou3 laa3 ngo5dei6 heoi3 baai3nin4 je4je4 tung4 maa4maa4","en":"New Year has arrived; we go to pay New Year visits to Grandpa and Grandma","w":["New Year","arrive","(now)","we","go","pay New Year visits","grandpa","and","grandma"]},
+{"jp":"baai3nin4 go2zan6si4 je4je4 bei2 zo2 lei6si6 ngo5","en":"When we paid New Year visits, Grandpa gave me a red packet","w":["pay New Year visits","at that time","grandpa","give","(done)","red packet","me"]},
+{"jp":"gam1maan5 ngo5dei6 jat1cai4 sik6 tyun4nin4faan6 hou2 hoi1sam1","en":"Tonight we eat the reunion dinner together and are very happy","w":["tonight","we","together","eat","reunion dinner","very","happy"]},
+{"jp":"san1nin4 ngo5dei6 jat1cai4 tyun4zeoi6 je4je4 tung4 maa4maa4 dou1 hou2 hoi1sam1","en":"At New Year we reunite together, and Grandpa and Grandma are both very happy","w":["New Year","we","together","reunite","grandpa","and","grandma","also","very","happy"]},
+{"jp":"ngo5 zuk1fuk1 je4je4 san1tai2gin6hong1 maan6si6jyu4ji3","en":"I wish Grandpa good health and that everything goes as he wishes","w":["I","bless","grandpa","good health","everything goes as wished"]},
+{"jp":"ngo5 zuk1fuk1 maa4maa4 lung4maa5zing1san4 san1tai2gin6hong1","en":"I wish Grandma full energy and good health","w":["I","bless","grandma","full of energy","good health"]},
+{"jp":"ngo5 hei1mong6 nei5dei6 san1nin4 san1tai2gin6hong1 maan6si6jyu4ji3","en":"I hope you all have good health and everything goes as you wish in the New Year","w":["I","hope","you all","New Year","good health","everything goes as wished"]},
+{"jp":"zuk1fuk1 nei5 maan6si6jyu4ji3","en":"Wishing you everything goes as you wish","w":["bless","you","everything goes as wished"]},
+{"jp":"je4je4 ngo5 zuk1fuk1 nei5 san1tai2gin6hong1 maan6si6jyu4ji3","en":"Grandpa, I wish you good health and that everything goes as you wish","w":["grandpa","I","bless","you","good health","everything goes as wished"]},
+{"jp":"san1nin4 ngo5 soeng2 pui4 nei5dei6 heoi3 caa4lau4 jam2 caa4","en":"At New Year I want to accompany you all to the teahouse for tea","w":["New Year","I","want to","accompany","you all","go","teahouse","drink","tea"]},
+{"jp":"tyun4nin4faan6 hou2 hou2sik6 do1ze6 maa4maa4 zyu2 faan6 haa6ci3 ngo5 bong1sau2 nei5","en":"The reunion dinner is very delicious; thank you Grandma for cooking. Next time I will help you","w":["reunion dinner","very","delicious","thank you","grandma","cook","rice","next time","I","help","you"]},
+{"jp":"lei6si6 ngo5 m4 jiu3 do1ze6 nei5","en":"I do not want a red packet, thank you","w":["red packet","I","not","want","thank you","you"]},
+{"jp":"san1nin4 nei5dei6 jau5 mou5 heoi3 baai3nin4 je4je4 tung4 maa4maa4","en":"Did you all go to pay New Year visits to Grandpa and Grandma at New Year?","w":["New Year","you all","have","not have","go","pay New Year visits","grandpa","and","grandma"]},
+{"jp":"ngo5dei6 tyun4zeoi6 go2zan6si4 je4je4 tung4 maa4maa4 dou1 hou2 gam2dung6","en":"When we reunited, Grandpa and Grandma were both very moved","w":["we","reunite","at that time","grandpa","and","grandma","also","very","moved"]},
+{"jp":"lung4maa5zing1san4 je4je4","en":"Full of energy, Grandpa!","w":["full of energy","grandpa"]},
+{"jp":"san1tai2gin6hong1 maa4maa4","en":"Good health, Grandma!","w":["good health","grandma"]},
+{"jp":"ngo5 hei1mong6 ting1jat6 tin1hei3 hou2 ngo5dei6 heoi3 baai3nin4","en":"I hope the weather is good tomorrow so we can pay New Year visits","w":["I","hope","tomorrow","weather","good","we","go","pay New Year visits"]},
+{"jp":"nei5 zuk1fuk1 ngo5 mat1je5 aa3 je4je4","en":"What do you wish me, Grandpa?","w":["you","bless","me","what","(friendly)","grandpa"]},
+{"jp":"je4je4 siu3 zyu6 gong2 maan6si6jyu4ji3 san1tai2gin6hong1","en":"Grandpa says with a smile, may everything go as you wish and good health","w":["grandpa","smile","(-ing)","say","everything goes as wished","good health"]},
+{"jp":"san1nin4 ngo5dei6 jat1cai4 tyun4zeoi6 zan1 hai6 hou2 hang6fuk1","en":"At New Year we reunite together; it is really very blessed","w":["New Year","we","together","reunite","really","is","very","blessed"]}
+]
+}

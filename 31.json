@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"je4je4","en":"paternal grandpa","zh":"爺爺"},
+{"jp":"maa4maa4","en":"paternal grandma","zh":"嫲嫲"},
+{"jp":"gung1gung1","en":"maternal grandpa","zh":"公公"},
+{"jp":"po4po4","en":"maternal grandma","zh":"婆婆"},
+{"jp":"lou5jan4gaa1","en":"elderly person","zh":"老人家"},
+{"jp":"san1tai2","en":"body / health","zh":"身體"},
+{"jp":"gin6hong1","en":"healthy","zh":"健康"},
+{"jp":"zing1san4","en":"energy / spirits","zh":"精神"},
+{"jp":"bou2zung6","en":"take care","zh":"保重"},
+{"jp":"jau5sam1","en":"thoughtful / how kind of you","zh":"有心"}
+],
+"sentences": [
+{"jp":"ngo5 gam1jat6 heoi3 gin3 je4je4","en":"I go to see Grandpa today","w":["I","today","go","see","grandpa"]},
+{"jp":"nei5 gam1jat6 jau5 mou5 gin3 maa4maa4","en":"Have you seen Grandma today?","w":["you","today","have","not have","see","grandma"]},
+{"jp":"je4je4 san1tai2 hou2 hou2","en":"Grandpa's health is very good","w":["grandpa","health","very","good"]},
+{"jp":"maa4maa4 zing1san4 hou2 hou2","en":"Grandma is very energetic","w":["grandma","energy","very","good"]},
+{"jp":"gung1gung1 gam1jat6 hou2 hoi1sam1","en":"Maternal Grandpa is very happy today","w":["maternal grandpa","today","very","happy"]},
+{"jp":"po4po4 jau5di1 m4 syu1fuk6","en":"Maternal Grandma is a bit unwell","w":["maternal grandma","a bit","not","comfortable"]},
+{"jp":"je4je4 tung4 maa4maa4 dou1 hou2 gin6hong1","en":"Grandpa and Grandma are both very healthy","w":["grandpa","and","grandma","both","very","healthy"]},
+{"jp":"ngo5dei6 uk1kei2 jau5 saam1 go3 lou5jan4gaa1","en":"There are three elderly people in our home","w":["our","home","have","three","(cl.)","elderly person"]},
+{"jp":"ngo5 soeng2 heoi3 gin3 gung1gung1 tung4 po4po4","en":"I want to go and see Maternal Grandpa and Maternal Grandma","w":["I","want to","go","see","maternal grandpa","and","maternal grandma"]},
+{"jp":"nei5 san1tai2 hou2 m4 hou2 aa3","en":"How is your health?","w":["your","health","good","not","good","(friendly)"]},
+{"jp":"ngo5 san1tai2 hou2 hou2 do1ze6","en":"My health is very good, thank you","w":["my","health","very","good","thank you"]},
+{"jp":"nei5 jau5sam1 laa1","en":"That is very thoughtful of you","w":["you","thoughtful","(now)"]},
+{"jp":"maa4maa4 nei5 zing1san4 hou2 aa3","en":"Grandma, you are very energetic!","w":["grandma","you","energy","very","(friendly)"]},
+{"jp":"je4je4 ngo5 lai4 laa1","en":"Grandpa, I am here!","w":["grandpa","I","come","(now)"]},
+{"jp":"ngo5dei6 dou1 hou2 gou1hing3 gin3 nei5","en":"We are all very glad to see you","w":["we","all","very","glad","see","you"]},
+{"jp":"nei5 jau5 mou5 gin3 gwo3 ngo5 gung1gung1","en":"Have you ever seen my Maternal Grandpa?","w":["you","have","not have","see","(before)","my","maternal grandpa"]},
+{"jp":"keoi5 hai6 ngo5 po4po4","en":"She is my Maternal Grandma","w":["she","is","my","maternal grandma"]},
+{"jp":"ngo5 maa4maa4 gam1jat6 lai4 ngo5 uk1kei2","en":"My grandma is coming to my home today","w":["my","grandma","today","come","my","home"]},
+{"jp":"bou2zung6 aa3 maa4maa4","en":"Take care, Grandma","w":["take care","(friendly)","grandma"]},
+{"jp":"ting1jat6 ngo5 zoi3 lai4 gin3 nei5","en":"I will come to see you again tomorrow","w":["tomorrow","I","again","come","see","you"]}
+]
+}

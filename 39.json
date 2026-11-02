@@ -1,0 +1,36 @@
+{
+"words": [
+{"jp":"zau6","en":"then / as soon as","zh":"就"},
+{"jp":"sin1zi3","en":"only then","zh":"先至"},
+{"jp":"m4daan1zi2","en":"not only","zh":"唔單止"},
+{"jp":"zung2zi1","en":"in short / anyway","zh":"總之"},
+{"jp":"hou2zoi6","en":"fortunately","zh":"好在"},
+{"jp":"m4gwaai3dak1","en":"no wonder","zh":"唔怪得"},
+{"jp":"sam6zi3","en":"even / go so far as","zh":"甚至"},
+{"jp":"gong2hei2","en":"speaking of","zh":"講起"},
+{"jp":"ling6ngoi6","en":"in addition / besides","zh":"另外"},
+{"jp":"tung4si4","en":"at the same time","zh":"同時"}
+],
+"sentences": [
+{"jp":"je4je4 jat1 hei2san1 zau6 heoi3 gung1jyun2 san4wan6","en":"As soon as Grandpa gets up, he goes to the park for morning exercise","w":["grandpa","as soon as","get up","then","go","park","morning exercise"]},
+{"jp":"ngo5 jat1 dou3 caa4lau4 zau6 gin3 dou3 maa4maa4","en":"As soon as I arrived at the teahouse, I saw Grandma","w":["I","as soon as","arrive","teahouse","then","see","(arrive)","grandma"]},
+{"jp":"ngo5 jiu3 sin1 daa2 din6waa2 sin1zi3 heoi3 taam3 nei5","en":"I need to call first, and only then go visit you","w":["I","need","first","hit","phone","only then","go","visit","you"]},
+{"jp":"m4daan1zi2 je4je4 maa4maa4 dou1 zung1ji3 jam2 caa4","en":"Not only Grandpa, Grandma also likes drinking tea","w":["not only","grandpa","grandma","also","like","drink","tea"]},
+{"jp":"m4daan1zi2 ngo5 zung1ji3 ni1 go3 sung3 ngo5 zung6 soeng2 sik6 do1 di1","en":"Not only do I like this dish, I still want to eat a bit more","w":["not only","I","like","this","(cl.)","dish","I","still","want to","eat","more","a bit"]},
+{"jp":"zung2zi1 nei5 jiu3 siu2sam1 san1tai2","en":"In short, you need to take care of your health","w":["in short","you","need","be careful","health"]},
+{"jp":"hou2zoi6 nei5 lai4 zo2 ngo5 hou2 hoi1sam1","en":"Fortunately you came, I am very happy","w":["fortunately","you","come","(done)","I","very","happy"]},
+{"jp":"m4gwaai3dak1 keoi5 gam3 hoi1sam1 keoi5 ge3 saang1jat6 hai6 gam1jat6","en":"No wonder he is so happy, today is his birthday","w":["no wonder","he","so","happy","his","(of)","birthday","is","today"]},
+{"jp":"je4je4 sam6zi3 zung1ji3 teng1 jyut6kek6","en":"Grandpa even likes listening to Cantonese opera","w":["grandpa","even","like","listen","Cantonese opera"]},
+{"jp":"gong2hei2 gu3si6 je4je4 sai3go3 go2zan6si4 jau5 hou2 do1 gu3si6","en":"Speaking of stories, Grandpa had many stories when he was young","w":["speaking of","story","grandpa","when young","at that time","have","very","many","story"]},
+{"jp":"ling6ngoi6 ngo5 ting1jat6 pui4 nei5 heoi3 caa4lau4","en":"In addition, I will accompany you to the teahouse tomorrow","w":["in addition","I","tomorrow","accompany","you","go","teahouse"]},
+{"jp":"tung4si4 ngo5 jiu3 mai5 di1 seoi2gwo2 bei2 maa4maa4","en":"At the same time, I need to buy some fruit for Grandma","w":["at the same time","I","need","buy","some","fruit","give","grandma"]},
+{"jp":"ngo5 jat1 sik6 zo2 ni1 go3 sung3 zau6 zung1ji3 zo2","en":"As soon as I ate this dish, I liked it","w":["I","as soon as","eat","(done)","this","(cl.)","dish","then","like","(done)"]},
+{"jp":"hou2zoi6 je4je4 jau5 joek6 hai2 uk1kei2","en":"Fortunately Grandpa has medicine at home","w":["fortunately","grandpa","have","medicine","at","home"]},
+{"jp":"m4gwaai3dak1 maa4maa4 gam3 gin6hong1 keoi5 gam1jat6 san4wan6 zo2","en":"No wonder Grandma is so healthy, she did morning exercise today","w":["no wonder","grandma","so","healthy","she","today","morning exercise","(done)"]},
+{"jp":"nei5 jat1 gong2 ngo5 zau6 ming4baak6 laa3","en":"As soon as you speak, I understand","w":["you","as soon as","speak","I","then","understand","(now)"]},
+{"jp":"ling6ngoi6 nei5 gei3dak1 tung4 je4je4 gong2 ngo5 ting1jat6 lai4","en":"In addition, remember to tell Grandpa that I am coming tomorrow","w":["in addition","you","remember","with","grandpa","speak","I","tomorrow","come"]},
+{"jp":"maa4maa4 sam6zi3 zung1ji3 daa2 maa4zoek3","en":"Grandma even likes playing mahjong","w":["grandma","even","like","play","mahjong"]},
+{"jp":"zung2zi1 nei5 m4sai2 daam1sam1","en":"In short, you do not need to worry","w":["in short","you","no need to","worry"]},
+{"jp":"m4daan1zi2 ngo5 keoi5dei6 dou1 soeng2 nei5 jau1sik1 do1 di1","en":"Not only me, they also want you to rest more","w":["not only","I","they","also","want to","you","rest","more","a bit"]}
+]
+}
