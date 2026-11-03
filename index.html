@@ -64,6 +64,18 @@ button{font:inherit;color:inherit}
 .md table{border-collapse:collapse;font:16px/1.5 system-ui,sans-serif}
 .md th,.md td{border-bottom:1px solid var(--bd);padding:7px 16px 7px 0;text-align:left}
 .md th{border-bottom-width:2px}
+button.btn{display:inline-block}
+.modes{display:grid;gap:10px}
+.mode{display:flex!important;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;padding:16px 20px}
+.mode span{font-size:15px}
+.inp{width:100%;font:inherit;color:inherit;background:var(--card);border:1px solid var(--bd);border-radius:6px;padding:12px 14px;margin-bottom:12px}
+.row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.speed{display:flex;align-items:center;gap:12px;font-size:15px;color:var(--mu);margin:20px 0 24px}
+.speed input{flex:1;max-width:260px;accent-color:var(--ac)}
+.lw{display:grid;gap:6px;margin:0 0 24px}
+.wr{display:grid;grid-template-columns:minmax(5.5rem,auto) 1fr;gap:0 16px;padding:8px 12px;border-left:3px solid var(--bd);background:var(--card);border-radius:0 6px 6px 0}
+.wr .n{grid-column:2;color:var(--mu);font-size:15px}
+.okr{border-left-color:var(--ok)}.nor{border-left-color:var(--no)}
 @media(max-width:900px){.layout{grid-template-columns:1fr}#md{height:auto;min-height:60vh;position:static;border-left:0;border-top:1px solid var(--bd)}#mdbody{padding:8px 20px 60px}.mdbar{padding:14px 20px}}
 </style>
 </head>
@@ -88,10 +100,10 @@ const pick=(a,n,not)=>shuf(a.filter(x=>x!==not)).slice(0,n);
 const h=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
 
 /* Speech: the optional "zh" field in each word is used only for the voice, never displayed */
-function say(t){
+function say(t,r=.85){
   if(!('speechSynthesis' in window))return;
   speechSynthesis.cancel();
-  const u=new SpeechSynthesisUtterance(t);u.lang='zh-HK';u.rate=.85;
+  const u=new SpeechSynthesisUtterance(t);u.lang='zh-HK';u.rate=r;
   const v=speechSynthesis.getVoices().find(v=>/zh[-_]HK|yue/i.test(v.lang));
   if(v)u.voice=v;
   speechSynthesis.speak(u);
@@ -183,13 +195,20 @@ const ex=[
 const next=()=>ex[Math.random()*ex.length|0]();
 
 /* levels: level N uses the words and sentences of levels 1..N */
-function start(i){
+function load(i){
   lvl=i;words=[];sents=[];dict={};
   levels.slice(0,i+1).forEach(l=>{
     (l.words||[]).forEach(w=>{if(!dict[w.jp]){dict[w.jp]=w;words.push(w)}});
     sents.push(...(l.sentences||[]));
   });
-  next();
+}
+function start(i){
+  load(i);
+  const c=shell('Choose how to practise'),g=h('div','modes');
+  [['Exercises','Arrange and choose: six kinds of practice',next],['Listening','Hear a sentence and type it in English (uses Groq)',listen]].forEach(([t,d,f])=>{
+    const b=h('button','btn mode');b.append(h('strong',null,t),h('span','mu',d));b.onclick=f;g.append(b);
+  });
+  c.append(g);
 }
 function menu(){
   app.replaceChildren(h('h1',null,'Jyutping practice'));
@@ -208,6 +227,104 @@ function menu(){
   }
   menu();
 })();
+
+/* ---------- Listening mode (Groq gpt-oss-120b) ---------- */
+const LS='groqKey',recent=[];let rate=.8;
+const errMsg=e=>e instanceof TypeError?'Could not reach Groq. Check your connection':e.message;
+async function groq(messages,temp){
+  const r=await fetch('https://api.groq.com/openai/v1/chat/completions',{
+    method:'POST',
+    headers:{'Content-Type':'application/json',Authorization:'Bearer '+localStorage.getItem(LS)},
+    body:JSON.stringify({model:'openai/gpt-oss-120b',messages,temperature:temp,reasoning_effort:'low'})
+  });
+  if(r.status===401){localStorage.removeItem(LS);throw new Error('key')}
+  if(!r.ok)throw new Error('Groq returned error '+r.status);
+  const m=((await r.json()).choices[0].message.content||'').match(/\{[\s\S]*\}/);
+  try{return JSON.parse(m[0])}catch(e){throw new Error('Unreadable reply from Groq')}
+}
+async function genSentence(){
+  const list=words.map(w=>w.jp+' ('+w.en+')').join(', ');
+  const ex=pick(sents,3).map(s=>s.jp+' = '+s.en).join('\n');
+  for(let n=0;n<3;n++){
+    const o=await groq([
+      {role:'system',content:'You write short, natural Cantonese practice sentences for beginners. Reply with JSON only.'},
+      {role:'user',content:'Allowed words (Jyutping with meaning): '+list+'\n\nWrite ONE new, natural, grammatical Cantonese sentence of 2 to 7 words using ONLY the allowed words, each copied exactly as written in Jyutping (with tone numbers). Style examples:\n'+ex+'\nDo not repeat these recent sentences: '+(recent.join(' | ')||'none')+'\nReply as {"jp":"words separated by single spaces","en":"natural English translation"}'}
+    ],1);
+    const t=String(o.jp||'').trim().toLowerCase().split(/\s+/);
+    if(o.en&&t.every(x=>dict[x])){
+      recent.push(t.join(' '));if(recent.length>6)recent.shift();
+      return{jp:t.join(' '),en:String(o.en),w:t.map(x=>dict[x].en)};
+    }
+  }
+  throw new Error('Could not get a valid sentence');
+}
+function keyForm(msg,then){
+  const c=shell('Enter your Groq API key');
+  c.append(h('p','mu',msg||'Listening practice uses Groq. Get a key at console.groq.com/keys. It is saved only in this browser (localStorage).'));
+  const i=h('input','inp'),b=h('button','btn','Save and continue');
+  i.type='password';i.placeholder='gsk_…';i.autocomplete='off';
+  const go=()=>{const v=i.value.trim();if(v){localStorage.setItem(LS,v);then()}};
+  b.onclick=go;i.onkeydown=e=>{if(e.key==='Enter')go()};
+  c.append(i,b);i.focus();
+}
+function fail(c,e,retry){
+  if(!c.isConnected)return;
+  if(e.message==='key')return keyForm('That key was rejected. Enter a valid Groq API key.',retry);
+  const b=h('button','btn','Try again');b.onclick=retry;
+  c.replaceChildren(h('p','fb not',errMsg(e)),b);
+}
+async function listen(){
+  if(!localStorage.getItem(LS))return keyForm('',listen);
+  const c=shell('Listen, then type what you heard in English');
+  c.append(h('p','mu','Writing a new sentence…'));
+  let s;
+  try{s=await genSentence()}catch(e){return fail(c,e,listen)}
+  if(!c.isConnected)return;
+  c.replaceChildren();
+  const lb=h('button','btn','🔊 Listen'),sp=h('input'),val=h('span',null,rate.toFixed(2)+'×'),lab=h('label','speed');
+  const inp=h('input','inp'),sub=h('button','btn','Check'),err=h('p','fb not'),ck=h('button','link','Change API key');
+  lb.onclick=()=>say(zhOf(s),rate);
+  sp.type='range';sp.min=.4;sp.max=1.2;sp.step=.05;sp.value=rate;
+  sp.oninput=()=>{rate=+sp.value;val.textContent=rate.toFixed(2)+'×'};
+  lab.append('Speed',sp,val);
+  inp.type='text';inp.placeholder='Type it in English';inp.autocomplete='off';inp.spellcheck=false;
+  ck.onclick=()=>keyForm('Enter a new Groq API key.',listen);
+  const go=async()=>{
+    const a=inp.value.trim();if(!a||sub.disabled)return;
+    inp.disabled=sub.disabled=true;sub.textContent='Checking…';err.textContent='';
+    const n=s.w.length;
+    try{
+      const g=await groq([
+        {role:'system',content:'You check a beginner\'s English answer to a Cantonese listening exercise. Reply with JSON only.'},
+        {role:'user',content:'Cantonese (Jyutping): '+s.jp+'\nIntended English: '+s.en+'\nWord for word: '+s.jp.split(' ').map((t,i)=>t+' = '+s.w[i]).join('; ')+'\nLearner wrote: '+a+'\n\nDecide whether the learner\'s answer has the same meaning. Accept synonyms and small spelling, grammar or word-order differences that are natural in English; reject missing or wrong content words. Then, for each Cantonese word in order, say whether the learner\'s answer covered it, with a very short note (under 12 words). Reply as {"correct":true or false,"summary":"one sentence explaining the verdict","words":[{"ok":true or false,"note":"..."}]} with exactly '+n+' items in words.'}
+      ],.2);
+      if(c.isConnected)result(c,s,a,g);
+    }catch(e){
+      if(!c.isConnected)return;
+      if(e.message==='key')return keyForm('That key was rejected. Enter a valid Groq API key.',listen);
+      inp.disabled=sub.disabled=false;sub.textContent='Check';err.textContent=errMsg(e)+'. Try again.';
+    }
+  };
+  sub.onclick=go;inp.onkeydown=e=>{if(e.key==='Enter')go()};
+  c.append(lb,lab,inp,err,sub,' ',ck);inp.focus();
+}
+function result(c,s,a,g){
+  c.replaceChildren();
+  const ok=g.correct===true;
+  c.append(h('p','fb '+(ok?'okt':'not'),ok?'Correct':'Not quite'));
+  if(g.summary)c.append(h('p',null,String(g.summary)));
+  c.append(h('p','mu','You wrote: '+a),sentEl(s,'jp'),h('p','mu','Meaning: '+s.en));
+  const lw=h('div','lw');
+  s.jp.split(' ').forEach((t,i)=>{
+    const x=(g.words||[])[i]||{},r=h('div','wr '+(x.ok===true?'okr':x.ok===false?'nor':'')),j=h('span','w',t);
+    j.dataset.tip=t+' = '+s.w[i];j.dataset.say=dict[t]?.zh||t;
+    r.append(j,h('span',null,(x.ok===true?'✓ ':x.ok===false?'✗ ':'')+s.w[i]));
+    if(x.note)r.append(h('span','n',String(x.note)));
+    lw.append(r);
+  });
+  const n=h('button','btn','Next →');n.onclick=listen;
+  c.append(lw,n);n.focus();
+}
 
 /* ---------- Markdown side panel ---------- */
 const mdSel=document.getElementById('mdsel'),mdBody=document.getElementById('mdbody'),picked={};
