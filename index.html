@@ -78,6 +78,8 @@ button.btn{display:inline-block}
 .msg p{margin:0 0 .6em}.msg>:last-child{margin-bottom:0}
 .msg ul,.msg ol{margin:0 0 .6em;padding-left:1.3em}
 .msg .tbl{overflow-x:auto}.msg th,.msg td{padding:2px 14px 2px 0;text-align:left}
+.kv{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:1px solid var(--bd);padding:8px 0}
+.sec{font:400 24px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;margin:34px 0 8px}
 .row .inp{flex:1;margin:0;width:auto;min-width:0}
 @media(max-width:900px){.layout{grid-template-columns:1fr}#md{height:auto;min-height:60vh;position:static;border-left:0;border-top:1px solid var(--bd)}#mdbody{padding:8px 20px 60px}.mdbar{padding:14px 20px}}
 </style>
@@ -147,10 +149,10 @@ document.addEventListener('contextmenu',e=>{
 ['click','scroll','keydown'].forEach(ev=>addEventListener(ev,()=>tip.hidden=true,true));
 
 /* layout helpers */
-function shell(ins){
+function shell(ins,tag){
   app.replaceChildren();
   const t=h('div','top'),b=h('button','link','← Levels');b.onclick=menu;
-  t.append(b,h('span','mu','Level '+(lvl+1)));
+  t.append(b,h('span','mu',tag||'Level '+(lvl+1)));
   const c=h('div');app.append(t,h('p','ins',ins),c);return c;
 }
 function done(c,ok,s,lang){
@@ -200,15 +202,15 @@ const next=()=>ex[Math.random()*ex.length|0]();
 /* levels: level N uses the words and sentences of levels 1..N */
 function load(i){
   lvl=i;words=[];sents=[];dict={};
-  levels.slice(0,i+1).forEach(l=>{
-    (l.words||[]).forEach(w=>{if(!dict[w.jp]){dict[w.jp]=w;words.push(w)}});
+  levels.slice(0,i+1).forEach((l,li)=>{
+    (l.words||[]).forEach(w=>{if(!dict[w.jp]){w.lv=li;dict[w.jp]=w;words.push(w)}});
     sents.push(...(l.sentences||[]));
   });
 }
 function start(i){
   load(i);
   const c=shell('Choose how to practise'),g=h('div','modes');
-  [['Exercises','Arrange and choose: six kinds of practice',next],['Listening','Hear a sentence and type it in English (uses Groq)',listen]].forEach(([t,d,f])=>{
+  [['Exercises','Arrange and choose: six kinds of practice',next],['Listening','Hear a random sentence from your level and chat about it (uses Groq)',listen],['Dynamic listening','An adaptive benchmark across every level that ends with your tough spots (uses Groq)',dyn]].forEach(([t,d,f])=>{
     const b=h('button','btn mode');b.append(h('strong',null,t),h('span','mu',d));b.onclick=f;g.append(b);
   });
   c.append(g);
@@ -222,7 +224,9 @@ function menu(){
   app.append(h('p','mu','Choose a level. Right-click any word to see and hear its translation.'));
   const g=h('div','grid');
   levels.forEach((_,i)=>{const b=h('button','btn','Level '+(i+1));b.onclick=()=>start(i);g.append(b)});
-  app.append(g);
+  const m=h('div','modes'),d=h('button','btn mode');
+  d.append(h('strong',null,'Dynamic listening'),h('span','mu','An adaptive benchmark across every level'));d.onclick=dyn;m.append(d);m.style.marginTop='24px';
+  app.append(g,m);
 }
 (async()=>{
   for(let n=1;;n++){
@@ -232,7 +236,7 @@ function menu(){
 })();
 
 /* ---------- Listening mode (Groq gpt-oss-120b) ---------- */
-const LS='groqKey',recent=[];let rate=.8;
+const LS='groqKey',seenL=[];let rate=.8;
 const errMsg=e=>e instanceof TypeError?'Could not reach Groq. Check your connection':e.message;
 async function ask(messages,temp){
   const r=await fetch('https://api.groq.com/openai/v1/chat/completions',{
@@ -247,22 +251,6 @@ async function ask(messages,temp){
 async function groq(messages,temp){
   const m=(await ask(messages,temp)).match(/\{[\s\S]*\}/);
   try{return JSON.parse(m[0])}catch(e){throw new Error('Unreadable reply from Groq')}
-}
-async function genSentence(){
-  const list=words.map(w=>w.jp+' ('+w.en+')').join(', ');
-  const ex=pick(sents,3).map(s=>s.jp+' = '+s.en).join('\n');
-  for(let n=0;n<3;n++){
-    const o=await groq([
-      {role:'system',content:'You write short, natural Cantonese practice sentences for beginners. Reply with JSON only.'},
-      {role:'user',content:'Allowed words (Jyutping with meaning): '+list+'\n\nWrite ONE new, natural, grammatical Cantonese sentence of 2 to 7 words using ONLY the allowed words, each copied exactly as written in Jyutping (with tone numbers). Style examples:\n'+ex+'\nDo not repeat these recent sentences: '+(recent.join(' | ')||'none')+'\nReply as {"jp":"words separated by single spaces","en":"natural English translation"}'}
-    ],1);
-    const t=String(o.jp||'').trim().toLowerCase().split(/\s+/);
-    if(o.en&&t.every(x=>dict[x])){
-      recent.push(t.join(' '));if(recent.length>6)recent.shift();
-      return{jp:t.join(' '),en:String(o.en),w:t.map(x=>dict[x].en)};
-    }
-  }
-  throw new Error('Could not get a valid sentence');
 }
 function keyForm(msg,then){
   const c=shell('Enter your Groq API key');
@@ -279,22 +267,28 @@ function fail(c,e,retry){
   const b=h('button','btn','Try again');b.onclick=retry;
   c.replaceChildren(h('p','fb not',errMsg(e)),b);
 }
-async function listen(){
-  if(!localStorage.getItem(LS))return keyForm('',listen);
-  const c=shell('Listen, then type what you heard in English');
-  c.append(h('p','mu','Writing a new sentence…'));
-  let s;
-  try{s=await genSentence()}catch(e){return fail(c,e,listen)}
-  if(!c.isConnected)return;
-  c.replaceChildren();
-  const hist=[{role:'system',content:'You are a friendly Cantonese tutor chatting with a beginner. The learner just heard this Cantonese sentence read aloud and cannot see it: '+s.jp+' (Jyutping). Word for word: '+s.jp.split(' ').map((t,i)=>t+' = '+s.w[i]).join('; ')+'. Meaning: '+s.en+'. Their first message is their English answer. Start your reply with Yes or No (is their meaning right? accept synonyms and small grammar slips), then go through the sentence word for word with the Jyutping, saying what they got right or wrong. If they say they do not know, skip the verdict and explain the sentence: the meaning, then word for word. After that, answer their follow-up questions about this sentence or Cantonese in general. Keep replies short and simple, with no tables.'}];
+const IDK='I don’t know';
+const GRADER='You are a strict but fair Cantonese tutor marking a listening test for a beginner. The learner heard a Cantonese sentence and wrote what it means in English. Score 0 to 10 (10 = meaning fully correct; take off about 2 for each missing or wrong content word and 1 for small grammar slips; 0 if they gave no real answer). Be consistent from one sentence to the next. Reply with JSON only.';
+/* random sentence straight from the JSON files, avoiding the last few shown */
+function randSent(){
+  const pool=sents.filter(x=>!seenL.includes(x)),x=rnd(pool.length?pool:sents);
+  seenL.push(x);if(seenL.length>Math.min(8,sents.length-1))seenL.shift();
+  return x;
+}
+function player(s){
   const lb=h('button','btn','🔊 Listen'),sp=h('input'),val=h('span',null,rate.toFixed(2)+'×'),lab=h('label','speed');
-  const log=h('div','log'),row=h('div','row'),inp=h('input','inp'),send=h('button','btn','Send'),err=h('p','fb not');
-  const idk=h('button','btn','I don’t know'),nx=h('button','btn','Next sentence →'),ck=h('button','link','Change API key'),acts=h('div','row');
   lb.onclick=()=>say(zhOf(s),rate);
   sp.type='range';sp.min=.4;sp.max=1.2;sp.step=.05;sp.value=rate;
   sp.oninput=()=>{rate=+sp.value;val.textContent=rate.toFixed(2)+'×'};
   lab.append('Speed',sp,val);
+  return[lb,lab];
+}
+function listen(){
+  if(!localStorage.getItem(LS))return keyForm('',listen);
+  const c=shell('Listen, then type what you heard in English'),s=randSent();
+  const hist=[{role:'system',content:'You are a friendly Cantonese tutor chatting with a beginner. The learner just heard this Cantonese sentence read aloud and cannot see it: '+s.jp+' (Jyutping). Word for word: '+s.jp.split(' ').map((t,i)=>t+' = '+s.w[i]).join('; ')+'. Meaning: '+s.en+'. Their first message is their English answer. Start your reply with Yes or No (is their meaning right? accept synonyms and small grammar slips), then go through the sentence word for word with the Jyutping, saying what they got right or wrong. If they say they do not know, skip the verdict and explain the sentence: the meaning, then word for word. After that, answer their follow-up questions about this sentence or Cantonese in general. Keep replies short and simple, with no tables.'}];
+  const log=h('div','log'),row=h('div','row'),inp=h('input','inp'),send=h('button','btn','Send'),err=h('p','fb not');
+  const idk=h('button','btn',IDK),nx=h('button','btn','Next sentence →'),ck=h('button','link','Change API key'),acts=h('div','row');
   inp.type='text';inp.placeholder='Type what you heard, or ask a question';inp.autocomplete='off';
   let busy=false;
   const turn=async text=>{
@@ -317,11 +311,113 @@ async function listen(){
   };
   send.onclick=()=>turn(inp.value);
   inp.onkeydown=e=>{if(e.key==='Enter')turn(inp.value)};
-  idk.onclick=()=>turn('I don’t know. Please explain it to me.');
+  idk.onclick=()=>turn(IDK+'. Please explain it to me.');
   nx.onclick=listen;
   ck.onclick=()=>keyForm('Enter a new Groq API key.',listen);
   row.append(inp,send);acts.append(idk,nx,ck);
-  c.append(lb,lab,log,err,row,h('p'),acts);inp.focus();
+  c.append(...player(s),log,err,row,h('p'),acts);inp.focus();
+}
+
+/* ---------- Dynamic listening: an adaptive benchmark ----------
+   Two separate AI sessions: a generator that writes each sentence (told how you scored),
+   and a grader that marks your answer out of 10. Pass = 6+. Each pass makes the next sentence
+   harder (longer, with words from later levels); it stops after 3 misses in a row. */
+const PASS=6,MISS_STOP=3,CAP=25;
+function dyn(){load(levels.length-1);dynNext({d:0,fails:0,rec:[],gen:[],chat:[]})}
+async function genDyn(st){
+  const tier=Math.min(levels.length-1,st.d>>1),len=Math.min(10,2+(st.d>>1));
+  const allowed=words.filter(w=>w.lv<=tier),newest=tier?words.filter(w=>w.lv===tier):[];
+  const used=st.rec.map(r=>r.jp),last=st.rec[st.rec.length-1];
+  const msg='Difficulty '+st.d+'. Allowed words (Jyutping with meaning): '+allowed.map(w=>w.jp+' ('+w.en+')').join(', ')+'.\nWrite one new natural, grammatical Cantonese sentence of about '+len+' words using ONLY the allowed words, each copied exactly in Jyutping'+(newest.length?', and include at least one of the newest words: '+newest.map(w=>w.jp).join(', '):'')+'.\n'+(last?'The learner scored '+last.score+'/10 on the previous sentence ('+last.jp+'). ':'')+'Already used: '+(used.join(' | ')||'none')+'.\nReply as {"jp":"words separated by single spaces","en":"natural English translation"}';
+  for(let n=0;n<3;n++){
+    const o=await groq([{role:'system',content:'You write sentences for an adaptive Cantonese listening benchmark that gets harder as the learner succeeds. Reply with JSON only.'},...st.gen.slice(-6),{role:'user',content:msg}],1);
+    const t=String(o.jp||'').trim().toLowerCase().split(/\s+/),jp=t.join(' ');
+    if(o.en&&t.length>1&&t.every(x=>dict[x]&&dict[x].lv<=tier)&&!used.includes(jp)){
+      st.gen.push({role:'user',content:'Difficulty '+st.d+(last?', previous score '+last.score+'/10':'')},{role:'assistant',content:JSON.stringify({jp,en:o.en})});
+      return{jp,en:String(o.en),w:t.map(x=>dict[x].en),d:st.d,tier:Math.max(...t.map(x=>dict[x].lv))};
+    }
+  }
+  throw new Error('Could not get a valid sentence');
+}
+async function dynNext(st){
+  if(st.fails>=MISS_STOP||st.rec.length>=CAP)return dynEnd(st);
+  if(!localStorage.getItem(LS))return keyForm('',()=>dynNext(st));
+  const c=shell('Listen, then write what it means in English','Benchmark');
+  c.append(h('p','mu','Writing sentence '+(st.rec.length+1)+'…'));
+  let s;
+  try{s=await genDyn(st)}catch(e){return fail(c,e,()=>dynNext(st))}
+  if(!c.isConnected)return;
+  c.replaceChildren();
+  const tok=s.jp.split(' '),inp=h('input','inp'),send=h('button','btn','Check'),idk=h('button','btn',IDK),end=h('button','link','End benchmark'),err=h('p','fb not'),acts=h('div','row');
+  inp.type='text';inp.placeholder='What does it mean in English?';inp.autocomplete='off';
+  let busy=false;
+  const submit=async text=>{
+    text=text.trim();if(busy||!text)return;
+    busy=true;err.textContent='';inp.disabled=send.disabled=idk.disabled=true;send.textContent='Scoring…';
+    const gmsg='Cantonese (Jyutping): '+s.jp+'\nWord for word: '+tok.map((t,i)=>t+' = '+s.w[i]).join('; ')+'\nIntended English: '+s.en+'\nLearner wrote: '+text+'\nReply as {"score":integer from 0 to 10,"feedback":"2 to 3 short sentences explaining the score, word for word where it helps","missed":["Jyutping words the learner got wrong or left out"]}';
+    try{
+      const g=await groq([{role:'system',content:GRADER},...st.chat.slice(-6),{role:'user',content:gmsg}],.2);
+      const sc=Math.max(0,Math.min(10,Math.round(+g.score)));
+      if(isNaN(sc))throw new Error('Unreadable score from Groq');
+      const missed=text===IDK?tok:(Array.isArray(g.missed)?g.missed:[]).map(x=>String(x).toLowerCase().trim()).filter(x=>tok.includes(x));
+      st.chat.push({role:'user',content:gmsg},{role:'assistant',content:JSON.stringify({score:sc,feedback:g.feedback,missed})});
+      const r={jp:s.jp,en:s.en,w:s.w,a:text,score:sc,missed,fb:String(g.feedback||''),tier:s.tier};
+      st.rec.push(r);
+      if(sc>=PASS){st.fails=0;st.d++}else st.fails++;
+      if(c.isConnected)dynResult(c,st,r,s);
+      return;
+    }catch(e){
+      if(!c.isConnected)return;
+      if(e.message==='key')return keyForm('That key was rejected. Enter a valid Groq API key.',()=>dynNext(st));
+      inp.disabled=send.disabled=idk.disabled=false;send.textContent='Check';err.textContent=errMsg(e)+'. Try again.';
+      busy=false;
+    }
+  };
+  send.onclick=()=>submit(inp.value);idk.onclick=()=>submit(IDK);
+  inp.onkeydown=e=>{if(e.key==='Enter')submit(inp.value)};
+  end.onclick=()=>dynEnd(st);
+  acts.append(send,idk,end);
+  c.append(h('p','mu','Sentence '+(st.rec.length+1)+'. A pass is '+PASS+'/10 or more. The benchmark ends after '+MISS_STOP+' misses in a row ('+st.fails+' so far).'),...player(s),inp,err,acts);
+  inp.focus();
+}
+function dynResult(c,st,r,s){
+  c.replaceChildren();
+  const stop=st.fails>=MISS_STOP||st.rec.length>=CAP,n=h('button','btn',stop?'See results →':'Next sentence →');
+  n.onclick=()=>dynNext(st);
+  c.append(h('p','sent big '+(r.score>=PASS?'okt':'not'),r.score+'/10'),h('p',null,r.fb),h('p','mu','You wrote: '+r.a),sentEl(s,'jp'),h('p','mu','Meaning: '+s.en),n);
+  n.focus();
+}
+async function dynEnd(st){
+  const c=shell('Benchmark results','Benchmark'),R=st.rec,again=h('button','btn','Run again');
+  again.onclick=dyn;
+  if(!R.length){c.append(h('p','mu','No sentences were scored.'),again);return}
+  const avg=R.reduce((a,r)=>a+r.score,0)/R.length,ok=R.filter(r=>r.score>=PASS);
+  const kv=(k,v)=>{const d=h('div','kv');d.append(h('span',null,k),h('strong',null,v));return d};
+  c.append(
+    h('p',null,st.fails>=MISS_STOP?'You missed '+MISS_STOP+' in a row, so the benchmark stopped there.':R.length>=CAP?'You completed all '+CAP+' sentences.':'You ended the benchmark early.'),
+    kv('Average score',avg.toFixed(1)+' / 10'),
+    kv('Sentences scored',String(R.length)),
+    kv('Longest sentence passed',ok.length?Math.max(...ok.map(r=>r.jp.split(' ').length))+' words':'none'),
+    kv('Furthest level passed',ok.length?'Level '+(Math.max(...ok.map(r=>r.tier))+1):'none'),
+    h('h2','sec','By vocabulary level'),h('p','mu','A sentence counts under the highest level of any word in it.'));
+  for(let t=0;t<levels.length;t++){
+    const x=R.filter(r=>r.tier===t);
+    if(x.length)c.append(kv('Level '+(t+1),(x.reduce((a,r)=>a+r.score,0)/x.length).toFixed(1)+' / 10 over '+x.length+' sentence'+(x.length>1?'s':'')));
+  }
+  const ws={};
+  R.forEach(r=>r.jp.split(' ').forEach(t=>{const x=ws[t]||(ws[t]={seen:0,miss:0});x.seen++;if(r.missed.includes(t))x.miss++}));
+  const tough=Object.entries(ws).filter(([,x])=>x.miss).sort((a,b)=>b[1].miss/b[1].seen-a[1].miss/a[1].seen||b[1].miss-a[1].miss).slice(0,12);
+  c.append(h('h2','sec','Tough spots'));
+  if(!tough.length)c.append(h('p','mu','No words were missed.'));
+  tough.forEach(([t,x])=>{const d=h('div','kv'),l=h('span');l.append(wEl(dict[t],'jp'),' '+dict[t].en);d.append(l,h('span','mu','missed '+x.miss+' of '+x.seen));c.append(d)});
+  const hard=[...R].sort((a,b)=>a.score-b.score).filter(r=>r.score<PASS).slice(0,3);
+  if(hard.length){c.append(h('h2','sec','Sentences to revisit'));hard.forEach(r=>c.append(sentEl(r,'jp'),h('p','mu','Meaning: '+r.en+'. You wrote: '+r.a+' ('+r.score+'/10)')))}
+  const adv=h('div','msg ai','Writing advice…');
+  c.append(h('h2','sec','What to work on'),adv,h('p'),again);
+  try{
+    const r=await ask([{role:'system',content:'You are a friendly Cantonese tutor.'},{role:'user',content:'A learner just finished a listening benchmark. Average '+avg.toFixed(1)+'/10 over '+R.length+' sentences. Words they missed (Jyutping = meaning, missed of seen): '+(tough.map(([t,x])=>t+' = '+dict[t].en+', '+x.miss+' of '+x.seen).join('; ')||'none')+'. Sentences below the pass mark: '+(hard.map(r=>r.jp+' ('+r.en+') '+r.score+'/10').join('; ')||'none')+'. In 4 to 6 short sentences, tell them what to work on and how, in plain language.'}],.5);
+    if(c.isConnected)adv.innerHTML=md(r.trim());
+  }catch(e){adv.textContent='Advice unavailable: '+errMsg(e)}
 }
 
 /* ---------- Markdown side panel ---------- */
