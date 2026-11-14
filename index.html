@@ -81,6 +81,12 @@ button.btn{display:inline-block}
 .kv{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:1px solid var(--bd);padding:8px 0}
 .sec{font:400 24px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;margin:34px 0 8px}
 .row .inp{flex:1;margin:0;width:auto;min-width:0}
+.tones{line-height:2.1}
+.tw{white-space:nowrap}
+.tin{width:1.45em;height:1.5em;margin:0 2px;padding:0;text-align:center;font:inherit;color:inherit;background:var(--card);border:1px solid var(--bd);border-radius:4px;vertical-align:baseline}
+.tin:hover,.tin:focus{border-color:var(--ac)}
+.tin.ok,.tin.no{opacity:1}
+.tr{font-size:19px;margin:0 0 26px}
 @media(max-width:900px){.layout{grid-template-columns:1fr}#md{height:auto;min-height:60vh;position:static;border-left:0;border-top:1px solid var(--bd)}#mdbody{padding:8px 20px 60px}.mdbar{padding:14px 20px}}
 </style>
 </head>
@@ -155,10 +161,10 @@ function shell(ins,tag){
   t.append(b,h('span','mu',tag||'Level '+(lvl+1)));
   const c=h('div');app.append(t,h('p','ins',ins),c);return c;
 }
-function done(c,ok,s,lang){
+function done(c,ok,s,lang,nx=next){
   c.append(h('p','fb '+(ok?'okt':'not'),ok?'Correct':(s?'Not quite. The answer:':'Not quite')));
   if(s)c.append(sentEl(s,lang));
-  const n=h('button','btn','Next →');n.onclick=next;c.append(n);n.focus();
+  const n=h('button','btn','Next →');n.onclick=()=>nx();c.append(n);n.focus();
 }
 function choose(ins,prompt,opts,ci){
   const c=shell(ins);c.append(prompt);
@@ -199,6 +205,56 @@ const ex=[
 ];
 const next=()=>ex[Math.random()*ex.length|0]();
 
+/* ---------- Tones: the Jyutping with its tone numbers blanked out ----------
+   Each digit 1-6 in the sentence becomes a one-character box. The English translation sits
+   below and the speaker button reads the sentence aloud. The words show only their English
+   meaning on right-click (never the Jyutping, which would give the tones away). */
+let lastTone=null;
+function tones(){
+  const pool=sents.filter(x=>/[1-6]/.test(x.jp)),c=shell('Listen, then type the tone number (1–6) for every syllable');
+  if(!pool.length){c.append(h('p','mu','No sentences with tone numbers were found for this level.'));return}
+  const cand=pool.filter(x=>x!==lastTone),s=rnd(cand.length?cand:pool);lastTone=s;
+  const d=h('div','sent tones'),chk=h('button','btn','Check'),ins=[],ans=[];
+  let locked=false;
+  const full=()=>ins.every(e=>e.value);
+  const go=()=>{
+    if(locked||!full())return;
+    locked=true;chk.remove();
+    let ok=true;
+    ins.forEach((e,k)=>{const good=e.value===ans[k];if(!good)ok=false;e.readOnly=true;e.classList.add(good?'ok':'no')});
+    done(c,ok,s,'jp',tones);
+  };
+  s.jp.split(' ').forEach((t,i)=>{
+    const wrap=h('span','tw');
+    t.split(/([1-6])/).forEach((part,j)=>{
+      if(j%2){
+        const e=h('input','tin'),k=ins.length;
+        e.type='text';e.maxLength=1;e.inputMode='numeric';e.autocomplete='off';e.setAttribute('aria-label','Tone number '+(k+1));
+        e.onfocus=()=>e.select();
+        e.oninput=()=>{
+          e.value=e.value.replace(/[^1-6]/g,'');
+          if(e.value&&ins[k+1])ins[k+1].focus();
+          chk.disabled=!full();
+        };
+        e.onkeydown=ev=>{
+          if(ev.key==='Enter'){go();return}
+          if(ev.key==='Backspace'&&!e.value&&ins[k-1]){ev.preventDefault();ins[k-1].focus()}
+          else if(ev.key==='ArrowLeft'&&ins[k-1]){ev.preventDefault();ins[k-1].focus()}
+          else if(ev.key==='ArrowRight'&&ins[k+1]){ev.preventDefault();ins[k+1].focus()}
+        };
+        ins.push(e);ans.push(part);wrap.append(e);
+      }else if(part){
+        const w=h('span','w',part);w.dataset.tip=s.w[i];wrap.append(w);
+      }
+    });
+    d.append(wrap,' ');
+  });
+  d.append(spk(zhOf(s)));
+  chk.disabled=true;chk.onclick=go;
+  c.append(d,h('p','tr mu',s.en),chk);
+  if(ins[0])ins[0].focus();
+}
+
 /* levels: level N uses the words and sentences of levels 1..N */
 function load(i){
   lvl=i;words=[];sents=[];dict={};
@@ -210,8 +266,8 @@ function load(i){
 function start(i){
   load(i);
   const c=shell('Choose how to practise'),g=h('div','modes');
-  [['Exercises','Arrange and choose: six kinds of practice',next],['Listening','Hear a random sentence from your level and chat about it (uses Groq)',listen],['Dynamic listening','An adaptive benchmark across every level that ends with your tough spots (uses Groq)',dyn]].forEach(([t,d,f])=>{
-    const b=h('button','btn mode');b.append(h('strong',null,t),h('span','mu',d));b.onclick=f;g.append(b);
+  [['Exercises','Arrange and choose: six kinds of practice',next],['Tones','Fill in the missing tone numbers (1–6) of a Jyutping sentence',tones],['Listening','Hear a random sentence from your level and chat about it (uses Groq)',listen],['Dynamic listening','An adaptive benchmark across every level that ends with your tough spots (uses Groq)',dyn]].forEach(([t,d,f])=>{
+    const b=h('button','btn mode');b.append(h('strong',null,t),h('span','mu',d));b.onclick=()=>f();g.append(b);
   });
   c.append(g);
 }
