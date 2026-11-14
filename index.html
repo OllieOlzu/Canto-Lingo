@@ -85,7 +85,8 @@ button.btn{display:inline-block}
 .tw{white-space:nowrap}
 .tin{width:1.45em;height:1.5em;margin:0 2px;padding:0;text-align:center;font:inherit;color:inherit;background:var(--card);border:1px solid var(--bd);border-radius:4px;vertical-align:baseline}
 .tin:hover,.tin:focus{border-color:var(--ac)}
-.tin.ok,.tin.no{opacity:1}
+.tin.ok{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 20%,var(--card))}
+.tin.no{border-color:var(--no);background:color-mix(in srgb,var(--no) 20%,var(--card))}
 .tr{font-size:19px;margin:0 0 26px}
 @media(max-width:900px){.layout{grid-template-columns:1fr}#md{height:auto;min-height:60vh;position:static;border-left:0;border-top:1px solid var(--bd)}#mdbody{padding:8px 20px 60px}.mdbar{padding:14px 20px}}
 </style>
@@ -216,9 +217,8 @@ function tones(){
   const cand=pool.filter(x=>x!==lastTone),s=rnd(cand.length?cand:pool);lastTone=s;
   const d=h('div','sent tones'),chk=h('button','btn','Check'),ins=[],ans=[];
   let locked=false;
-  const full=()=>ins.every(e=>e.value);
   const go=()=>{
-    if(locked||!full())return;
+    if(locked)return;
     locked=true;chk.remove();
     let ok=true;
     ins.forEach((e,k)=>{const good=e.value===ans[k];if(!good)ok=false;e.readOnly=true;e.classList.add(good?'ok':'no')});
@@ -234,7 +234,6 @@ function tones(){
         e.oninput=()=>{
           e.value=e.value.replace(/[^1-6]/g,'');
           if(e.value&&ins[k+1])ins[k+1].focus();
-          chk.disabled=!full();
         };
         e.onkeydown=ev=>{
           if(ev.key==='Enter'){go();return}
@@ -250,7 +249,7 @@ function tones(){
     d.append(wrap,' ');
   });
   d.append(spk(zhOf(s)));
-  chk.disabled=true;chk.onclick=go;
+  chk.onclick=go;
   c.append(d,h('p','tr mu',s.en),chk);
   if(ins[0])ins[0].focus();
 }
