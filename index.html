@@ -27,6 +27,9 @@ button{font:inherit;color:inherit}
 .btn:hover:not(:disabled){border-color:var(--ac);color:var(--ac)}
 .btn:disabled{opacity:.4;cursor:default}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin-top:28px}
+.btn.wide{grid-column:1/-1}
+.sent.st{font-size:22px;line-height:1.7;margin:0 0 14px}
+.part+.part{border-top:1px solid var(--bd);padding-top:30px;margin-top:30px}
 .ans{min-height:58px;border-bottom:2px solid var(--bd);padding:4px 0 10px;display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
 .pool{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
 .tile{background:var(--card);border:1px solid var(--bd);border-radius:6px;padding:8px 14px;cursor:pointer;font:400 21px "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
@@ -64,30 +67,6 @@ button{font:inherit;color:inherit}
 .md table{border-collapse:collapse;font:16px/1.5 system-ui,sans-serif}
 .md th,.md td{border-bottom:1px solid var(--bd);padding:7px 16px 7px 0;text-align:left}
 .md th{border-bottom-width:2px}
-button.btn{display:inline-block}
-.modes{display:grid;gap:10px}
-.mode{display:flex!important;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;padding:16px 20px}
-.mode span{font-size:15px}
-.inp{width:100%;font:inherit;color:inherit;background:var(--card);border:1px solid var(--bd);border-radius:6px;padding:12px 14px;margin-bottom:12px}
-.row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
-.speed{display:flex;align-items:center;gap:12px;font-size:15px;color:var(--mu);margin:20px 0 24px}
-.speed input{flex:1;max-width:260px;accent-color:var(--ac)}
-.log{display:grid;gap:10px;margin:0 0 14px}
-.msg{padding:10px 14px;border-radius:8px;border:1px solid var(--bd);background:var(--card);max-width:94%;line-height:1.55}
-.msg.me{justify-self:end;background:var(--ac);border-color:var(--ac);color:var(--bg)}
-.msg p{margin:0 0 .6em}.msg>:last-child{margin-bottom:0}
-.msg ul,.msg ol{margin:0 0 .6em;padding-left:1.3em}
-.msg .tbl{overflow-x:auto}.msg th,.msg td{padding:2px 14px 2px 0;text-align:left}
-.kv{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:1px solid var(--bd);padding:8px 0}
-.sec{font:400 24px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;margin:34px 0 8px}
-.row .inp{flex:1;margin:0;width:auto;min-width:0}
-.tones{line-height:2.1}
-.tw{white-space:nowrap}
-.tin{width:1.45em;height:1.5em;margin:0 2px;padding:0;text-align:center;font:inherit;color:inherit;background:var(--card);border:1px solid var(--bd);border-radius:4px;vertical-align:baseline}
-.tin:hover,.tin:focus{border-color:var(--ac)}
-.tin.ok{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 20%,var(--card))}
-.tin.no{border-color:var(--no);background:color-mix(in srgb,var(--no) 20%,var(--card))}
-.tr{font-size:19px;margin:0 0 26px}
 @media(max-width:900px){.layout{grid-template-columns:1fr}#md{height:auto;min-height:60vh;position:static;border-left:0;border-top:1px solid var(--bd)}#mdbody{padding:8px 20px 60px}.mdbar{padding:14px 20px}}
 </style>
 </head>
@@ -112,10 +91,10 @@ const pick=(a,n,not)=>shuf(a.filter(x=>x!==not)).slice(0,n);
 const h=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
 
 /* Speech: the optional "zh" field in each word is used only for the voice, never displayed */
-function say(t,r=.85){
+function say(t){
   if(!('speechSynthesis' in window))return;
   speechSynthesis.cancel();
-  const u=new SpeechSynthesisUtterance(t);u.lang='zh-HK';u.rate=r;
+  const u=new SpeechSynthesisUtterance(t);u.lang='zh-HK';u.rate=.85;
   const v=speechSynthesis.getVoices().find(v=>/zh[-_]HK|yue/i.test(v.lang));
   if(v)u.voice=v;
   speechSynthesis.speak(u);
@@ -156,16 +135,16 @@ document.addEventListener('contextmenu',e=>{
 ['click','scroll','keydown'].forEach(ev=>addEventListener(ev,()=>tip.hidden=true,true));
 
 /* layout helpers */
-function shell(ins,tag){
+function shell(ins){
   app.replaceChildren();
   const t=h('div','top'),b=h('button','link','← Levels');b.onclick=menu;
-  t.append(b,h('span','mu',tag||'Level '+(lvl+1)));
+  t.append(b,h('span','mu','Level '+(lvl+1)));
   const c=h('div');app.append(t,h('p','ins',ins),c);return c;
 }
-function done(c,ok,s,lang,nx=next){
+function done(c,ok,s,lang){
   c.append(h('p','fb '+(ok?'okt':'not'),ok?'Correct':(s?'Not quite. The answer:':'Not quite')));
   if(s)c.append(sentEl(s,lang));
-  const n=h('button','btn','Next →');n.onclick=()=>nx();c.append(n);n.focus();
+  const n=h('button','btn','Next →');n.onclick=next;c.append(n);n.focus();
 }
 function choose(ins,prompt,opts,ci){
   const c=shell(ins);c.append(prompt);
@@ -206,82 +185,611 @@ const ex=[
 ];
 const next=()=>ex[Math.random()*ex.length|0]();
 
-/* ---------- Tones: the Jyutping with its tone numbers blanked out ----------
-   Each digit 1-6 in the sentence becomes a one-character box. The English translation sits
-   below and the speaker button reads the sentence aloud. The words show only their English
-   meaning on right-click (never the Jyutping, which would give the tones away). */
-let lastTone=null;
-function tones(){
-  const pool=sents.filter(x=>/[1-6]/.test(x.jp)),c=shell('Listen, then type the tone number (1–6) for every syllable');
-  if(!pool.length){c.append(h('p','mu','No sentences with tone numbers were found for this level.'));return}
-  const cand=pool.filter(x=>x!==lastTone),s=rnd(cand.length?cand:pool);lastTone=s;
-  const d=h('div','sent tones'),chk=h('button','btn','Check'),ins=[],ans=[];
-  let locked=false;
-  const go=()=>{
-    if(locked)return;
-    locked=true;chk.remove();
-    let ok=true;
-    ins.forEach((e,k)=>{const good=e.value===ans[k];if(!good)ok=false;e.readOnly=true;e.classList.add(good?'ok':'no')});
-    done(c,ok,s,'jp',tones);
-  };
-  s.jp.split(' ').forEach((t,i)=>{
-    const wrap=h('span','tw');
-    t.split(/([1-6])/).forEach((part,j)=>{
-      if(j%2){
-        const e=h('input','tin'),k=ins.length;
-        e.type='text';e.maxLength=1;e.inputMode='numeric';e.autocomplete='off';e.setAttribute('aria-label','Tone number '+(k+1));
-        e.onfocus=()=>e.select();
-        e.oninput=()=>{
-          e.value=e.value.replace(/[^1-6]/g,'');
-          if(e.value&&ins[k+1])ins[k+1].focus();
-        };
-        e.onkeydown=ev=>{
-          if(ev.key==='Enter'){go();return}
-          if(ev.key==='Backspace'&&!e.value&&ins[k-1]){ev.preventDefault();ins[k-1].focus()}
-          else if(ev.key==='ArrowLeft'&&ins[k-1]){ev.preventDefault();ins[k-1].focus()}
-          else if(ev.key==='ArrowRight'&&ins[k+1]){ev.preventDefault();ins[k+1].focus()}
-        };
-        ins.push(e);ans.push(part);wrap.append(e);
-      }else if(part){
-        const w=h('span','w',part);w.dataset.tip=s.w[i];wrap.append(w);
-      }
-    });
-    d.append(wrap,' ');
+/* ---------- Progressive story (hard-coded) ----------
+   STORY: the text as written; blank line = new part, one line = one sentence.
+   STORY_LEX: key|characters|English. A key is one word, written as its Jyutping syllables.
+   The characters are used only for the voice, never displayed.
+   A "~x" after a syllable in the story picks a different sense of the same Jyutping
+   (hou2~v = "very"); it is not shown on screen. */
+/*story-data*/
+const STORY=`
+Nei5 hou2.
+Ngo5 hai6 Aa3 Ming4.
+Ni1 go3 hai6 maa4 maa4.
+Go2 go3 hai6 je4 je2.
+Ngo5 jau5 maa4 maa4.
+Ngo5 jau5 je4 je2.
+Ngo5 mou5 so2 si4.
+Je4 je2 jau5 so2 si4.
+Je4 je2 man6: "Nei5 hai6 bin1 go3?"
+Ngo5 waa6: "Ngo5 hai6 Aa3 Ming4!"
+Je4 je2 siu3.
+Maa4 maa4 man6: "Nei5 sik6 m4 sik6 faan6?"
+Ngo5 waa6: "Ngo5 sik6!"
+Ngo5 m4 sik1 gong2 gwong2 dung1 waa2.
+Keoi5 dei6 sik1 gong2 gwong2 dung1 waa2.
+Maa4 maa4 waa6: "Mou5 man6 tai4!"
+
+Ni1 dou6 hai6 je4 je2 tung4 maa4 maa4 ge3 uk1 kei2.
+Uk1 kei2 hou2~v sai3.
+Ngo5 dei6 hai2 uk1 kei2 sik6 ng5 faan6.
+Toi2 soeng6 min6 jau5 jyu2, jau5 coi3, jau5 juk6.
+Ni1 tiu4 jyu2 hou2 sik6.
+Ngo5 m4 soeng2 sik6 go2 dip6 coi3.
+Maa4 maa4 waa6: "Nei5 jiu3 sik6 coi3!"
+Ngo5 jiu3 loeng5 wun2 faan6.
+Je4 je2 jam2 caa4, ngo5 jam2 seoi2.
+Ngo5 man6: "Ni1 go3 hai6 mat1 je5?"
+Je4 je2 waa6: "Ni1 go3 hai6 dau6 fu6."
+Ngo5 waa6: "Dau6 fu6 hou2 sik6!"
+Maa4 maa4 hou2~v hoi1 sam1.
+Je4 je2 man6: "Nei5 gam1 nin4 gei2 do1 seoi3?"
+Ngo5 waa6: "Ngo5 ji6 sap6 ng5 seoi3."
+Maa4 maa4 waa6: "Nei5 hou2~v gou1 aa3!"
+Ngo5 ge3 gwong2 dung1 waa2 m4 hou2, daan6 hai6 ngo5 soeng2 hok6.
+
+Ngo5 kam4 jat6 co5 zo2 fei1 gei1 lai4 Hoeng1 Gong2.
+Ngo5 ji5 ging1 sik6 zo2 ng5 faan6.
+Je4 je2 ji4 gaa1 tai2 gan2 bou3 zi2.
+Maa4 maa4 sai2 gan2 wun2.
+Maa4 maa4 man6: "Nei5 sik6 gwo3 jyu4 daan2 mei6 aa3?"
+Ngo5 waa6: "Ngo5 mei6 sik6 gwo3."
+Maa4 maa4 waa6: "Ting1 jat6 ngo5 dei6 heoi3 gaai1 si5, sik6 jyu4 daan2 laa1!"
+Je4 je2 waa6: "Jyu4 gwo2 nei5 soeng2, ngo5 dei6 zung6 ho2 ji5 heoi3 jam2 caa4."
+Ngo5 waa6: "Hou2 aa3! Jan1 wai6 ngo5 hou2~v noi6 mou5 jam2 caa4, so2 ji5 ngo5 hou2~v soeng2 heoi3."
+Je6 maan5, ngo5 hou2~v gui6, so2 ji5 ngo5 zou2 di1 fan3 gaau3.
+
+Dai6 ji6 jat6 ziu1 zou2, ngo5 cat1 dim2 zung1 zau6 sing2 zo2.
+Maa4 maa4 ji5 ging1 hai2 cyu4 fong2 zyu2 gan2 zuk1.
+Je4 je2 man6: "Nei5 fan3 dak1 hou2 m4 hou2 aa3?"
+Ngo5 waa6: "Fan3 dak1 hou2~v hou2, do1 ze6 je4 je2!"
+Sik6 jyun4 zou2 caan1 zi1 hau6, maa4 maa4 daai3 ngo5 heoi3 gaai1 si5.
+Gaai1 si5 jap6 min6 jau5 hou2 do1 jan4, hou2~v cou4.
+Maai6 jyu2 ge3 aa3 suk1 daai6 seng1 giu3: "Leng3 zai2, maai5 tiu4 jyu2 laa1!"
+Maa4 maa4 siu3 zyu6 man6: "Ni1 tiu4 jyu2 gei2 cin2 jat1 gan1 aa3?"
+Aa3 suk1 waa6: "Luk6 sap6 man1 jat1 gan1!"
+Maa4 maa4 waa6: "Gam3 gwai3? Peng4 di1 laa1!"
+Zeoi3 hau6, maa4 maa4 gong2 gaa3 sing4 gung1, ng5 sap6 man1 zau6 maai5 zo2 tiu4 jyu2.
+Ngo5 seoi1 jin4 teng1 m4 ming4, daan6 hai6 ngo5 zi1 dou3 maa4 maa4 hou2~v lek1.
+Zi1 hau6 ngo5 dei6 hai2 gaai1 bin1 sik6 zo2 jat1 wun2 jyu4 daan2, jau6 daan6 ngaa4 jau6 hou2 mei6.
+
+Je4 je2 zou2 zau6 heoi3 zo2 caa4 lau4, tung4 lou5 pang4 jau5 king1 gai2, dang2 gan2 ngo5 dei6.
+Fo2 gei3 man6 ngo5 dei6 jiu3 me1 caa4, je4 je2 giu3 zo2 jat1 wu4 pou2 nei2.
+Haa1 gaau2, siu1 maai2 tung4 caa1 siu1 baau1 cyun4 bou6 dou1 hou2~v hou2 sik6.
+Ngo5 jung6 faai3 zi2 gaap3 haa1 gaau2, daan6 hai6 haa1 gaau2 dit3 zo2 lok6 toi2 dou6.
+Je4 je2 daai6 siu3: "Mou5 gan2 jiu3, maan6 maan2 lai4!"
+Keoi5 gaau3 ngo5 dim2 joeng2 jung6 faai3 zi2, zung6 gaau3 ngo5 jam2 caa4 ge3 gwai1 geoi2.
+Jyu4 gwo2 jau5 jan4 bong1 nei5 zam1 caa4, nei5 zau6 jiu3 jung6 sau2 zi2 kau3 toi2 min6, biu2 si6 do1 ze6.
+Ngo5 si3 zo2 jat1 ci3, maa4 maa4 waa6 ngo5 kau3 dak1 hou2 ci5 joeng2.
+Je4 je2 jat1 bin1 jam2 caa4, jat1 bin1 gong2 ji5 cin4 ge3 gu3 si6.
+Keoi5 waa6 ng5 sap6 nin4 cin4, ni1 dou6 mei6 jau5 gam3 do1 gou1 lau4 daai6 haa6.
+Go2 si4 mou5 ji4 gaa1 gam3 fu3 jyu6, daan6 hai6 leon4 geoi1 zi1 gaan1 hou2~v jau5 jan4 cing4 mei6.
+Ngo5 jau5 di1 teng1 m4 ming4, maa4 maa4 zau6 maan6 di1 zoi3 gong2 jat1 ci3.
+Ngo5 waa6: "Ni1 ci3 ngo5 teng1 ming4 laa3!"
+Je4 je2 waa6: "Nei5 hou2~v lek1 gaa3! Gong2 dak1 gei2 hou2 wo3!"
+Ngo5 zi1 je4 je2 hai6 gong2 lai4 hung2 ngo5 hoi1 sam1 ge3, bat1 gwo3 ngo5 dou1 zan1 hai6 hou2~v hoi1 sam1.
+
+Jam2 jyun4 caa4, ngo5 dei6 haang4 heoi3 gung1 jyun4, tai2 di1 lou5 jan4 gaa1 daa2 taai3 gik6.
+Jau5 go3 baak3 baak1 waa6 ngo5 taai3 sau3, jiu3 sik6 do1 di1 faan6 sin1 zi3 jau5 lik6.
+Faan1 dou3 uk1 kei2, maa4 maa4 gaau3 ngo5 baau1 wan4 tan1.
+Ngo5 baau1 ge3 wan4 tan1 jau6 daai6 jau6 cau2, je4 je2 ging2 jin4 waa6 mei6 dou6 m4 co3.
+Je6 maan5, ngo5 dei6 sik6 zi6 gei2 baau1 ge3 wan4 tan1, maa4 maa4 zung6 gei3 dak1 zing2 ngo5 zeoi3 zung1 ji3 sik6 ge3 zi1 maa4 wu2.
+
+Sik6 faan6 go2 zan6, je4 je2 man6: "Nei5 hai2 Nau2 Sai1 Laan4 zou6 me1 gung1 zok3 aa3?"
+Ngo5 waa6 ngo5 hai6 din6 nou5 gung1 cing4 si1, jat6 jat6 deoi3 zyu6 bou6 din6 nou5, hou2 siu2 jau5 si4 gaan3 jau1 sik1.
+Maa4 maa4 zik1 hak1 zau3 hei2 mei4 tau4 waa6: "Zou6 dou3 gam3 san1 fu2, dim2 dak1 gaa3!"
+Je4 je2 zau6 waa6 hau6 saang1 zai2 san1 fu2 di1 dou1 mou5 so2 wai6, zeoi3 gan2 jiu3 hai6 sik6 baau2 di1 tung4 maai4 fan3 gau3 gaau3.
+Ngo5 siu3 zyu6 waa6: "Fong3 sam1 laa1, maa4 maa4 zyu2 me1 ngo5 dou1 sik6 saai3!"
+
+Sik6 jyun4 faan6, je4 je2 ling1 ceot1 fu3 maa4 zoek3, waa6 jiu3 gaau3 ngo5 daa2.
+Gwai1 zak1 fuk1 zaap6 dou3 ngo5 seng4 go3 jan4 lyun6 saai3 lung4, daa2 zo2 saam1 hyun1, dou1 zung6 gaau2 m4 cing1 bin1 zek3 hai6 bin1 zek3.
+Git3 gwo2 ngo5 lin4 syu1 saam1 ci3, syu1 zo2 seng4 ng5 sap6 man1, hou2~v juk6 cek3, maa4 maa4 zau6 siu3 dou3 lau4 saai3 ngaan5 seoi2.
+Je4 je2 paak3 paak3 ngo5 bok3 tau4 waa6: "Syu1 cin2 hai6 hok6 je5 bit1 ging1 zi1 lou6, ji5 hau6 nei5 zau6 sik1 gaa3 laa3."
+Go2 maan5 fan3 hai2 cong4 soeng6 min6, ngo5 nam2 zyu6 gam1 jat6 jat1 jat6, gok3 dak1 zi6 gei2 hok6 zo2 hou2 do1 je5.
+
+Gwo3 zo2 gei2 jat6, ngo5 tung4 aa3 je4 aa3 maa4 ge3 kau1 tung1 seon6 coeng3 zo2 hou2 do1, m4 sai2 zoi3 kaau3 bei2 sau2 waak6 goek3.
+Jau5 jat6 ziu1 zou2, lau4 haa6 ge3 Can4 Baak3 hai2 din6 tai1 jap6 min6 gin3 dou2 ngo5, zik1 hak1 laai1 zyu6 ngo5 king1 gai2.
+Keoi5 waa6 keoi5 hai2 se5 keoi1 bou3 zou6 ji6 gung1, soeng2 fong2 man6 haa5 ngo5 ni1 go3 hoi2 ngoi6 gwai1 loi4 ge3 syun1 zai2.
+Ngo5 ji6 waa6 bat1 syut3 zau6 daap3 jing1 zo2, jan1 wai6 ngo5 gok3 dak1, tung4 gaai1 fong1 king1 gai2 sin1 zi3 hai6 zeoi3 hou2 ge3 lin6 zaap6.
+
+Can4 Baak3 man6: "Nei5 hai2 Nau2 Sai1 Laan4 ceot1 sai3, dim2 gaai2 zung6 wui5 soeng2 hok6 gwong2 dung1 waa2 gaa3?"
+Ngo5 daap3: "Lou5 sat6 gong2, ngo5 sai3 go3 go2 zan6 zing6 hai6 teng1 dak1 ming4 siu2 siu2, mui5 ci3 tung4 aa3 je4 aa3 maa4 gong2 din6 waa2, dou1 hai6 'hai6 aa3 hai6 aa3' gam2~b jing1, zan1 hai6 hou2~v gaam3 gaai3."
+Can4 Baak3 man6: "Gam2 gam1 ci3 faan1 lai4, zeoi3 daai6 ge3 sau1 wok6 hai6 me1 ne1?"
+Ngo5 waa6: "Zeoi3 daai6 ge3 sau1 wok6, zau6 hai6 ngo5 zung1 jyu1 ming4 baak6, jyu5 jin4 m4 daan1 zi2 hai6 kau1 tung1 ge3 gung1 geoi6, zung6 hai6 jat1 go3 jan4 ge3 gam2 cing4 tung4 gei3 jik1."
+Ngo5 bou2 cung1: "Aa3 je4 seng4 jat6 waa6, gwong2 dung1 waa2 jau5 hou2 do1 je5 gan1 bun2 jik6 m4 dou3, hou2 ci5 'wo1 sam1', zing6 hai6 jung6 gwong2 dung1 waa2 sin1 gong2 dak1 ceot1 go2 zung2 gam2 gok3."
+Can4 Baak3 siu3 dou3 baa2 hau2 hap6 m4 maai4: "Waa1, gam3 ging6! Hau6 saang1 zai2 gam3 sik1 gong2, zan1 hai6 hau6 saang1 ho2 wai3!"
+Ngo5 haa1 haa1 daai6 siu3: "Gwo3 zoeng2 laa3! Ngo5 ji4 gaa1 gong2 je5, jau5 si4 zung6 hai6 wui5 dat6 jin4 ci4 kung4, jiu3 kaau3 aa3 maa4 gau3 coeng4, bat1 gwo3 zi3 siu2 ji5 ging1 m4 wui5 gong2 dou3 ngau4 tau4 m4 daap3 maa5 zeoi2 laa3."
+Can4 Baak3 zoi3 man6: "Gam2 nei5 daa2 syun3 gei2 si4 zoi3 faan1 lai4 aa3?"
+Ngo5 nam2 dou1 mou5 nam2 zau6 daap3: "Gwo3 nin4 jat1 ding6 faan1 lai4! Ngo5 tung4 aa3 je4 aa3 maa4 gong2 hou2 zo2, dou3 si4 jat1 cai4 haang4 faa1 si5, sik6 tyun4 nin4 faan6, dong1 jin4 zeoi3 gan2 jiu3 hai6 sau1 lai6 si6 laa1!"
+Can4 Baak3 zik1 coeng4 se2 dai1 biu1 tai4: "Nau2 Sai1 Laan4 syun1 zai2 faan1 Gong2 cam4 gan1, gwong2 dung1 waa2 gwo3 gwaan1 cyun4 kaau3 aa3 je4 aa3 maa4."
+
+Ni1 go3 si4 hau6, aa3 maa4 hai2 coeng1 hau2 daai6 giu3: "Aa3 Ming4! Faan1 lai4 sik6 faan6 laa3, tong1 dung3 saai3 laa3!"
+Ngo5 zik1 hak1 jing1 keoi5: "Lai4 laa3 lai4 laa3!"
+Paau2 faan1 uk1 kei2 go2 zan6, ngo5 dat6 jin4 faat3 gok3, jyun4 loi4 zeoi3 hou2 ge3 gwong2 dung1 waa2 fo3 tong4, zau6 hai6 aa3 maa4 bou1 ge3 jat1 wun2 tong1.
+`;
+
+const STORY_LEX=`
+nei5|你|you
+hou2|好|good
+ngo5|我|I / me
+hai6|係|is / am / yes
+aa3 ming4|阿明|Ah Ming (name)
+ni1 go3|呢個|this
+maa4 maa4|媽媽|mum
+go2 go3|嗰個|that
+je4 je2|爺爺|grandpa
+jau5|有|have / there is
+mou5|冇|don't have
+so2 si4|鎖匙|key
+man6|問|ask
+bin1 go3|邊個|who
+waa6|話|say
+siu3|笑|smile / laugh
+sik6|食|eat
+m4|唔|not
+faan6|飯|rice / meal
+sik1|識|know how to
+gong2|講|speak / say
+gwong2 dung1 waa2|廣東話|Cantonese
+keoi5 dei6|佢哋|they
+man6 tai4|問題|problem
+ni1 dou6|呢度|here
+tung4|同|and / with
+ge3|嘅|of / 's (particle)
+uk1 kei2|屋企|home
+hou2~v|好|very
+sai3|細|small
+ngo5 dei6|我哋|we / us
+hai2|喺|at / in
+ng5 faan6|午飯|lunch
+toi2|枱|table
+soeng6 min6|上面|on top
+jyu2|魚|fish
+coi3|菜|vegetables
+juk6|肉|meat
+ni1 tiu4|呢條|this (fish)
+hou2 sik6|好食|delicious (lit. good to eat)
+soeng2|想|want to
+go2 dip6|嗰碟|that plate of
+jiu3|要|need to / want
+loeng5|兩|two
+wun2|碗|bowl
+jam2|飲|drink
+caa4|茶|tea
+seoi2|水|water
+mat1 je5|乜嘢|what
+dau6 fu6|豆腐|tofu
+hoi1 sam1|開心|happy
+gam1 nin4|今年|this year
+gei2 do1|幾多|how many
+seoi3|歲|years old
+ji6 sap6 ng5|二十五|twenty-five
+gou1|高|tall
+aa3|呀|(sentence particle)
+daan6 hai6|但係|but
+hok6|學|learn
+kam4 jat6|琴日|yesterday
+co5|坐|take (a ride)
+zo2|咗|(past tense marker)
+fei1 gei1|飛機|aeroplane
+lai4|嚟|come
+hoeng1 gong2|香港|Hong Kong
+ji5 ging1|已經|already
+ji4 gaa1|而家|now
+tai2|睇|read / watch
+gan2|緊|(in progress)
+bou3 zi2|報紙|newspaper
+sai2|洗|wash
+gwo3|過|(have ever done)
+jyu4 daan2|魚蛋|fish balls
+mei6|未|not yet
+ting1 jat6|聽日|tomorrow
+heoi3|去|go
+gaai1 si5|街市|market
+laa1|啦|(suggestion particle)
+jyu4 gwo2|如果|if
+zung6|仲|also / still
+ho2 ji5|可以|can
+jan1 wai6|因為|because
+noi6|耐|a long time
+so2 ji5|所以|so
+je6 maan5|夜晚|night
+gui6|攰|tired
+zou2|早|early
+di1|啲|a bit / some
+fan3 gaau3|瞓覺|sleep
+dai6 ji6 jat6|第二日|the next day
+ziu1 zou2|朝早|morning
+cat1 dim2 zung1|七點鐘|seven o'clock
+zau6|就|then / already
+sing2|醒|wake up
+cyu4 fong2|廚房|kitchen
+zyu2|煮|cook
+zuk1|粥|congee
+fan3|瞓|sleep
+dak1|得|(complement particle)
+do1 ze6|多謝|thank you
+sik6 jyun4|食完|finish eating
+zou2 caan1|早餐|breakfast
+zi1 hau6|之後|after / afterwards
+daai3|帶|take / bring along
+jap6 min6|入面|inside
+hou2 do1|好多|a lot of
+do1|多|many / more
+jan4|人|person / people
+cou4|嘈|noisy
+maai6|賣|sell
+aa3 suk1|阿叔|uncle
+daai6 seng1|大聲|loudly
+giu3|叫|shout / call / order
+leng3 zai2|靚仔|handsome young man
+maai5|買|buy
+tiu4|條|(classifier for fish)
+siu3 zyu6|笑住|smiling
+gei2 cin2|幾錢|how much
+jat1 gan1|一斤|one catty
+luk6 sap6|六十|sixty
+man1|蚊|dollars
+gam3|咁|so
+gwai3|貴|expensive
+peng4|平|cheap
+zeoi3 hau6|最後|finally
+gong2 gaa3|講價|bargain
+sing4 gung1|成功|successfully
+ng5 sap6|五十|fifty
+seoi1 jin4|雖然|although
+teng1|聽|hear / listen
+ming4|明|understand
+zi1 dou3|知道|know
+lek1|叻|clever / capable
+gaai1 bin1|街邊|roadside
+jat1 wun2|一碗|a bowl of
+jau6|又|both ... and
+daan6 ngaa4|彈牙|springy / bouncy
+hou2 mei6|好味|tasty
+caa4 lau4|茶樓|teahouse
+lou5 pang4 jau5|老朋友|old friends
+king1 gai2|傾偈|chat
+dang2|等|wait
+fo2 gei3|伙記|waiter
+me1|咩|what
+jat1 wu4|一壺|a pot of
+pou2 nei2|普洱|pu-erh tea
+haa1 gaau2|蝦餃|shrimp dumplings
+siu1 maai2|燒賣|siu mai (pork dumplings)
+caa1 siu1 baau1|叉燒包|BBQ pork buns
+cyun4 bou6|全部|all
+dou1|都|also / all
+jung6|用|use
+faai3 zi2|筷子|chopsticks
+gaap3|夾|pick up (with chopsticks)
+dit3|跌|fall
+lok6|落|down onto
+dou6|度|(place particle)
+daai6 siu3|大笑|laugh loudly
+mou5 gan2 jiu3|冇緊要|never mind
+maan6 maan2|慢慢|slowly
+keoi5|佢|he / she
+gaau3|教|teach
+dim2 joeng2|點樣|how
+gwai1 geoi2|規矩|rules / etiquette
+jau5 jan4|有人|someone
+bong1|幫|help
+zam1|斟|pour
+sau2 zi2|手指|finger
+kau3|敲|tap
+toi2 min6|枱面|tabletop
+biu2 si6|表示|show / express
+si3|試|try
+jat1 ci3|一次|once
+hou2 ci5 joeng2|好似樣|looks the part
+jat1 bin1|一邊|while (doing one thing)
+ji5 cin4|以前|in the past
+gu3 si6|故事|story
+nin4 cin4|年前|years ago
+gou1 lau4 daai6 haa6|高樓大廈|skyscrapers
+go2 si4|嗰時|at that time
+fu3 jyu6|富裕|wealthy
+leon4 geoi1|鄰居|neighbours
+zi1 gaan1|之間|between
+jan4 cing4 mei6|人情味|warmth of community
+jau5 di1|有啲|somewhat
+maan6|慢|slow
+zoi3|再|again
+ni1 ci3|呢次|this time
+laa3|喇|(particle: now / done)
+gaa3|㗎|(particle)
+gei2|幾|quite
+wo3|喎|(particle)
+zi1|知|know
+gong2 lai4|講嚟|say it in order to
+hung2|哄|cheer up
+bat1 gwo3|不過|however
+zan1 hai6|真係|really
+jam2 jyun4|飲完|finish drinking
+haang4|行|walk
+gung1 jyun4|公園|park
+lou5 jan4 gaa1|老人家|elderly people
+daa2|打|play / practise
+taai3 gik6|太極|tai chi
+jau5 go3|有個|there was a
+baak3 baak1|伯伯|old man
+taai3|太|too
+sau3|瘦|thin
+sin1 zi3|先至|only then
+jau5 lik6|有力|strong
+faan1 dou3|返到|get back to
+baau1|包|wrap
+wan4 tan1|雲吞|wontons
+daai6|大|big
+cau2|醜|ugly
+ging2 jin4|竟然|unexpectedly
+mei6 dou6|味道|taste
+m4 co3|唔錯|not bad
+zi6 gei2|自己|oneself
+gei3 dak1|記得|remember
+zing2|整|make
+zeoi3|最|most
+zung1 ji3|鍾意|like
+zi1 maa4 wu2|芝麻糊|sesame soup
+go2 zan6|嗰陣|at that time
+nau2 sai1 laan4|紐西蘭|New Zealand
+zou6|做|do
+gung1 zok3|工作|work
+din6 nou5|電腦|computer
+gung1 cing4 si1|工程師|engineer
+jat6 jat6|日日|every day
+deoi3 zyu6|對住|facing
+bou6|部|(classifier for machines)
+hou2 siu2|好少|rarely
+si4 gaan3|時間|time
+jau1 sik1|休息|rest
+zik1 hak1|即刻|immediately
+zau3 hei2|皺起|furrow
+mei4 tau4|眉頭|brow
+zou6 dou3|做到|work to the point of
+san1 fu2|辛苦|hard / tiring
+dim2 dak1|點得|how could that be OK
+hau6 saang1 zai2|後生仔|young man
+mou5 so2 wai6|冇所謂|doesn't matter
+zeoi3 gan2 jiu3|最緊要|most important
+sik6 baau2|食飽|eat enough
+tung4 maai4|同埋|and
+fan3 gau3 gaau3|瞓夠覺|get enough sleep
+fong3 sam1|放心|don't worry
+saai3|晒|all / completely
+ling1 ceot1|拎出|take out
+fu3|副|(classifier for a set)
+maa4 zoek3|麻雀|mahjong
+gwai1 zak1|規則|rules
+fuk1 zaap6|複雜|complicated
+dou3|到|until / so that
+seng4 go3|成個|whole
+lyun6 saai3 lung4|亂晒籠|totally confused
+saam1 hyun1|三圈|three rounds
+gaau2 m4 cing1|搞唔清|can't figure out
+bin1 zek3|邊隻|which piece
+git3 gwo2|結果|in the end
+lin4|連|in a row
+syu1|輸|lose
+saam1 ci3|三次|three times
+seng4|成|almost
+juk6 cek3|肉赤|pained (about money)
+lau4|流|flow
+ngaan5 seoi2|眼水|tears
+paak3 paak3|拍拍|pat
+bok3 tau4|膊頭|shoulder
+syu1 cin2|輸錢|lose money
+hok6 je5|學嘢|learn things
+je5|嘢|things
+bit1 ging1 zi1 lou6|必經之路|a road everyone must take
+ji5 hau6|以後|in future
+go2 maan5|嗰晚|that night
+cong4|牀|bed
+nam2 zyu6|諗住|thinking about
+gam1 jat6|今日|today
+jat1 jat6|一日|the whole day
+gok3 dak1|覺得|feel
+gwo3 zo2|過咗|pass (time)
+gei2 jat6|幾日|a few days
+aa3 je4|阿爺|grandpa
+aa3 maa4|阿嫲|grandma
+kau1 tung1|溝通|communication
+seon6 coeng3|順暢|smooth
+m4 sai2|唔使|no need to
+kaau3|靠|rely on
+bei2 sau2 waak6 goek3|比手畫腳|gesturing with hands and feet
+jau5 jat6|有日|one day
+lau4 haa6|樓下|downstairs
+can4 baak3|陳伯|Uncle Chan
+din6 tai1|電梯|lift
+gin3 dou2|見到|see
+laai1 zyu6|拉住|grab hold of
+se5 keoi1|社區|community
+bou3|報|sign up
+ji6 gung1|義工|volunteer
+fong2 man6|訪問|interview
+haa5|吓|a bit
+hoi2 ngoi6|海外|overseas
+gwai1 loi4|歸來|returning
+syun1 zai2|孫仔|grandson
+ji6 waa6 bat1 syut3|二話不說|without a second word
+daap3 jing1|答應|agree
+gaai1 fong1|街坊|neighbours
+lin6 zaap6|練習|practice
+ceot1 sai3|出世|be born
+dim2 gaai2|點解|why
+wui5|會|would / will
+daap3|答|answer
+lou5 sat6 gong2|老實講|honestly
+sai3 go3|細個|as a child
+zing6 hai6|淨係|only
+teng1 dak1 ming4|聽得明|can understand
+siu2 siu2|少少|a little
+mui5 ci3|每次|every time
+din6 waa2|電話|phone
+gam2~b|噉|like that
+jing1|應|respond
+gaam3 gaai3|尷尬|awkward
+gam2|噉|so / in that case
+gam1 ci3|今次|this time
+faan1 lai4|返嚟|come back
+zeoi3 daai6|最大|biggest
+sau1 wok6|收穫|gain
+ne1|呢|(question particle)
+zau6 hai6|就係|is exactly
+zung1 jyu1|終於|finally
+ming4 baak6|明白|understand
+jyu5 jin4|語言|language
+m4 daan1 zi2|唔單止|not only
+gung1 geoi6|工具|tool
+jat1 go3|一個|a / one
+gam2 cing4|感情|feelings
+gei3 jik1|記憶|memories
+bou2 cung1|補充|add
+seng4 jat6|成日|always
+gan1 bun2|根本|at all
+jik6 m4 dou3|譯唔到|can't be translated
+hou2 ci5|好似|like
+wo1 sam1|窩心|heartwarming
+sin1|先|only then
+gong2 dak1 ceot1|講得出|be able to express
+go2 zung2|嗰種|that kind of
+gam2 gok3|感覺|feeling
+siu3 dou3|笑到|laugh until
+baa2 hau2|把口|mouth
+hap6 m4 maai4|合唔埋|can't close
+waa1|嘩|wow
+gam3 ging6|咁勁|so impressive
+hau6 saang1 ho2 wai3|後生可畏|the young are formidable
+haa1 haa1|哈哈|haha
+gwo3 zoeng2|過獎|you flatter me
+gong2 je5|講嘢|talk
+jau5 si4|有時|sometimes
+dat6 jin4|突然|suddenly
+ci4 kung4|詞窮|lost for words
+gau3 coeng4|救場|save the day
+zi3 siu2|至少|at least
+gong2 dou3|講到|speak to the point of
+ngau4 tau4 m4 daap3 maa5 zeoi2|牛頭唔搭馬嘴|talk nonsense (lit. ox head, horse mouth)
+daa2 syun3|打算|plan
+gei2 si4|幾時|when
+nam2 dou1 mou5 nam2|諗都冇諗|without a second thought
+gwo3 nin4|過年|Chinese New Year
+jat1 ding6|一定|definitely
+gong2 hou2|講好|agreed
+dou3 si4|到時|by then
+jat1 cai4|一齊|together
+faa1 si5|花市|flower market
+tyun4 nin4 faan6|團年飯|reunion dinner
+dong1 jin4|當然|of course
+sau1 lai6 si6|收利是|collect red envelopes
+zik1 coeng4|即場|on the spot
+se2 dai1|寫低|write down
+biu1 tai4|標題|headline
+faan1 gong2|返港|return to Hong Kong
+cam4 gan1|尋根|search for one's roots
+gwo3 gwaan1|過關|get through
+cyun4 kaau3|全靠|rely entirely on
+si4 hau6|時候|time
+coeng1 hau2|窗口|window
+daai6 giu3|大叫|shout
+tong1|湯|soup
+dung3|凍|cold
+lai4 laa3|嚟喇|coming!
+paau2 faan1|跑返|run back
+faat3 gok3|發覺|realise
+jyun4 loi4|原來|it turns out
+fo3 tong4|課堂|classroom
+bou1|煲|simmer
+`;
+/*end story-data*/
+
+/*story-core*/
+const lex=new Map();let lexMax=1;
+STORY_LEX.trim().split('\n').forEach(l=>{
+  const [k,zh,en]=l.split('|');if(!en)return;
+  const key=k.trim();lex.set(key,{zh:zh.trim(),en:en.trim()});lexMax=Math.max(lexMax,key.split(' ').length);
+});
+/* Split a sentence into words: the fewest dictionary words that cover it (longest first on ties).
+   Punctuation stays outside the word and a word never spans a comma or quote. */
+function segment(line){
+  const sy=line.trim().split(/\s+/).map(t=>{
+    const m=t.match(/^([^A-Za-z]*)([A-Za-z]+[1-6])(?:~([a-z]+))?(.*)$/);
+    return m?{lead:m[1],txt:m[2],tag:m[3]||'',trail:m[4]}:{lead:'',txt:t,tag:'',trail:'',bad:1};
   });
-  d.append(spk(zhOf(s)));
-  chk.onclick=go;
-  c.append(d,h('p','tr mu',s.en),chk);
-  if(ins[0])ins[0].focus();
+  const n=sy.length,best=new Array(n+1);best[n]={c:0};
+  for(let i=n-1;i>=0;i--){
+    let b={c:1000+best[i+1].c,len:1,e:null};
+    for(let L=Math.min(lexMax,n-i);L>=1;L--){
+      const p=sy.slice(i,i+L);
+      if(p.some((s,j)=>s.bad||(j<L-1&&s.trail)||(j>0&&s.lead)))continue;
+      if(L>1&&p.some(s=>s.tag))continue;
+      const e=lex.get(p.map(s=>s.txt.toLowerCase()).join(' ')+(L===1&&p[0].tag?'~'+p[0].tag:''));
+      if(!e)continue;
+      const c=1+best[i+L].c;
+      if(c<b.c||(c===b.c&&L>b.len))b={c,len:L,e};
+    }
+    best[i]=b;
+  }
+  const out=[];
+  for(let i=0;i<n;){
+    const b=best[i],p=sy.slice(i,i+b.len);
+    out.push({text:p.map(s=>s.txt).join(' '),lead:p[0].lead,trail:p[p.length-1].trail,zh:b.e&&b.e.zh,en:b.e&&b.e.en});
+    i+=b.len;
+  }
+  return out;
+}
+const zhPunct={',':'，','.':'。','?':'？','!':'！',':':'：',';':'；'};
+const zhTrail=t=>[...t].map(c=>zhPunct[c]||'').join('');
+/*end story-core*/
+
+/* the story screen: one row per sentence, each word right-clickable, each sentence with a 🔊 button */
+function storyLine(s){
+  const d=h('div','sent st'),zh=[];
+  segment(s).forEach((w,i)=>{
+    if(i)d.append(' ');
+    if(w.lead)d.append(w.lead);
+    const e=h('span','w',w.text);
+    if(w.en){e.dataset.tip=w.text+' = '+w.en;e.dataset.say=w.zh}
+    d.append(e);
+    if(w.trail)d.append(w.trail);
+    zh.push((w.zh||w.text)+zhTrail(w.trail));
+  });
+  d.append(spk(zh.join('')));
+  return d;
+}
+let storyParts=null;
+function story(){
+  storyParts=storyParts||STORY.trim().split(/\n\s*\n/).map(p=>p.split('\n').map(l=>l.trim()).filter(Boolean));
+  app.replaceChildren();
+  const t=h('div','top'),b=h('button','link','← Levels');
+  b.onclick=()=>{if('speechSynthesis' in window)speechSynthesis.cancel();menu()};
+  t.append(b,h('span','mu','Progressive story'));
+  const box=h('div','story');
+  storyParts.forEach(p=>{const d=h('div','part');p.forEach(l=>d.append(storyLine(l)));box.append(d)});
+  app.append(t,h('p','ins','Right-click any word to see and hear its translation. Press 🔊 to hear a whole sentence.'),box);
+  scrollTo(0,0);
 }
 
 /* levels: level N uses the words and sentences of levels 1..N */
-function load(i){
+function start(i){
   lvl=i;words=[];sents=[];dict={};
-  levels.slice(0,i+1).forEach((l,li)=>{
-    (l.words||[]).forEach(w=>{if(!dict[w.jp]){w.lv=li;dict[w.jp]=w;words.push(w)}});
+  levels.slice(0,i+1).forEach(l=>{
+    (l.words||[]).forEach(w=>{if(!dict[w.jp]){dict[w.jp]=w;words.push(w)}});
     sents.push(...(l.sentences||[]));
   });
-}
-function start(i){
-  load(i);
-  const c=shell('Choose how to practise'),g=h('div','modes');
-  [['Exercises','Arrange and choose: six kinds of practice',next],['Tones','Fill in the missing tone numbers (1–6) of a Jyutping sentence',tones],['Listening','Hear a random sentence from your level and chat about it (uses Groq)',listen],['Dynamic listening','An adaptive benchmark across every level that ends with your tough spots (uses Groq)',dyn]].forEach(([t,d,f])=>{
-    const b=h('button','btn mode');b.append(h('strong',null,t),h('span','mu',d));b.onclick=()=>f();g.append(b);
-  });
-  c.append(g);
+  next();
 }
 function menu(){
   app.replaceChildren(h('h1',null,'Jyutping practice'));
   if(!levels.length){
     app.append(h('p','mu','Could not load 1.json. Open this page through a local web server (for example, run “python3 -m http.server” in this folder, then visit localhost:8000/jyutping.html).'));
-    return;
-  }
-  app.append(h('p','mu','Choose a level. Right-click any word to see and hear its translation.'));
+  }else app.append(h('p','mu','Choose a level. Right-click any word to see and hear its translation.'));
   const g=h('div','grid');
   levels.forEach((_,i)=>{const b=h('button','btn','Level '+(i+1));b.onclick=()=>start(i);g.append(b)});
-  const m=h('div','modes'),d=h('button','btn mode');
-  d.append(h('strong',null,'Dynamic listening'),h('span','mu','An adaptive benchmark across every level'));d.onclick=dyn;m.append(d);m.style.marginTop='24px';
-  app.append(g,m);
+  const sb=h('button','btn wide','Progressive story');sb.onclick=story;g.append(sb);
+  app.append(g);
 }
 (async()=>{
   for(let n=1;;n++){
@@ -289,191 +797,6 @@ function menu(){
   }
   menu();
 })();
-
-/* ---------- Listening mode (Groq gpt-oss-120b) ---------- */
-const LS='groqKey',seenL=[];let rate=.8;
-const errMsg=e=>e instanceof TypeError?'Could not reach Groq. Check your connection':e.message;
-async function ask(messages,temp){
-  const r=await fetch('https://api.groq.com/openai/v1/chat/completions',{
-    method:'POST',
-    headers:{'Content-Type':'application/json',Authorization:'Bearer '+localStorage.getItem(LS)},
-    body:JSON.stringify({model:'openai/gpt-oss-120b',messages,temperature:temp,reasoning_effort:'low'})
-  });
-  if(r.status===401){localStorage.removeItem(LS);throw new Error('key')}
-  if(!r.ok)throw new Error('Groq returned error '+r.status);
-  return (await r.json()).choices[0].message.content||'';
-}
-async function groq(messages,temp){
-  const m=(await ask(messages,temp)).match(/\{[\s\S]*\}/);
-  try{return JSON.parse(m[0])}catch(e){throw new Error('Unreadable reply from Groq')}
-}
-function keyForm(msg,then){
-  const c=shell('Enter your Groq API key');
-  c.append(h('p','mu',msg||'Listening practice uses Groq. Get a key at console.groq.com/keys. It is saved only in this browser (localStorage).'));
-  const i=h('input','inp'),b=h('button','btn','Save and continue');
-  i.type='password';i.placeholder='gsk_…';i.autocomplete='off';
-  const go=()=>{const v=i.value.trim();if(v){localStorage.setItem(LS,v);then()}};
-  b.onclick=go;i.onkeydown=e=>{if(e.key==='Enter')go()};
-  c.append(i,b);i.focus();
-}
-function fail(c,e,retry){
-  if(!c.isConnected)return;
-  if(e.message==='key')return keyForm('That key was rejected. Enter a valid Groq API key.',retry);
-  const b=h('button','btn','Try again');b.onclick=retry;
-  c.replaceChildren(h('p','fb not',errMsg(e)),b);
-}
-const IDK='I don’t know';
-const GRADER='You are a strict but fair Cantonese tutor marking a listening test for a beginner. The learner heard a Cantonese sentence and wrote what it means in English. Score 0 to 10 (10 = meaning fully correct; take off about 2 for each missing or wrong content word and 1 for small grammar slips; 0 if they gave no real answer). Be consistent from one sentence to the next. Reply with JSON only.';
-/* random sentence straight from the JSON files, avoiding the last few shown */
-function randSent(){
-  const pool=sents.filter(x=>!seenL.includes(x)),x=rnd(pool.length?pool:sents);
-  seenL.push(x);if(seenL.length>Math.min(8,sents.length-1))seenL.shift();
-  return x;
-}
-function player(s){
-  const lb=h('button','btn','🔊 Listen'),sp=h('input'),val=h('span',null,rate.toFixed(2)+'×'),lab=h('label','speed');
-  lb.onclick=()=>say(zhOf(s),rate);
-  sp.type='range';sp.min=.4;sp.max=1.2;sp.step=.05;sp.value=rate;
-  sp.oninput=()=>{rate=+sp.value;val.textContent=rate.toFixed(2)+'×'};
-  lab.append('Speed',sp,val);
-  return[lb,lab];
-}
-function listen(){
-  if(!localStorage.getItem(LS))return keyForm('',listen);
-  const c=shell('Listen, then type what you heard in English'),s=randSent();
-  const hist=[{role:'system',content:'You are a friendly Cantonese tutor chatting with a beginner. The learner just heard this Cantonese sentence read aloud and cannot see it: '+s.jp+' (Jyutping). Word for word: '+s.jp.split(' ').map((t,i)=>t+' = '+s.w[i]).join('; ')+'. Meaning: '+s.en+'. Their first message is their English answer. Start your reply with Yes or No (is their meaning right? accept synonyms and small grammar slips), then go through the sentence word for word with the Jyutping, saying what they got right or wrong. If they say they do not know, skip the verdict and explain the sentence: the meaning, then word for word. After that, answer their follow-up questions about this sentence or Cantonese in general. Keep replies short and simple, with no tables.'}];
-  const log=h('div','log'),row=h('div','row'),inp=h('input','inp'),send=h('button','btn','Send'),err=h('p','fb not');
-  const idk=h('button','btn',IDK),nx=h('button','btn','Next sentence →'),ck=h('button','link','Change API key'),acts=h('div','row');
-  inp.type='text';inp.placeholder='Type what you heard, or ask a question';inp.autocomplete='off';
-  let busy=false;
-  const turn=async text=>{
-    text=text.trim();if(busy||!text)return;
-    busy=true;err.textContent='';inp.value='';
-    const um=h('div','msg me',text),am=h('div','msg ai','…');
-    log.append(um,am);am.scrollIntoView({block:'nearest'});
-    hist.push({role:'user',content:text});
-    try{
-      const r=await ask(hist,.5);
-      hist.push({role:'assistant',content:r});
-      am.innerHTML=md(r.trim());
-    }catch(e){
-      hist.pop();um.remove();am.remove();inp.value=text;
-      if(!c.isConnected){busy=false;return}
-      if(e.message==='key')return keyForm('That key was rejected. Enter a valid Groq API key.',listen);
-      err.textContent=errMsg(e)+'. Try again.';
-    }
-    busy=false;inp.focus();
-  };
-  send.onclick=()=>turn(inp.value);
-  inp.onkeydown=e=>{if(e.key==='Enter')turn(inp.value)};
-  idk.onclick=()=>turn(IDK+'. Please explain it to me.');
-  nx.onclick=listen;
-  ck.onclick=()=>keyForm('Enter a new Groq API key.',listen);
-  row.append(inp,send);acts.append(idk,nx,ck);
-  c.append(...player(s),log,err,row,h('p'),acts);inp.focus();
-}
-
-/* ---------- Dynamic listening: an adaptive benchmark ----------
-   Two separate AI sessions: a generator that writes each sentence (told how you scored),
-   and a grader that marks your answer out of 10. Pass = 6+. Each pass makes the next sentence
-   harder (longer, with words from later levels); it stops after 3 misses in a row. */
-const PASS=6,MISS_STOP=3,CAP=25;
-function dyn(){load(levels.length-1);dynNext({d:0,fails:0,rec:[],gen:[],chat:[]})}
-async function genDyn(st){
-  const tier=Math.min(levels.length-1,st.d>>1),len=Math.min(10,2+(st.d>>1));
-  const allowed=words.filter(w=>w.lv<=tier),newest=tier?words.filter(w=>w.lv===tier):[];
-  const used=st.rec.map(r=>r.jp),last=st.rec[st.rec.length-1];
-  const msg='Difficulty '+st.d+'. Allowed words (Jyutping with meaning): '+allowed.map(w=>w.jp+' ('+w.en+')').join(', ')+'.\nWrite one new natural, grammatical Cantonese sentence of about '+len+' words using ONLY the allowed words, each copied exactly in Jyutping'+(newest.length?', and include at least one of the newest words: '+newest.map(w=>w.jp).join(', '):'')+'.\n'+(last?'The learner scored '+last.score+'/10 on the previous sentence ('+last.jp+'). ':'')+'Already used: '+(used.join(' | ')||'none')+'.\nReply as {"jp":"words separated by single spaces","en":"natural English translation"}';
-  for(let n=0;n<3;n++){
-    const o=await groq([{role:'system',content:'You write sentences for an adaptive Cantonese listening benchmark that gets harder as the learner succeeds. Reply with JSON only.'},...st.gen.slice(-6),{role:'user',content:msg}],1);
-    const t=String(o.jp||'').trim().toLowerCase().split(/\s+/),jp=t.join(' ');
-    if(o.en&&t.length>1&&t.every(x=>dict[x]&&dict[x].lv<=tier)&&!used.includes(jp)){
-      st.gen.push({role:'user',content:'Difficulty '+st.d+(last?', previous score '+last.score+'/10':'')},{role:'assistant',content:JSON.stringify({jp,en:o.en})});
-      return{jp,en:String(o.en),w:t.map(x=>dict[x].en),d:st.d,tier:Math.max(...t.map(x=>dict[x].lv))};
-    }
-  }
-  throw new Error('Could not get a valid sentence');
-}
-async function dynNext(st){
-  if(st.fails>=MISS_STOP||st.rec.length>=CAP)return dynEnd(st);
-  if(!localStorage.getItem(LS))return keyForm('',()=>dynNext(st));
-  const c=shell('Listen, then write what it means in English','Benchmark');
-  c.append(h('p','mu','Writing sentence '+(st.rec.length+1)+'…'));
-  let s;
-  try{s=await genDyn(st)}catch(e){return fail(c,e,()=>dynNext(st))}
-  if(!c.isConnected)return;
-  c.replaceChildren();
-  const tok=s.jp.split(' '),inp=h('input','inp'),send=h('button','btn','Check'),idk=h('button','btn',IDK),end=h('button','link','End benchmark'),err=h('p','fb not'),acts=h('div','row');
-  inp.type='text';inp.placeholder='What does it mean in English?';inp.autocomplete='off';
-  let busy=false;
-  const submit=async text=>{
-    text=text.trim();if(busy||!text)return;
-    busy=true;err.textContent='';inp.disabled=send.disabled=idk.disabled=true;send.textContent='Scoring…';
-    const gmsg='Cantonese (Jyutping): '+s.jp+'\nWord for word: '+tok.map((t,i)=>t+' = '+s.w[i]).join('; ')+'\nIntended English: '+s.en+'\nLearner wrote: '+text+'\nReply as {"score":integer from 0 to 10,"feedback":"2 to 3 short sentences explaining the score, word for word where it helps","missed":["Jyutping words the learner got wrong or left out"]}';
-    try{
-      const g=await groq([{role:'system',content:GRADER},...st.chat.slice(-6),{role:'user',content:gmsg}],.2);
-      const sc=Math.max(0,Math.min(10,Math.round(+g.score)));
-      if(isNaN(sc))throw new Error('Unreadable score from Groq');
-      const missed=text===IDK?tok:(Array.isArray(g.missed)?g.missed:[]).map(x=>String(x).toLowerCase().trim()).filter(x=>tok.includes(x));
-      st.chat.push({role:'user',content:gmsg},{role:'assistant',content:JSON.stringify({score:sc,feedback:g.feedback,missed})});
-      const r={jp:s.jp,en:s.en,w:s.w,a:text,score:sc,missed,fb:String(g.feedback||''),tier:s.tier};
-      st.rec.push(r);
-      if(sc>=PASS){st.fails=0;st.d++}else st.fails++;
-      if(c.isConnected)dynResult(c,st,r,s);
-      return;
-    }catch(e){
-      if(!c.isConnected)return;
-      if(e.message==='key')return keyForm('That key was rejected. Enter a valid Groq API key.',()=>dynNext(st));
-      inp.disabled=send.disabled=idk.disabled=false;send.textContent='Check';err.textContent=errMsg(e)+'. Try again.';
-      busy=false;
-    }
-  };
-  send.onclick=()=>submit(inp.value);idk.onclick=()=>submit(IDK);
-  inp.onkeydown=e=>{if(e.key==='Enter')submit(inp.value)};
-  end.onclick=()=>dynEnd(st);
-  acts.append(send,idk,end);
-  c.append(h('p','mu','Sentence '+(st.rec.length+1)+'. A pass is '+PASS+'/10 or more. The benchmark ends after '+MISS_STOP+' misses in a row ('+st.fails+' so far).'),...player(s),inp,err,acts);
-  inp.focus();
-}
-function dynResult(c,st,r,s){
-  c.replaceChildren();
-  const stop=st.fails>=MISS_STOP||st.rec.length>=CAP,n=h('button','btn',stop?'See results →':'Next sentence →');
-  n.onclick=()=>dynNext(st);
-  c.append(h('p','sent big '+(r.score>=PASS?'okt':'not'),r.score+'/10'),h('p',null,r.fb),h('p','mu','You wrote: '+r.a),sentEl(s,'jp'),h('p','mu','Meaning: '+s.en),n);
-  n.focus();
-}
-async function dynEnd(st){
-  const c=shell('Benchmark results','Benchmark'),R=st.rec,again=h('button','btn','Run again');
-  again.onclick=dyn;
-  if(!R.length){c.append(h('p','mu','No sentences were scored.'),again);return}
-  const avg=R.reduce((a,r)=>a+r.score,0)/R.length,ok=R.filter(r=>r.score>=PASS);
-  const kv=(k,v)=>{const d=h('div','kv');d.append(h('span',null,k),h('strong',null,v));return d};
-  c.append(
-    h('p',null,st.fails>=MISS_STOP?'You missed '+MISS_STOP+' in a row, so the benchmark stopped there.':R.length>=CAP?'You completed all '+CAP+' sentences.':'You ended the benchmark early.'),
-    kv('Average score',avg.toFixed(1)+' / 10'),
-    kv('Sentences scored',String(R.length)),
-    kv('Longest sentence passed',ok.length?Math.max(...ok.map(r=>r.jp.split(' ').length))+' words':'none'),
-    kv('Furthest level passed',ok.length?'Level '+(Math.max(...ok.map(r=>r.tier))+1):'none'),
-    h('h2','sec','By vocabulary level'),h('p','mu','A sentence counts under the highest level of any word in it.'));
-  for(let t=0;t<levels.length;t++){
-    const x=R.filter(r=>r.tier===t);
-    if(x.length)c.append(kv('Level '+(t+1),(x.reduce((a,r)=>a+r.score,0)/x.length).toFixed(1)+' / 10 over '+x.length+' sentence'+(x.length>1?'s':'')));
-  }
-  const ws={};
-  R.forEach(r=>r.jp.split(' ').forEach(t=>{const x=ws[t]||(ws[t]={seen:0,miss:0});x.seen++;if(r.missed.includes(t))x.miss++}));
-  const tough=Object.entries(ws).filter(([,x])=>x.miss).sort((a,b)=>b[1].miss/b[1].seen-a[1].miss/a[1].seen||b[1].miss-a[1].miss).slice(0,12);
-  c.append(h('h2','sec','Tough spots'));
-  if(!tough.length)c.append(h('p','mu','No words were missed.'));
-  tough.forEach(([t,x])=>{const d=h('div','kv'),l=h('span');l.append(wEl(dict[t],'jp'),' '+dict[t].en);d.append(l,h('span','mu','missed '+x.miss+' of '+x.seen));c.append(d)});
-  const hard=[...R].sort((a,b)=>a.score-b.score).filter(r=>r.score<PASS).slice(0,3);
-  if(hard.length){c.append(h('h2','sec','Sentences to revisit'));hard.forEach(r=>c.append(sentEl(r,'jp'),h('p','mu','Meaning: '+r.en+'. You wrote: '+r.a+' ('+r.score+'/10)')))}
-  const adv=h('div','msg ai','Writing advice…');
-  c.append(h('h2','sec','What to work on'),adv,h('p'),again);
-  try{
-    const r=await ask([{role:'system',content:'You are a friendly Cantonese tutor.'},{role:'user',content:'A learner just finished a listening benchmark. Average '+avg.toFixed(1)+'/10 over '+R.length+' sentences. Words they missed (Jyutping = meaning, missed of seen): '+(tough.map(([t,x])=>t+' = '+dict[t].en+', '+x.miss+' of '+x.seen).join('; ')||'none')+'. Sentences below the pass mark: '+(hard.map(r=>r.jp+' ('+r.en+') '+r.score+'/10').join('; ')||'none')+'. In 4 to 6 short sentences, tell them what to work on and how, in plain language.'}],.5);
-    if(c.isConnected)adv.innerHTML=md(r.trim());
-  }catch(e){adv.textContent='Advice unavailable: '+errMsg(e)}
-}
 
 /* ---------- Markdown side panel ---------- */
 const mdSel=document.getElementById('mdsel'),mdBody=document.getElementById('mdbody'),picked={};
